@@ -1,4 +1,4 @@
-var ytOptionLayer = (function () {
+const ytOptionLayer = (function () {
 	function ytOptionLayer () {
 		var s = this;
 		LExtends(s, LSprite, []);

@@ -1,13 +1,14 @@
+//初始化库件
 LInit(30, "mylegend", 400, 600, main);
 
-var dataList = {};
+const dataList = {};
 
 function main () {
 	LGlobal.aspectRatio = PORTRAIT;
 	
 	LGlobal.setDebug(false);
 
-	var b = document.body;
+	var b = document.body;  
 	b.style.margin = "0px";
 	b.style.padding = "0px";
 	b.style.backgroundColor = "black";
@@ -62,6 +63,7 @@ function loadGame () {
 		]
 	];
 
+	//LLoadManage类是可以用来同时读取图片，文本以及js多种类型的文件。
 	LLoadManage.load(
 		loadData[0],
 		null,

@@ -1,4 +1,4 @@
-var ytButton = (function () {
+const ytButton = (function () {
 	function ytButton (overStyle, contentLayerData, scale) {
 		var s = this;
 		LExtends(s, LSprite, []);

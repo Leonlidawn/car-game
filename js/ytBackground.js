@@ -1,4 +1,4 @@
-var ytBackground = (function () {
+const ytBackground = (function () {
 	function ytBackground (bitmapData) {
 		var s = this;
 		LExtends(s, LSprite, []);

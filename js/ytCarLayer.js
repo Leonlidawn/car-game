@@ -1,4 +1,4 @@
-var ytCarLayer = (function () {
+const ytCarLayer = (function () {
 	function ytCarLayer (carIndex) {
 		var s = this;
 		LExtends(s, LSprite, []);

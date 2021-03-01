@@ -1,4 +1,4 @@
-var ytExplosion = (function () {
+const ytExplosion = (function () {
 	function ytExplosion () {
 		var s = this,
 		bmpd = dataList["explosion"].clone(),

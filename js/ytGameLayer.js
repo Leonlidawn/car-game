@@ -1,4 +1,4 @@
-var ytGameLayer = (function () {
+const ytGameLayer = (function () {
 	function ytGameLayer (car, place) {
 		var s = this;
 		LExtends(s, LSprite, []);

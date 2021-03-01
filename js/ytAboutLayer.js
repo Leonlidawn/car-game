@@ -1,4 +1,4 @@
-var ytAboutLayer = (function () {
+const ytAboutLayer = (function () {
 	function ytAboutLayer () {
 		var s = this;
 		LExtends(s, LSprite, []);

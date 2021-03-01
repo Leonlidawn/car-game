@@ -1,4 +1,4 @@
-var ytPreloader = (function () {
+const ytPreloader = (function () {
 	function ytPreloader () {
 		var s = this;
 		LExtends(s, LSprite, []);

@@ -1,4 +1,4 @@
-var ytHelpLayer = (function () {
+const ytHelpLayer = (function () {
 	function ytHelpLayer () {
 		var s = this;
 		LExtends(s, LSprite, []);

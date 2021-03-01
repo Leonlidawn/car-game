@@ -1,4 +1,4 @@
-var ytCar = (function () {
+const ytCar = (function () {
 	function ytCar (carBmpd, data, positionIndex) {
 		var s = this;
 		LExtends(s, LSprite, []);

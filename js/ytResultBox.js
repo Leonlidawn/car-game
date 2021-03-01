@@ -1,4 +1,4 @@
-var ytResultBox = (function () {
+const ytResultBox = (function () {
 	function ytResultBox (point) {
 		var s = this;
 		LExtends(s, LSprite, []);

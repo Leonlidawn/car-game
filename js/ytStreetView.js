@@ -1,4 +1,4 @@
-var ytStreetView = (function () {
+const ytStreetView = (function () {
 	function ytStreetView (place) {
 		var s = this;
 		LExtends(s, LSprite, []);

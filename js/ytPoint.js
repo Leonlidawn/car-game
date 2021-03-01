@@ -1,4 +1,4 @@
-var ytPoint = (function () {
+const ytPoint = (function () {
 	function ytPoint () {
 		var s = this;
 		LExtends(s, LSprite, []);

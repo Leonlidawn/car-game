@@ -1,4 +1,4 @@
-var ytMenuLayer = (function () {
+const ytMenuLayer = (function () {
 	function ytMenuLayer () {
 		var s = this;
 		LExtends(s, LSprite, []);
