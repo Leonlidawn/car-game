@@ -1,6 +1,13 @@
 //初始化库件
 LInit(30, "mylegend", 400, 600, main);
 
+
+const gameData = {};
+// 在这里初始化添加游戏相关的data
+gameData.money = 0;
+gameData.username = '';
+
+
 const dataList = {};
 
 function main () {
