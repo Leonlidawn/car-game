@@ -1,3 +1,6 @@
+/**
+ * 开场动画，带有载人进度条
+ */
 const ytPreloader = (function () {
 	function ytPreloader () {
 		var s = this;
@@ -33,7 +36,6 @@ const ytPreloader = (function () {
 		var s = this,
 		pb = s.progressBmp,
 		w = pb.getWidth() * (p / 100);
-
 		s.progressMask.graphics.drawRect(0, "", [0, 0, w,pb.getHeight()]);
 	};
 

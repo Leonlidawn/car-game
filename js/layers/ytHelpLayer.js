@@ -1,3 +1,6 @@
+/**
+ * help 页面
+ */
 const ytHelpLayer = (function () {
 	function ytHelpLayer () {
 		var s = this;

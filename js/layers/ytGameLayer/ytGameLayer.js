@@ -1,3 +1,6 @@
+/**
+ * 游戏页面
+ */ 
 const ytGameLayer = (function () {
 	function ytGameLayer (car, place) {
 		var s = this;
@@ -38,6 +41,9 @@ const ytGameLayer = (function () {
 		s.fadeIn();
 
 		s.stageLayer.addEventListener(LMouseEvent.MOUSE_UP, s.mouseUp);
+		//TODO:加上keyboard event, 左右移动
+		// s.stageLayer.addEventListener(LKeyboardEvent.KEY_PRESS, ???);
+
 		s.addEventListener(LEvent.ENTER_FRAME, s.loop);
 	}
 
@@ -110,7 +116,10 @@ const ytGameLayer = (function () {
 		});
 	};
 
-	ytGameLayer.prototype.mouseUp = function (e) {
+	ytGameLayer.prototype.mouseUp = moveCar;
+	// ytGameLayer.prototype.keyUp = moveCar;
+
+	function moveCar(e){
 		var s = e.currentTarget.parent;
 
 		if (!s.carLayer || !s.carLayer.car) {

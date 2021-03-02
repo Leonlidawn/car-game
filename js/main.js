@@ -25,25 +25,27 @@ function loadGame () {
 	var loadData = [
 		[
 			{path : "./js/ytPreloader.js"},
-
 			{name : "preloader_bar", path : "./images/preloader_bar.jpg"},
 			{name : "preloader_bar_background", path : "./images/preloader_bar_background.jpg"},
 			{name : "preloader_background", path : "./images/preloader_background.jpg"}
 		],
 		[
-			{path : "./js/ytButton.js"},
-			{path : "./js/ytMenuLayer.js"},
-			{path : "./js/ytOptionLayer.js"},
-			{path : "./js/ytGameLayer.js"},
-			{path : "./js/ytBackground.js"},
-			{path : "./js/ytStreetView.js"},
-			{path : "./js/ytCar.js"},
-			{path : "./js/ytCarLayer.js"},
-			{path : "./js/ytExplosion.js"},
-			{path : "./js/ytPoint.js"},
-			{path : "./js/ytResultBox.js"},
-			{path : "./js/ytHelpLayer.js"},
-			{path : "./js/ytAboutLayer.js"},
+			{path : "./js/common/ytButton.js"},
+
+			{path : "./js/layers/ytHelpLayer.js"},
+			{path : "./js/layers/ytAboutLayer.js"},
+			{path : "./js/layers/ytMenuLayer.js"},
+			{path : "./js/layers/ytOptionLayer.js"},
+
+			{path : "./js/layers/ytGameLayer/ytGameLayer.js"},
+			{path : "./js/layers/ytGameLayer/ytBackground.js"},
+			{path : "./js/layers/ytGameLayer/ytStreetView.js"},
+			{path : "./js/layers/ytGameLayer/ytExplosion.js"},
+			{path : "./js/layers/ytGameLayer/ytPoint.js"},
+			{path : "./js/layers/ytGameLayer/ytResultBox.js"},
+
+			{path : "./js/layers/ytCarLayer/ytCarLayer.js"},
+			{path : "./js/layers/ytCarLayer/ytCar.js"},
 
 			{name : "button_sheet", path : "./images/button_sheet.jpg"},
 			{name : "menu_car_icons", path : "./images/menu_car_icons.png"},
@@ -63,7 +65,10 @@ function loadGame () {
 		]
 	];
 
+	//load是IIFE.立即执行
 	//LLoadManage类是可以用来同时读取图片，文本以及js多种类型的文件。
+	//args: list  onUpdate  onComplete
+	//分了两次加载
 	LLoadManage.load(
 		loadData[0],
 		null,
@@ -75,14 +80,15 @@ function loadGame () {
 
 			LLoadManage.load(
 				loadData[1],
+				
 				function (p) {
+					//更新画面
 					preloader.setProgress(p);
 				},
+
 				function (r) {
 					updateDataList(r);
-
 					preloader.remove();
-
 					addMenuInterface();
 				}
 			);
@@ -90,20 +96,25 @@ function loadGame () {
 	);
 }
 
-function updateDataList (r) {
-	for (var k in r) {
-		var o = r[k];
+/**
+ * 根据resouceList 更新dataList内容
+ * @param {*} resourseList 
+ */
+function updateDataList (resourseList) {
+	for (let i in resourseList) {
+		const resource = resourseList[i];
 
-		if (o instanceof Image) {
-			dataList[k] = new LBitmapData(o);
+		if (resource instanceof Image) {
+			dataList[i] = new LBitmapData(resource);
 		} else {
-			dataList[k] = o;
+			dataList[i] = resource;
 		}
 	}
 }
 
 function addMenuInterface () {
 	var menuInterface = new ytMenuLayer();
+	//加入界面
 	addChild(menuInterface);
 }
 
