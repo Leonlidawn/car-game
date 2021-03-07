@@ -17,12 +17,9 @@ const ytOptionLayer = (function () {
 		];
 
 		s.placeInfoList = [
-			{name : "CANYON", data : "street_canyon"},
-			{name : "CITY", data : "street_city"},
-			{name : "DESERT", data : "street_desert"},
-			{name : "PRAIRIE", data : "street_grass"},
-			{name : "ICEFIELD", data : "street_snow"},
-			{name : "BRIDGE", data : "street_water"}
+			{name : "Comprhensive ", data : "street_canyon"},
+		
+			{name : "Third Party", data : "street_water"}
 		];
 
 		var backgroundBmp = new LBitmap(dataList["default_menu_background"]);
@@ -97,7 +94,7 @@ const ytOptionLayer = (function () {
 			var cBmpd = dataList[o.data].clone();
 			cBmpd.setProperties(0, 0, cBmpd.width, cBmpd.width);
 			var iconBmp = new LBitmap(cBmpd);
-			iconBmp.scaleX = iconBmp.scaleY = 0.08;
+			iconBmp.scaleX = iconBmp.scaleY = 0.3;
 			contentLayer.addChild(iconBmp);
 
 			var txt = new LTextField();
