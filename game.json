@@ -2233,7 +2233,7 @@
             "fontSize": 20,
             "visible": true,
             "color": "#000000",
-            "fontFamily": "Bimbo_JVE.ttf",
+            "fontFamily": "",
             "align": "left",
             "wordWrap": true
           }
@@ -2245,12 +2245,12 @@
           "variables": [],
           "behaviors": [],
           "content": {
-            "text": "policy",
+            "text": "policy ",
             "opacity": 255,
             "fontSize": 20,
             "visible": true,
             "color": "#000000",
-            "fontFamily": "FontAwesome.ttf",
+            "fontFamily": "",
             "align": "left",
             "wordWrap": true
           }
@@ -2267,7 +2267,7 @@
             "fontSize": 20,
             "visible": true,
             "color": "#000000",
-            "fontFamily": "FontAwesome.ttf",
+            "fontFamily": "",
             "align": "left",
             "wordWrap": true
           }
@@ -2686,6 +2686,42 @@
                         "insuranceButton2Des",
                         "=",
                         "insuranceTitle2.Y()+insuranceTitleGroup.GetFontSize()+insurancePolicyGroup.GetFontSize()"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BBText::SetBBText"
+                      },
+                      "parameters": [
+                        "insuranceButton0Des",
+                        "=",
+                        "\"📜policy1: xxxxxxx \"+NewLine()+NewLine()+\n\"📜policy2: xxxxxxxxxxxxxxxxx\"+NewLine()+NewLine()+\"📜policy3: xxxxxxxxxx\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BBText::SetBBText"
+                      },
+                      "parameters": [
+                        "insuranceButton1Des",
+                        "=",
+                        "\"📜policy1: xxxxxxx \"+NewLine()+NewLine()+\n\"📜policy2: xxxxxxxxxxxxxxxxx\"+NewLine()+NewLine()+\"📜policy3: xxxxxxxxxx\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BBText::SetBBText"
+                      },
+                      "parameters": [
+                        "insuranceButton2Des",
+                        "=",
+                        "\"📜policy1: xxxxxxx \"+NewLine()+NewLine()+\n\"📜policy2: xxxxxxxxxxxxxxxxx\"+NewLine()+NewLine()+\"📜policy3: xxxxxxxxxx\""
                       ],
                       "subInstructions": []
                     }
