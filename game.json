@@ -1578,7 +1578,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 1
+        "zoomFactor": 1.008
       },
       "objectsGroups": [
         {
@@ -1673,6 +1673,21 @@
           "name": "isInitialized",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "XPADDING_RATIO",
+          "type": "string",
+          "value": "0.025"
+        },
+        {
+          "name": "YPADDING_RATIO",
+          "type": "string",
+          "value": "0.025"
+        },
+        {
+          "name": "BUTTON_MARGIN_RATIO",
+          "type": "string",
+          "value": "0.01"
         }
       ],
       "instances": [
@@ -1685,8 +1700,8 @@
           "name": "InsuranceSelectPanelBackground",
           "persistentUuid": "2a79723d-0907-402d-ac99-30f037898529",
           "width": 0,
-          "x": 1,
-          "y": 0,
+          "x": 0,
+          "y": 1,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -1694,47 +1709,15 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "height": 126,
+          "customSize": false,
+          "height": 136,
           "layer": "",
           "locked": false,
           "name": "insuranceButton0",
           "persistentUuid": "a8f5ae45-6c05-483e-bc7d-85e5a7fdac5d",
-          "width": 128,
-          "x": 21,
-          "y": 52,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 126,
-          "layer": "",
-          "locked": false,
-          "name": "insuranceButton0",
-          "persistentUuid": "0188bfd6-00c8-4f1d-b39f-f039627dbfca",
-          "width": 128,
-          "x": 21,
-          "y": 52,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 126,
-          "layer": "",
-          "locked": false,
-          "name": "insuranceButton0",
-          "persistentUuid": "15952a2f-fbf4-4767-9ba4-0ca18017e6a6",
-          "width": 128,
-          "x": 17,
-          "y": 59,
+          "width": 315,
+          "x": 3,
+          "y": 42,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -1749,8 +1732,8 @@
           "name": "insuranceButton1",
           "persistentUuid": "c3b7d1d8-11a4-4b4d-815a-6ac43021a88f",
           "width": 126,
-          "x": 174,
-          "y": 55,
+          "x": 90,
+          "y": 229,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1765,9 +1748,57 @@
           "name": "insuranceButton2",
           "persistentUuid": "1e19e2c9-facc-43e5-8b80-3c3f3b2863dd",
           "width": 131,
-          "x": 26,
-          "y": 275,
+          "x": 85,
+          "y": 366,
           "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 28,
+          "layer": "",
+          "locked": false,
+          "name": "button1Description",
+          "persistentUuid": "764be4a0-0292-4514-a370-bc3d60cf981c",
+          "width": 105,
+          "x": 49,
+          "y": 83,
+          "zOrder": 6,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 28,
+          "layer": "",
+          "locked": false,
+          "name": "button1Description",
+          "persistentUuid": "07df43b3-7e43-4f47-a8f4-cd74c1f1db18",
+          "width": 105,
+          "x": 48,
+          "y": 110,
+          "zOrder": 6,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 28,
+          "layer": "",
+          "locked": false,
+          "name": "button1Description",
+          "persistentUuid": "638f55ec-79dd-4f35-9223-bf6b56884fd5",
+          "width": 105,
+          "x": 48,
+          "y": 146,
+          "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1983,6 +2014,25 @@
               ]
             }
           ]
+        },
+        {
+          "bold": false,
+          "italic": false,
+          "name": "button1Description",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "behaviors": [],
+          "string": "(icon) Policy 1: simple description ",
+          "font": "",
+          "characterSize": 8,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
         }
       ],
       "events": [
@@ -2181,6 +2231,107 @@
           },
           "comment": "1. 如何确定有什么保险可以购买？\n=> 在scene设定每一关显示什么保险， 可以用 levelInsrance:[ insuranceArray: [<i1:{相关信息},i2:{}>]] 结构表示？\n2. 如何确定保险的显示位置？\n=> 假设我们可以loop through  array. 根据当前这关的array.length来决定 InsuranceButton.visible 的属性，\n如何让button知道对应的array index？让button自身带有index属性",
           "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeHeight"
+              },
+              "parameters": [
+                "insuranceButtonGroup",
+                "=",
+                "ScreenHeight()*(1-Variable(YPADDING_RATIO)*2-Variable(BUTTON_MARGIN_RATIO)*6)/3"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeWidth"
+              },
+              "parameters": [
+                "insuranceButtonGroup",
+                "=",
+                "ScreenWidth()*(1-Variable(XPADDING_RATIO)*2)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreX"
+              },
+              "parameters": [
+                "insuranceButtonGroup",
+                "=",
+                "ScreenWidth()*Variable(XPADDING_RATIO)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreY"
+              },
+              "parameters": [
+                "insuranceButton0",
+                "=",
+                "ScreenHeight()*(Variable(YPADDING_RATIO)+Variable(BUTTON_MARGIN_RATIO))"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "GetArgumentAsBoolean"
+              },
+              "parameters": [
+                "VariableString(isInitialized)"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreY"
+              },
+              "parameters": [
+                "insuranceButton2",
+                "=",
+                "ScreenHeight()*(Variable(YPADDING_RATIO)+Variable(BUTTON_MARGIN_RATIO)*5) + ScreenHeight()*(1-Variable(YPADDING_RATIO)*2-Variable(BUTTON_MARGIN_RATIO)*6)*2/3"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreY"
+              },
+              "parameters": [
+                "insuranceButton1",
+                "=",
+                "ScreenHeight()*(Variable(YPADDING_RATIO)+Variable(BUTTON_MARGIN_RATIO)*3) + ScreenHeight()*(1-Variable(YPADDING_RATIO)*2-Variable(BUTTON_MARGIN_RATIO)*6)/3"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
         }
       ],
       "layers": [
