@@ -9,16 +9,16 @@
   "properties": {
     "adaptGameResolutionAtRuntime": true,
     "folderProject": false,
-    "orientation": "landscape",
-    "packageName": "com.example.gamename",
+    "orientation": "portrait",
+    "packageName": "com.anonymous.car.insurance",
     "projectUuid": "7521ca9e-493f-42a2-a30c-18aadfbd4e42",
     "scaleMode": "linear",
     "sizeOnStartupMode": "adaptWidth",
     "useExternalSourceFiles": false,
     "version": "1.0.0",
-    "name": "Project",
-    "author": "",
-    "windowWidth": 800,
+    "name": "Car Insurance Simulation",
+    "author": "Team Anonymous",
+    "windowWidth": 320,
     "windowHeight": 600,
     "latestCompilationDirectory": "",
     "maxFPS": 60,
@@ -219,13 +219,71 @@
   },
   "objects": [],
   "objectsGroups": [],
-  "variables": [],
+  "variables": [
+    {
+      "name": "INIT_MONEY",
+      "type": "number",
+      "value": 1000
+    },
+    {
+      "name": "INIT_INSURANCE_PRICE",
+      "type": "structure",
+      "children": [
+        {
+          "name": "3RDPARTY",
+          "type": "string",
+          "value": "500"
+        },
+        {
+          "name": "COMPREHENSIVE",
+          "type": "string",
+          "value": "1500"
+        },
+        {
+          "name": "CTP",
+          "type": "string",
+          "value": "500"
+        }
+      ]
+    },
+    {
+      "name": "LEVEL_TIME",
+      "type": "string",
+      "value": "60"
+    },
+    {
+      "name": "insurancePrice",
+      "type": "structure",
+      "children": [
+        {
+          "name": "3rdParty",
+          "type": "string",
+          "value": "0"
+        },
+        {
+          "name": "comprehensive",
+          "type": "string",
+          "value": "0"
+        },
+        {
+          "name": "ctp",
+          "type": "string",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "name": "",
+      "type": "string",
+      "value": ""
+    }
+  ],
   "layouts": [
     {
       "b": 209,
       "disableInputWhenNotFocused": true,
-      "mangledName": "New_32scene",
-      "name": "New scene",
+      "mangledName": "Game_32Play_32_45_32Level_321",
+      "name": "Game Play - Level 1",
       "oglFOV": 90,
       "oglZFar": 500,
       "oglZNear": 1,
@@ -242,6 +300,7 @@
         "gridOffsetX": 0,
         "gridOffsetY": 0,
         "gridR": 158,
+        "gridType": "rectangular",
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
@@ -251,10 +310,12 @@
       "variables": [
         {
           "name": "CarLeft",
+          "type": "string",
           "value": ""
         },
         {
           "name": "CarRight",
+          "type": "string",
           "value": ""
         }
       ],
@@ -276,13 +337,16 @@
           "initialVariables": [
             {
               "name": "Variable",
+              "type": "string",
               "value": ""
             },
             {
               "name": "Variable2",
+              "type": "structure",
               "children": [
                 {
                   "name": "ChildVariable",
+                  "type": "string",
                   "value": ""
                 }
               ]
@@ -295,7 +359,7 @@
           "height": 600,
           "layer": "",
           "locked": false,
-          "name": "Highway",
+          "name": "Road",
           "persistentUuid": "3a598f28-8dd0-4b11-b07c-af7004ca5be0",
           "width": 800,
           "x": 3,
@@ -362,7 +426,7 @@
           ]
         },
         {
-          "name": "Highway",
+          "name": "Road",
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
@@ -734,7 +798,7 @@
               },
               "parameters": [
                 "",
-                "Highway",
+                "Road",
                 "no",
                 "",
                 ""
@@ -1371,8 +1435,8 @@
     {
       "b": 209,
       "disableInputWhenNotFocused": true,
-      "mangledName": "New_32scene2",
-      "name": "New scene2",
+      "mangledName": "Game_32Play_32_45_32Level_322",
+      "name": "Game Play - Level 2",
       "oglFOV": 90,
       "oglZFar": 500,
       "oglZNear": 1,
@@ -1389,6 +1453,7 @@
         "gridOffsetX": 0,
         "gridOffsetY": 0,
         "gridR": 158,
+        "gridType": "rectangular",
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
