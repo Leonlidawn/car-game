@@ -231,6 +231,13 @@
         "name": "document.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "Bimbo_JVE.ttf",
+        "kind": "font",
+        "metadata": "",
+        "name": "Bimbo_JVE.ttf",
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -1578,7 +1585,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 1.008
+        "zoomFactor": 0.8679999999999999
       },
       "objectsGroups": [
         {
@@ -1592,6 +1599,34 @@
             },
             {
               "name": "insuranceButton0"
+            }
+          ]
+        },
+        {
+          "name": "insuranceTitleGroup",
+          "objects": [
+            {
+              "name": "insuranceTitle0"
+            },
+            {
+              "name": "insuranceTitle1"
+            },
+            {
+              "name": "insuranceTitle2"
+            }
+          ]
+        },
+        {
+          "name": "insurancePolicyGroup",
+          "objects": [
+            {
+              "name": "insuranceButton0Des"
+            },
+            {
+              "name": "insuranceButton1Des"
+            },
+            {
+              "name": "insuranceButton2Des"
             }
           ]
         }
@@ -1688,6 +1723,11 @@
           "name": "BUTTON_MARGIN_RATIO",
           "type": "string",
           "value": "0.01"
+        },
+        {
+          "name": "TEXT_MARGIN",
+          "type": "string",
+          "value": "2"
         }
       ],
       "instances": [
@@ -1757,15 +1797,15 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "height": 28,
+          "customSize": false,
+          "height": 0,
           "layer": "",
           "locked": false,
-          "name": "button1Description",
-          "persistentUuid": "764be4a0-0292-4514-a370-bc3d60cf981c",
-          "width": 105,
-          "x": 49,
-          "y": 83,
+          "name": "insuranceTitle0",
+          "persistentUuid": "3c636a8f-4891-4ae4-abbd-d8ba6f90047f",
+          "width": 0,
+          "x": 5,
+          "y": 46,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -1773,32 +1813,80 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "height": 28,
+          "customSize": false,
+          "height": 0,
           "layer": "",
           "locked": false,
-          "name": "button1Description",
-          "persistentUuid": "07df43b3-7e43-4f47-a8f4-cd74c1f1db18",
-          "width": 105,
-          "x": 48,
-          "y": 110,
-          "zOrder": 6,
+          "name": "insuranceTitle1",
+          "persistentUuid": "6e18682a-4bf4-4907-9816-5f20ddc3bd40",
+          "width": 0,
+          "x": 105,
+          "y": 249,
+          "zOrder": 7,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
         },
         {
           "angle": 0,
-          "customSize": true,
-          "height": 28,
+          "customSize": false,
+          "height": 0,
           "layer": "",
           "locked": false,
-          "name": "button1Description",
-          "persistentUuid": "638f55ec-79dd-4f35-9223-bf6b56884fd5",
-          "width": 105,
-          "x": 48,
-          "y": 146,
-          "zOrder": 6,
+          "name": "insuranceTitle2",
+          "persistentUuid": "eaeb4e99-688c-4452-bc6d-f412fef3ab43",
+          "width": 0,
+          "x": 93,
+          "y": 380,
+          "zOrder": 8,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "insuranceButton0Des",
+          "persistentUuid": "4f1c234f-e77b-46d5-84ee-8fbcce0a0b66",
+          "width": 0,
+          "x": 123,
+          "y": 126,
+          "zOrder": 9,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "insuranceButton1Des",
+          "persistentUuid": "5384debe-03df-46d0-8800-398b80558709",
+          "width": 0,
+          "x": 149,
+          "y": 310,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "insuranceButton2Des",
+          "persistentUuid": "9cda6e75-3acb-4e9c-bea4-e8c484e4a99c",
+          "width": 0,
+          "x": 122,
+          "y": 433,
+          "zOrder": 11,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2016,22 +2104,105 @@
           ]
         },
         {
-          "bold": false,
-          "italic": false,
-          "name": "button1Description",
-          "smoothed": true,
+          "name": "insuranceButton0Des",
           "tags": "",
-          "type": "TextObject::Text",
-          "underlined": false,
+          "type": "BBText::BBText",
           "variables": [],
           "behaviors": [],
-          "string": "(icon) Policy 1: simple description ",
-          "font": "",
-          "characterSize": 8,
-          "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
+          "content": {
+            "text": "policy",
+            "opacity": 255,
+            "fontSize": 20,
+            "visible": true,
+            "color": "#000000",
+            "fontFamily": "Bimbo_JVE.ttf",
+            "align": "left",
+            "wordWrap": true
+          }
+        },
+        {
+          "name": "insuranceButton1Des",
+          "tags": "",
+          "type": "BBText::BBText",
+          "variables": [],
+          "behaviors": [],
+          "content": {
+            "text": "policy",
+            "opacity": 255,
+            "fontSize": 20,
+            "visible": true,
+            "color": "#000000",
+            "fontFamily": "Bimbo_JVE.ttf",
+            "align": "left",
+            "wordWrap": true
+          }
+        },
+        {
+          "name": "insuranceButton2Des",
+          "tags": "",
+          "type": "BBText::BBText",
+          "variables": [],
+          "behaviors": [],
+          "content": {
+            "text": "policy",
+            "opacity": 255,
+            "fontSize": 20,
+            "visible": true,
+            "color": "#000000",
+            "fontFamily": "Bimbo_JVE.ttf",
+            "align": "left",
+            "wordWrap": true
+          }
+        },
+        {
+          "name": "insuranceTitle0",
+          "tags": "",
+          "type": "BBText::BBText",
+          "variables": [],
+          "behaviors": [],
+          "content": {
+            "text": "Title",
+            "opacity": 255,
+            "fontSize": 20,
+            "visible": true,
+            "color": "#000000",
+            "fontFamily": "Bimbo_JVE.ttf",
+            "align": "left",
+            "wordWrap": true
+          }
+        },
+        {
+          "name": "insuranceTitle1",
+          "tags": "",
+          "type": "BBText::BBText",
+          "variables": [],
+          "behaviors": [],
+          "content": {
+            "text": "Title",
+            "opacity": 255,
+            "fontSize": 20,
+            "visible": true,
+            "color": "#000000",
+            "fontFamily": "Bimbo_JVE.ttf",
+            "align": "left",
+            "wordWrap": true
+          }
+        },
+        {
+          "name": "insuranceTitle2",
+          "tags": "",
+          "type": "BBText::BBText",
+          "variables": [],
+          "behaviors": [],
+          "content": {
+            "text": "Title",
+            "opacity": 255,
+            "fontSize": 20,
+            "visible": true,
+            "color": "#000000",
+            "fontFamily": "Bimbo_JVE.ttf",
+            "align": "left",
+            "wordWrap": true
           }
         }
       ],
@@ -2285,27 +2456,7 @@
                 "ScreenHeight()*(Variable(YPADDING_RATIO)+Variable(BUTTON_MARGIN_RATIO))"
               ],
               "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": true,
-                "value": "GetArgumentAsBoolean"
-              },
-              "parameters": [
-                "VariableString(isInitialized)"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
+            },
             {
               "type": {
                 "inverted": false,
@@ -2329,8 +2480,98 @@
                 "ScreenHeight()*(Variable(YPADDING_RATIO)+Variable(BUTTON_MARGIN_RATIO)*3) + ScreenHeight()*(1-Variable(YPADDING_RATIO)*2-Variable(BUTTON_MARGIN_RATIO)*6)/3"
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "BBText::SetAlignment"
+              },
+              "parameters": [
+                "insuranceTitleGroup",
+                "\"left\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "BBText::SetFontSize"
+              },
+              "parameters": [
+                "insuranceTitleGroup",
+                "=",
+                "18"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "BBText::SetWrappingWidth"
+              },
+              "parameters": [
+                "insuranceTitleGroup",
+                "=",
+                "insuranceButtonGroup.Width()- 2*Variable(TEXT_MARGIN\n)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "BBText::SetWrappingWidth"
+              },
+              "parameters": [
+                "insurancePolicyGroup",
+                "=",
+                "insuranceButtonGroup.Width()- 2*Variable(TEXT_MARGIN\n)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreX"
+              },
+              "parameters": [
+                "insuranceTitleGroup",
+                "=",
+                "ScreenWidth()*Variable(XPADDING_RATIO) + Variable(TEXT_MARGIN)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreX"
+              },
+              "parameters": [
+                "insurancePolicyGroup",
+                "=",
+                "ScreenWidth()*Variable(XPADDING_RATIO) + Variable(TEXT_MARGIN)"
+              ],
+              "subInstructions": []
             }
           ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "GetArgumentAsBoolean"
+              },
+              "parameters": [
+                "VariableString(isInitialized)"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [],
           "events": []
         }
       ],
