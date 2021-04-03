@@ -238,6 +238,49 @@
         "metadata": "",
         "name": "Bimbo_JVE.ttf",
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Screen Shot 2021-04-03 at 9.48.25 pm.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Screen Shot 2021-04-03 at 9.48.25 pm.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Screen Shot 2021-04-03 at 9.48.25 pm2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Screen Shot 2021-04-03 at 9.48.25 pm2.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Screen Shot 2021-04-03 at 9.48.25 pm3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Screen Shot 2021-04-03 at 9.48.25 pm3.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Screen Shot 2021-04-03 at 9.48.25 pm4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Screen Shot 2021-04-03 at 9.48.25 pm4.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "FontAwesome.ttf",
+        "kind": "font",
+        "metadata": "",
+        "name": "FontAwesome.ttf",
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -322,6 +365,11 @@
       "name": "currentLevel",
       "type": "string",
       "value": "0"
+    },
+    {
+      "name": "INSURANCE_BUTTON_TITLE_FONT_SIZE",
+      "type": "string",
+      "value": "18"
     }
   ],
   "layouts": [
@@ -1563,8 +1611,8 @@
     {
       "b": 209,
       "disableInputWhenNotFocused": true,
-      "mangledName": "Choose_32Insurance",
-      "name": "Choose Insurance",
+      "mangledName": "Choose_32Insurance_32_45_32Level_321",
+      "name": "Choose Insurance - Level 1",
       "oglFOV": 90,
       "oglZFar": 500,
       "oglZNear": 1,
@@ -1727,7 +1775,12 @@
         {
           "name": "TEXT_MARGIN",
           "type": "string",
-          "value": "2"
+          "value": "12"
+        },
+        {
+          "name": "TITLE_FONT_SIZE",
+          "type": "string",
+          "value": "18"
         }
       ],
       "instances": [
@@ -1741,7 +1794,7 @@
           "persistentUuid": "2a79723d-0907-402d-ac99-30f037898529",
           "width": 0,
           "x": 0,
-          "y": 1,
+          "y": -1,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -1749,15 +1802,15 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 136,
+          "customSize": true,
+          "height": 176,
           "layer": "",
           "locked": false,
           "name": "insuranceButton0",
           "persistentUuid": "a8f5ae45-6c05-483e-bc7d-85e5a7fdac5d",
-          "width": 315,
-          "x": 3,
-          "y": 42,
+          "width": 167,
+          "x": 69,
+          "y": 28,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -1766,14 +1819,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 123,
+          "height": 145,
           "layer": "",
           "locked": false,
           "name": "insuranceButton1",
           "persistentUuid": "c3b7d1d8-11a4-4b4d-815a-6ac43021a88f",
-          "width": 126,
-          "x": 90,
-          "y": 229,
+          "width": 164,
+          "x": 65,
+          "y": 223,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1782,14 +1835,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 137,
+          "height": 164,
           "layer": "",
           "locked": false,
           "name": "insuranceButton2",
           "persistentUuid": "1e19e2c9-facc-43e5-8b80-3c3f3b2863dd",
-          "width": 131,
-          "x": 85,
-          "y": 366,
+          "width": 171,
+          "x": 63,
+          "y": 379,
           "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
@@ -1804,8 +1857,8 @@
           "name": "insuranceTitle0",
           "persistentUuid": "3c636a8f-4891-4ae4-abbd-d8ba6f90047f",
           "width": 0,
-          "x": 5,
-          "y": 46,
+          "x": 119,
+          "y": 53,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -1820,8 +1873,8 @@
           "name": "insuranceTitle1",
           "persistentUuid": "6e18682a-4bf4-4907-9816-5f20ddc3bd40",
           "width": 0,
-          "x": 105,
-          "y": 249,
+          "x": 121,
+          "y": 251,
           "zOrder": 7,
           "numberProperties": [],
           "stringProperties": [],
@@ -1836,8 +1889,8 @@
           "name": "insuranceTitle2",
           "persistentUuid": "eaeb4e99-688c-4452-bc6d-f412fef3ab43",
           "width": 0,
-          "x": 93,
-          "y": 380,
+          "x": 128,
+          "y": 386,
           "zOrder": 8,
           "numberProperties": [],
           "stringProperties": [],
@@ -1868,8 +1921,8 @@
           "name": "insuranceButton1Des",
           "persistentUuid": "5384debe-03df-46d0-8800-398b80558709",
           "width": 0,
-          "x": 149,
-          "y": 310,
+          "x": 107,
+          "y": 303,
           "zOrder": 10,
           "numberProperties": [],
           "stringProperties": [],
@@ -1885,7 +1938,7 @@
           "persistentUuid": "9cda6e75-3acb-4e9c-bea4-e8c484e4a99c",
           "width": 0,
           "x": 122,
-          "y": 433,
+          "y": 429,
           "zOrder": 11,
           "numberProperties": [],
           "stringProperties": [],
@@ -1907,6 +1960,71 @@
           "width": 320,
           "variables": [],
           "behaviors": []
+        },
+        {
+          "name": "insuranceButton22",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "isSelected",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "value": "string type not supported"
+            },
+            {
+              "name": "price",
+              "type": "string",
+              "value": "-1"
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "value": "string type not supported"
+            },
+            {
+              "name": "buttonPositionIndex",
+              "type": "string",
+              "value": "2"
+            }
+          ],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Screen Shot 2021-04-03 at 9.48.25 pm2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         },
         {
           "name": "insuranceButton2",
@@ -1952,7 +2070,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "document.png",
+                      "image": "Screen Shot 2021-04-03 at 9.48.25 pm2.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -2017,7 +2135,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "document.png",
+                      "image": "Screen Shot 2021-04-03 at 9.48.25 pm3.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -2082,7 +2200,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "document.png",
+                      "image": "Screen Shot 2021-04-03 at 9.48.25 pm4.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -2132,7 +2250,7 @@
             "fontSize": 20,
             "visible": true,
             "color": "#000000",
-            "fontFamily": "Bimbo_JVE.ttf",
+            "fontFamily": "FontAwesome.ttf",
             "align": "left",
             "wordWrap": true
           }
@@ -2149,7 +2267,7 @@
             "fontSize": 20,
             "visible": true,
             "color": "#000000",
-            "fontFamily": "Bimbo_JVE.ttf",
+            "fontFamily": "FontAwesome.ttf",
             "align": "left",
             "wordWrap": true
           }
@@ -2166,7 +2284,7 @@
             "fontSize": 20,
             "visible": true,
             "color": "#000000",
-            "fontFamily": "Bimbo_JVE.ttf",
+            "fontFamily": "",
             "align": "left",
             "wordWrap": true
           }
@@ -2183,7 +2301,7 @@
             "fontSize": 20,
             "visible": true,
             "color": "#000000",
-            "fontFamily": "Bimbo_JVE.ttf",
+            "fontFamily": "",
             "align": "left",
             "wordWrap": true
           }
@@ -2200,7 +2318,7 @@
             "fontSize": 20,
             "visible": true,
             "color": "#000000",
-            "fontFamily": "Bimbo_JVE.ttf",
+            "fontFamily": "",
             "align": "left",
             "wordWrap": true
           }
@@ -2252,43 +2370,88 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": " insurance button group, 根据当前关卡载入可选择的保险数据\n\nproblem: \nthere is no string variable in gDevelop.....\n不支持array[variable]这样的做法\n\n1. first draft:\n load price only.  => when price is -1, it needs to be initialized\n show if it is availble\n\n/////\nscene.insuranceButtonGroup.foreach(\n  (button)=>{\n     const insuranceArray = scene.levelInsuranceArray;\n     const buttonData = insuranceArray[button.buttonPositionIndex];\n     button.enable = buttonData.isavailable\n  }\n}\n\n//====\nscene.insuranceButtonGroup.foreach(\n  (button)=>{\n     ...\n      button.enable = scene.levelInsuranceArray[button.buttonPositionIndex].isAvailable;\n  }\n}\n\n\n////最粗暴可行的的方案， 有很多个选择保险的scene，每个scene里面只有price是不一样的，其它copy paste\n",
-              "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "",
+              "comment": "设置insurance button的位置与大小",
               "comment2": ""
             },
             {
               "disabled": false,
               "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
+              "conditions": [],
+              "actions": [
                 {
                   "type": {
                     "inverted": false,
-                    "value": "Egal"
+                    "value": "ChangeHeight"
                   },
                   "parameters": [
-                    "GlobalVariableString(GlobalVariableString(currentLevel))",
+                    "insuranceButtonGroup",
                     "=",
-                    "0"
+                    "ScreenHeight()*(1-Variable(YPADDING_RATIO)*2-Variable(BUTTON_MARGIN_RATIO)*6)/3"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeWidth"
+                  },
+                  "parameters": [
+                    "insuranceButtonGroup",
+                    "=",
+                    "ScreenWidth()*(1-Variable(XPADDING_RATIO)*2)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MettreX"
+                  },
+                  "parameters": [
+                    "insuranceButtonGroup",
+                    "=",
+                    "ScreenWidth()*Variable(XPADDING_RATIO)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MettreY"
+                  },
+                  "parameters": [
+                    "insuranceButton0",
+                    "=",
+                    "ScreenHeight()*(Variable(YPADDING_RATIO)+Variable(BUTTON_MARGIN_RATIO))"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MettreY"
+                  },
+                  "parameters": [
+                    "insuranceButton2",
+                    "=",
+                    "ScreenHeight()*(Variable(YPADDING_RATIO)+Variable(BUTTON_MARGIN_RATIO)*5) + ScreenHeight()*(1-Variable(YPADDING_RATIO)*2-Variable(BUTTON_MARGIN_RATIO)*6)*2/3"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MettreY"
+                  },
+                  "parameters": [
+                    "insuranceButton1",
+                    "=",
+                    "ScreenHeight()*(Variable(YPADDING_RATIO)+Variable(BUTTON_MARGIN_RATIO)*3) + ScreenHeight()*(1-Variable(YPADDING_RATIO)*2-Variable(BUTTON_MARGIN_RATIO)*6)/3"
                   ],
                   "subInstructions": []
                 }
               ],
-              "actions": [],
               "events": [
                 {
                   "disabled": false,
@@ -2302,7 +2465,7 @@
                     "textG": 0,
                     "textR": 0
                   },
-                  "comment": "选中关卡后 根据该关卡的数据 显示可购买的保险",
+                  "comment": "设置insurance button 内的title",
                   "comment2": ""
                 },
                 {
@@ -2310,46 +2473,226 @@
                   "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
-                  "actions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BBText::SetFontSize"
+                      },
+                      "parameters": [
+                        "insuranceTitleGroup",
+                        "=",
+                        "Variable(TITLE_FONT_SIZE)"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BBText::SetAlignment"
+                      },
+                      "parameters": [
+                        "insuranceTitleGroup",
+                        "\"left\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "MettreX"
+                      },
+                      "parameters": [
+                        "insuranceTitleGroup",
+                        "=",
+                        "ScreenWidth()*Variable(XPADDING_RATIO) + Variable(TEXT_MARGIN)"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BBText::SetWrappingWidth"
+                      },
+                      "parameters": [
+                        "insuranceTitleGroup",
+                        "=",
+                        "insuranceButtonGroup.Width()- 2*Variable(TEXT_MARGIN\n)"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "MettreY"
+                      },
+                      "parameters": [
+                        "insuranceTitle0",
+                        "=",
+                        "insuranceButton0.Y()+Variable(INSURANCE_BUTTON_TITLE_FONT_SIZE)+Variable(TEXT_MARGIN)"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "MettreY"
+                      },
+                      "parameters": [
+                        "insuranceTitle1",
+                        "=",
+                        "insuranceButton1.Y()+Variable(INSURANCE_BUTTON_TITLE_FONT_SIZE)+Variable(TEXT_MARGIN)"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "MettreY"
+                      },
+                      "parameters": [
+                        "insuranceTitle2",
+                        "=",
+                        "insuranceButton2.Y()+Variable(INSURANCE_BUTTON_TITLE_FONT_SIZE)+Variable(TEXT_MARGIN)"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BBText::SetBBText"
+                      },
+                      "parameters": [
+                        "insuranceTitle0",
+                        "=",
+                        "\"CTP\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BBText::SetBBText"
+                      },
+                      "parameters": [
+                        "insuranceTitle1",
+                        "=",
+                        "\"Third Party Insurance\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BBText::SetBBText"
+                      },
+                      "parameters": [
+                        "insuranceTitle2",
+                        "=",
+                        "\"Comprehensive Insurance\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "设置insurance button 内的policy",
+                  "comment2": ""
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BBText::SetFontSize"
+                      },
+                      "parameters": [
+                        "insurancePolicyGroup",
+                        "=",
+                        "Variable(TITLE_FONT_SIZE)*0.8"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BBText::SetWrappingWidth"
+                      },
+                      "parameters": [
+                        "insurancePolicyGroup",
+                        "=",
+                        "insuranceButtonGroup.Width()- 2*Variable(TEXT_MARGIN\n)"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "MettreX"
+                      },
+                      "parameters": [
+                        "insurancePolicyGroup",
+                        "=",
+                        "ScreenWidth()*Variable(XPADDING_RATIO) + Variable(TEXT_MARGIN)"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "MettreY"
+                      },
+                      "parameters": [
+                        "insuranceButton0Des",
+                        "=",
+                        "insuranceTitle0.Y()+insuranceTitleGroup.GetFontSize()+insurancePolicyGroup.GetFontSize()"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "MettreY"
+                      },
+                      "parameters": [
+                        "insuranceButton1Des",
+                        "=",
+                        "insuranceTitle1.Y()+insuranceTitleGroup.GetFontSize()+insurancePolicyGroup.GetFontSize()"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "MettreY"
+                      },
+                      "parameters": [
+                        "insuranceButton2Des",
+                        "=",
+                        "insuranceTitle2.Y()+insuranceTitleGroup.GetFontSize()+insurancePolicyGroup.GetFontSize()"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
                   "events": []
                 }
               ]
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "VarObjet"
-                  },
-                  "parameters": [
-                    "insuranceButtonGroup",
-                    "price",
-                    "=",
-                    "-1"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarObjet"
-                  },
-                  "parameters": [
-                    "insuranceButtonGroup",
-                    "price",
-                    "=",
-                    "GlobalVariable(insurancePrice.3rdParty)"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
             },
             {
               "disabled": false,
@@ -2365,43 +2708,8 @@
               },
               "comment": "初始化结束",
               "comment2": ""
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "SetSceneVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "isInitialized",
-                    "True"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
             }
           ]
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "1. 如何确定有什么保险可以购买？\n=> 在scene设定每一关显示什么保险， 可以用 levelInsrance:[ insuranceArray: [<i1:{相关信息},i2:{}>]] 结构表示？\n2. 如何确定保险的显示位置？\n=> 假设我们可以loop through  array. 根据当前这关的array.length来决定 InsuranceButton.visible 的属性，\n如何让button知道对应的array index？让button自身带有index属性",
-          "comment2": ""
         },
         {
           "disabled": false,
@@ -2412,143 +2720,11 @@
             {
               "type": {
                 "inverted": false,
-                "value": "ChangeHeight"
+                "value": "SetSceneVariableAsBoolean"
               },
               "parameters": [
-                "insuranceButtonGroup",
-                "=",
-                "ScreenHeight()*(1-Variable(YPADDING_RATIO)*2-Variable(BUTTON_MARGIN_RATIO)*6)/3"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ChangeWidth"
-              },
-              "parameters": [
-                "insuranceButtonGroup",
-                "=",
-                "ScreenWidth()*(1-Variable(XPADDING_RATIO)*2)"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "MettreX"
-              },
-              "parameters": [
-                "insuranceButtonGroup",
-                "=",
-                "ScreenWidth()*Variable(XPADDING_RATIO)"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "MettreY"
-              },
-              "parameters": [
-                "insuranceButton0",
-                "=",
-                "ScreenHeight()*(Variable(YPADDING_RATIO)+Variable(BUTTON_MARGIN_RATIO))"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "MettreY"
-              },
-              "parameters": [
-                "insuranceButton2",
-                "=",
-                "ScreenHeight()*(Variable(YPADDING_RATIO)+Variable(BUTTON_MARGIN_RATIO)*5) + ScreenHeight()*(1-Variable(YPADDING_RATIO)*2-Variable(BUTTON_MARGIN_RATIO)*6)*2/3"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "MettreY"
-              },
-              "parameters": [
-                "insuranceButton1",
-                "=",
-                "ScreenHeight()*(Variable(YPADDING_RATIO)+Variable(BUTTON_MARGIN_RATIO)*3) + ScreenHeight()*(1-Variable(YPADDING_RATIO)*2-Variable(BUTTON_MARGIN_RATIO)*6)/3"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "BBText::SetAlignment"
-              },
-              "parameters": [
-                "insuranceTitleGroup",
-                "\"left\""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "BBText::SetFontSize"
-              },
-              "parameters": [
-                "insuranceTitleGroup",
-                "=",
-                "18"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "BBText::SetWrappingWidth"
-              },
-              "parameters": [
-                "insuranceTitleGroup",
-                "=",
-                "insuranceButtonGroup.Width()- 2*Variable(TEXT_MARGIN\n)"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "BBText::SetWrappingWidth"
-              },
-              "parameters": [
-                "insurancePolicyGroup",
-                "=",
-                "insuranceButtonGroup.Width()- 2*Variable(TEXT_MARGIN\n)"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "MettreX"
-              },
-              "parameters": [
-                "insuranceTitleGroup",
-                "=",
-                "ScreenWidth()*Variable(XPADDING_RATIO) + Variable(TEXT_MARGIN)"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "MettreX"
-              },
-              "parameters": [
-                "insurancePolicyGroup",
-                "=",
-                "ScreenWidth()*Variable(XPADDING_RATIO) + Variable(TEXT_MARGIN)"
+                "isInitialized",
+                "True"
               ],
               "subInstructions": []
             }
@@ -2559,18 +2735,31 @@
           "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": true,
-                "value": "GetArgumentAsBoolean"
-              },
-              "parameters": [
-                "VariableString(isInitialized)"
-              ],
-              "subInstructions": []
-            }
-          ],
+          "conditions": [],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
           "actions": [],
           "events": []
         }
