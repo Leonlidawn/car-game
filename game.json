@@ -2582,7 +2582,7 @@
                   "parameters": [
                     "confirmButtonText",
                     "=",
-                    "\"[b]CHOOSE INSURANCE[/b]\""
+                    "\"TODO: draw me in the button!Confirm\""
                   ],
                   "subInstructions": []
                 },
@@ -2594,7 +2594,7 @@
                   "parameters": [
                     "confirmButtonText",
                     "=",
-                    "(ScreenHeight()*Variable(YPADDING_RATIO)-Variable(TITLE_FONT_SIZE)*1.2)/2"
+                    "confirmButton.Y()+confirmButton.Height()/2 -Variable(TITLE_FONT_SIZE)/2"
                   ],
                   "subInstructions": []
                 },
@@ -2606,7 +2606,7 @@
                   "parameters": [
                     "confirmButtonText",
                     "=",
-                    "ScreenWidth()"
+                    "ScreenWidth()/2-comfirmButtonText.Width()/2"
                   ],
                   "subInstructions": []
                 }
