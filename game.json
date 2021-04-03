@@ -281,6 +281,15 @@
         "metadata": "",
         "name": "FontAwesome.ttf",
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "confirmButtonBackground.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "confirmButtonBackground.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -1633,7 +1642,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.8679999999999999
+        "zoomFactor": 0.8079999999999998
       },
       "objectsGroups": [
         {
@@ -1781,6 +1790,16 @@
           "name": "TITLE_FONT_SIZE",
           "type": "string",
           "value": "18"
+        },
+        {
+          "name": "CONFIRM_BUTTON_HEIGHT",
+          "type": "string",
+          "value": "20"
+        },
+        {
+          "name": "",
+          "type": "string",
+          "value": ""
         }
       ],
       "instances": [
@@ -1940,6 +1959,54 @@
           "x": 122,
           "y": 429,
           "zOrder": 11,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "PageTitle",
+          "persistentUuid": "58197e99-b34f-4c54-b8c0-d765add20016",
+          "width": 0,
+          "x": 57,
+          "y": 10,
+          "zOrder": 12,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 31,
+          "layer": "",
+          "locked": false,
+          "name": "confirmButton",
+          "persistentUuid": "1bd294cf-d6f2-4b27-9ae7-6243445d4aa5",
+          "width": 137,
+          "x": 74,
+          "y": 553,
+          "zOrder": 13,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "confirmButtonText",
+          "persistentUuid": "d43f8aca-6a6b-42a3-a77e-69deabb1f0c8",
+          "width": 0,
+          "x": 117,
+          "y": 555,
+          "zOrder": 14,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2214,6 +2281,62 @@
             "align": "left",
             "wordWrap": true
           }
+        },
+        {
+          "name": "confirmButton",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "confirmButtonBackground.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "confirmButtonText",
+          "tags": "",
+          "type": "BBText::BBText",
+          "variables": [],
+          "behaviors": [],
+          "content": {
+            "text": "confirm",
+            "opacity": 255,
+            "fontSize": 20,
+            "visible": true,
+            "color": "#000000",
+            "fontFamily": "",
+            "align": "left",
+            "wordWrap": true
+          }
         }
       ],
       "events": [
@@ -2274,12 +2397,12 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "MettreY"
+                    "value": "BBText::SetFontSize"
                   },
                   "parameters": [
-                    "insuranceTitle0",
+                    "PageTitle",
                     "=",
-                    "insuranceButton0.Y()+Variable(INSURANCE_BUTTON_TITLE_FONT_SIZE)+Variable(TEXT_MARGIN)"
+                    "Variable(TITLE_FONT_SIZE)*1.2"
                   ],
                   "subInstructions": []
                 },
@@ -2289,9 +2412,9 @@
                     "value": "MettreY"
                   },
                   "parameters": [
-                    "insuranceTitle0",
+                    "PageTitle",
                     "=",
-                    "insuranceButton0.Y()+Variable(INSURANCE_BUTTON_TITLE_FONT_SIZE)+Variable(TEXT_MARGIN)"
+                    "(ScreenHeight()*Variable(YPADDING_RATIO)-Variable(TITLE_FONT_SIZE)*1.2)/2"
                   ],
                   "subInstructions": []
                 },
@@ -2304,6 +2427,186 @@
                     "PageTitle",
                     "=",
                     "ScreenWidth()*Variable(XPADDING_RATIO)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BBText::SetWrappingWidth"
+                  },
+                  "parameters": [
+                    "PageTitle",
+                    "=",
+                    "ScreenWidth()*(1-Variable(XPADDING_RATIO))"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BBText::SetBBText"
+                  },
+                  "parameters": [
+                    "PageTitle",
+                    "=",
+                    "\"[b]CHOOSE INSURANCE[/b]\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "设置confirm button",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeHeight"
+                  },
+                  "parameters": [
+                    "confirmButton",
+                    "=",
+                    "Variable(CONFIRM_BUTTON_HEIGHT)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeWidth"
+                  },
+                  "parameters": [
+                    "confirmButton",
+                    "=",
+                    "ScreenWidth()/3"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MettreY"
+                  },
+                  "parameters": [
+                    "confirmButton",
+                    "=",
+                    "ScreenHeight()*(1-Variable(YPADDING_RATIO))"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MettreX"
+                  },
+                  "parameters": [
+                    "confirmButton",
+                    "=",
+                    "ScreenWidth()/3"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "设置confirm button text",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BBText::SetFontSize"
+                  },
+                  "parameters": [
+                    "confirmButtonText",
+                    "=",
+                    "Variable(TITLE_FONT_SIZE)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BBText::SetWrappingWidth"
+                  },
+                  "parameters": [
+                    "confirmButtonText",
+                    "=",
+                    "ScreenWidth()/3-4"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BBText::SetBBText"
+                  },
+                  "parameters": [
+                    "confirmButtonText",
+                    "=",
+                    "\"[b]CHOOSE INSURANCE[/b]\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MettreY"
+                  },
+                  "parameters": [
+                    "confirmButtonText",
+                    "=",
+                    "(ScreenHeight()*Variable(YPADDING_RATIO)-Variable(TITLE_FONT_SIZE)*1.2)/2"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MettreX"
+                  },
+                  "parameters": [
+                    "confirmButtonText",
+                    "=",
+                    "ScreenWidth()"
                   ],
                   "subInstructions": []
                 }
