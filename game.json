@@ -213,6 +213,24 @@
         "name": "Explosion_6.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "background.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "background.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "document.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "document.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -257,8 +275,8 @@
       "children": [
         {
           "name": "3rdParty",
-          "type": "string",
-          "value": "0"
+          "type": "number",
+          "value": 0
         },
         {
           "name": "comprehensive",
@@ -273,9 +291,30 @@
       ]
     },
     {
-      "name": "",
+      "name": "currentInsurance",
+      "type": "structure",
+      "children": [
+        {
+          "name": "3rdParty",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "comprehensive",
+          "type": "boolean",
+          "value": false
+        },
+        {
+          "name": "ctp",
+          "type": "boolean",
+          "value": true
+        }
+      ]
+    },
+    {
+      "name": "currentLevel",
       "type": "string",
-      "value": ""
+      "value": "0"
     }
   ],
   "layouts": [
@@ -1493,6 +1532,720 @@
           "ambientLightColorB": 0,
           "ambientLightColorG": 0,
           "ambientLightColorR": 6587272,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": []
+        }
+      ],
+      "behaviorsSharedData": []
+    },
+    {
+      "b": 209,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "Choose_32Insurance",
+      "name": "Choose Insurance",
+      "oglFOV": 90,
+      "oglZFar": 500,
+      "oglZNear": 1,
+      "r": 209,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "Choose Insurance",
+      "v": 209,
+      "uiSettings": {
+        "grid": false,
+        "gridB": 255,
+        "gridG": 180,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridR": 158,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "snap": true,
+        "windowMask": false,
+        "zoomFactor": 1
+      },
+      "objectsGroups": [
+        {
+          "name": "insuranceButtonGroup",
+          "objects": [
+            {
+              "name": "insuranceButton2"
+            },
+            {
+              "name": "insuranceButton1"
+            },
+            {
+              "name": "insuranceButton0"
+            }
+          ]
+        }
+      ],
+      "variables": [
+        {
+          "name": "levelInsuranceArray",
+          "type": "array",
+          "children": [
+            {
+              "type": "structure",
+              "children": [
+                {
+                  "name": "3rdParty",
+                  "type": "structure",
+                  "children": [
+                    {
+                      "name": "description",
+                      "type": "string",
+                      "value": "<可以考虑改成 policy collection>"
+                    },
+                    {
+                      "name": "isAvailable",
+                      "type": "boolean",
+                      "value": true
+                    },
+                    {
+                      "name": "price",
+                      "type": "string",
+                      "value": ""
+                    }
+                  ]
+                },
+                {
+                  "name": "comprehensive",
+                  "type": "structure",
+                  "children": [
+                    {
+                      "name": "description",
+                      "type": "string",
+                      "value": ""
+                    },
+                    {
+                      "name": "isAvailable",
+                      "type": "boolean",
+                      "value": true
+                    },
+                    {
+                      "name": "price",
+                      "type": "string",
+                      "value": ""
+                    }
+                  ]
+                },
+                {
+                  "name": "ctp",
+                  "type": "structure",
+                  "children": [
+                    {
+                      "name": "isAvailable",
+                      "type": "boolean",
+                      "value": false
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "number",
+              "value": 0
+            },
+            {
+              "type": "number",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "isInitialized",
+          "type": "boolean",
+          "value": false
+        }
+      ],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "InsuranceSelectPanelBackground",
+          "persistentUuid": "2a79723d-0907-402d-ac99-30f037898529",
+          "width": 0,
+          "x": 1,
+          "y": 0,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 126,
+          "layer": "",
+          "locked": false,
+          "name": "insuranceButton0",
+          "persistentUuid": "a8f5ae45-6c05-483e-bc7d-85e5a7fdac5d",
+          "width": 128,
+          "x": 21,
+          "y": 52,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 126,
+          "layer": "",
+          "locked": false,
+          "name": "insuranceButton0",
+          "persistentUuid": "0188bfd6-00c8-4f1d-b39f-f039627dbfca",
+          "width": 128,
+          "x": 21,
+          "y": 52,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 126,
+          "layer": "",
+          "locked": false,
+          "name": "insuranceButton0",
+          "persistentUuid": "15952a2f-fbf4-4767-9ba4-0ca18017e6a6",
+          "width": 128,
+          "x": 17,
+          "y": 59,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 123,
+          "layer": "",
+          "locked": false,
+          "name": "insuranceButton1",
+          "persistentUuid": "c3b7d1d8-11a4-4b4d-815a-6ac43021a88f",
+          "width": 126,
+          "x": 174,
+          "y": 55,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 137,
+          "layer": "",
+          "locked": false,
+          "name": "insuranceButton2",
+          "persistentUuid": "1e19e2c9-facc-43e5-8b80-3c3f3b2863dd",
+          "width": 131,
+          "x": 26,
+          "y": 275,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [
+        {
+          "bottomMargin": 0,
+          "height": 600,
+          "leftMargin": 0,
+          "name": "InsuranceSelectPanelBackground",
+          "rightMargin": 0,
+          "tags": "",
+          "texture": "background.png",
+          "tiled": true,
+          "topMargin": 0,
+          "type": "PanelSpriteObject::PanelSprite",
+          "width": 320,
+          "variables": [],
+          "behaviors": []
+        },
+        {
+          "name": "insuranceButton2",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "isSelected",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "value": "string type not supported"
+            },
+            {
+              "name": "price",
+              "type": "string",
+              "value": "-1"
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "value": "string type not supported"
+            },
+            {
+              "name": "buttonPositionIndex",
+              "type": "string",
+              "value": "2"
+            }
+          ],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "document.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "insuranceButton1",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "isSelected",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "value": "string type not supported"
+            },
+            {
+              "name": "price",
+              "type": "string",
+              "value": "-1"
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "value": "string type not supported"
+            },
+            {
+              "name": "buttonPositionIndex",
+              "type": "string",
+              "value": "1"
+            }
+          ],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "document.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "insuranceButton0",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "isSelected",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "name": "description",
+              "type": "string",
+              "value": "string type not supported"
+            },
+            {
+              "name": "price",
+              "type": "string",
+              "value": "-1"
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "value": "string type not supported"
+            },
+            {
+              "name": "buttonPositionIndex",
+              "type": "string",
+              "value": "0"
+            }
+          ],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "document.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "选择保险的页面，保险页面需要初始化\n",
+          "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "GetArgumentAsBoolean"
+              },
+              "parameters": [
+                "VariableString(isInitialized)"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": " insurance button group, 根据当前关卡载入可选择的保险数据\n\nproblem: \nthere is no string variable in gDevelop.....\n不支持array[variable]这样的做法\n\n1. first draft:\n load price only.  => when price is -1, it needs to be initialized\n show if it is availble\n\n/////\nscene.insuranceButtonGroup.foreach(\n  (button)=>{\n     const insuranceArray = scene.levelInsuranceArray;\n     const buttonData = insuranceArray[button.buttonPositionIndex];\n     button.enable = buttonData.isavailable\n  }\n}\n\n//====\nscene.insuranceButtonGroup.foreach(\n  (button)=>{\n     ...\n      button.enable = scene.levelInsuranceArray[button.buttonPositionIndex].isAvailable;\n  }\n}\n\n\n////最粗暴可行的的方案， 有很多个选择保险的scene，每个scene里面只有price是不一样的，其它copy paste\n",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Egal"
+                  },
+                  "parameters": [
+                    "GlobalVariableString(GlobalVariableString(currentLevel))",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "选中关卡后 根据该关卡的数据 显示可购买的保险",
+                  "comment2": ""
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [],
+                  "events": []
+                }
+              ]
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "insuranceButtonGroup",
+                    "price",
+                    "=",
+                    "-1"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "insuranceButtonGroup",
+                    "price",
+                    "=",
+                    "GlobalVariable(insurancePrice.3rdParty)"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "初始化结束",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SetSceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "isInitialized",
+                    "True"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ]
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "1. 如何确定有什么保险可以购买？\n=> 在scene设定每一关显示什么保险， 可以用 levelInsrance:[ insuranceArray: [<i1:{相关信息},i2:{}>]] 结构表示？\n2. 如何确定保险的显示位置？\n=> 假设我们可以loop through  array. 根据当前这关的array.length来决定 InsuranceButton.visible 的属性，\n如何让button知道对应的array index？让button自身带有index属性",
+          "comment2": ""
+        }
+      ],
+      "layers": [
+        {
+          "ambientLightColorB": 7665560,
+          "ambientLightColorG": 7041296,
+          "ambientLightColorR": 6372712,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": []
+        }
+      ],
+      "behaviorsSharedData": []
+    },
+    {
+      "b": 209,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "New_32scene",
+      "name": "New scene",
+      "oglFOV": 90,
+      "oglZFar": 500,
+      "oglZNear": 1,
+      "r": 209,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 209,
+      "uiSettings": {
+        "grid": false,
+        "gridB": 255,
+        "gridG": 180,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridR": 158,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "snap": true,
+        "windowMask": false,
+        "zoomFactor": 1
+      },
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [],
+      "objects": [],
+      "events": [],
+      "layers": [
+        {
+          "ambientLightColorB": 0,
+          "ambientLightColorG": 7419968,
+          "ambientLightColorR": 0,
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
           "name": "",
