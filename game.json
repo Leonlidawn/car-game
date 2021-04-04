@@ -290,6 +290,60 @@
         "name": "confirmButtonBackground.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Car Game UI/Scenes/Houses 1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Car Game UI/Scenes/Houses 1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Car Game UI/Scenes/Houses 2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Car Game UI/Scenes/Houses 2.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "topbar_placeholder.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "topbar_placeholder.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "ControllerRadius.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ControllerRadius.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "ControllerPosition.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "ControllerPosition.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "NewObject2-1-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "NewObject2-1-2.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -451,7 +505,31 @@
         "windowMask": false,
         "zoomFactor": 0.5799999999999996
       },
-      "objectsGroups": [],
+      "objectsGroups": [
+        {
+          "name": "unmovableGroup",
+          "objects": [
+            {
+              "name": "sideRight"
+            },
+            {
+              "name": "sideLeft"
+            }
+          ]
+        },
+        {
+          "name": "z1",
+          "objects": []
+        },
+        {
+          "name": "z2",
+          "objects": []
+        },
+        {
+          "name": "z3",
+          "objects": []
+        }
+      ],
       "variables": [
         {
           "name": "CarLeft",
@@ -462,20 +540,30 @@
           "name": "CarRight",
           "type": "string",
           "value": ""
+        },
+        {
+          "name": "controllerAngle",
+          "type": "string",
+          "value": "0"
+        },
+        {
+          "name": "touchInOut",
+          "type": "string",
+          "value": "0"
         }
       ],
       "instances": [
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "height": 68,
           "layer": "",
           "locked": false,
-          "name": "Car",
+          "name": "player",
           "persistentUuid": "b76ca657-fe75-467b-a5c9-77b4b71736b3",
-          "width": 0,
-          "x": 290,
-          "y": 404,
+          "width": 39,
+          "x": 111,
+          "y": 432,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -501,15 +589,127 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 600,
+          "height": 601,
           "layer": "",
           "locked": false,
-          "name": "Road",
-          "persistentUuid": "3a598f28-8dd0-4b11-b07c-af7004ca5be0",
-          "width": 800,
-          "x": 3,
+          "name": "sideRight",
+          "persistentUuid": "b3bab1a1-f18e-4b90-baa8-dc99aba8eaab",
+          "width": 44,
+          "x": 274,
+          "y": -1,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 599,
+          "layer": "",
+          "locked": false,
+          "name": "sideLeft",
+          "persistentUuid": "9c4db262-b8a9-4f0e-8e84-f2be975d0b4d",
+          "width": 41,
+          "x": 1,
+          "y": 2,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 599,
+          "layer": "",
+          "locked": false,
+          "name": "road",
+          "persistentUuid": "a5693236-9e9a-4875-be75-dad93076eef1",
+          "width": 232,
+          "x": 43,
           "y": 0,
-          "zOrder": 0,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 44,
+          "layer": "",
+          "locked": false,
+          "name": "topBar",
+          "persistentUuid": "fa624ead-febb-4c9e-8086-83d0ffc86fb2",
+          "width": 319,
+          "x": 0,
+          "y": -1,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 76,
+          "layer": "",
+          "locked": false,
+          "name": "skillBar",
+          "persistentUuid": "ad3b0997-b083-42c8-bcf8-b0776e038095",
+          "width": 318,
+          "x": -1,
+          "y": 525,
+          "zOrder": 6,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 66,
+          "layer": "UI layer",
+          "locked": false,
+          "name": "touchRadius",
+          "persistentUuid": "0aa334c5-4605-41f8-bc4c-b29aa2d9d217",
+          "width": 68,
+          "x": 20,
+          "y": 389,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 27,
+          "layer": "UI layer",
+          "locked": false,
+          "name": "controllerPosition",
+          "persistentUuid": "55c0430a-a41c-4669-a4ea-6eb780c97786",
+          "width": 28,
+          "x": 40,
+          "y": 409,
+          "zOrder": 11,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "UI layer",
+          "locked": false,
+          "name": "controllerCenter",
+          "persistentUuid": "ded9ebb3-e1f5-4981-8943-ab69b6a6a5a2",
+          "width": 0,
+          "x": 35,
+          "y": 409,
+          "zOrder": 10,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -517,7 +717,7 @@
       ],
       "objects": [
         {
-          "name": "Car",
+          "name": "player",
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
@@ -571,7 +771,7 @@
           ]
         },
         {
-          "name": "Road",
+          "name": "road",
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
@@ -610,7 +810,7 @@
           ]
         },
         {
-          "name": "Car_blue",
+          "name": "car4",
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
@@ -649,7 +849,7 @@
           ]
         },
         {
-          "name": "Car_pink2",
+          "name": "car3",
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
@@ -688,7 +888,7 @@
           ]
         },
         {
-          "name": "Car_green",
+          "name": "car2",
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
@@ -727,7 +927,7 @@
           ]
         },
         {
-          "name": "Car_gray",
+          "name": "car1",
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
@@ -766,7 +966,7 @@
           ]
         },
         {
-          "name": "Tree",
+          "name": "tree",
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
@@ -805,7 +1005,7 @@
           ]
         },
         {
-          "name": "Eplosion",
+          "name": "explosion",
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
@@ -927,6 +1127,284 @@
               ]
             }
           ]
+        },
+        {
+          "name": "sideRight",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Car Game UI/Scenes/Houses 2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "sideLeft",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Car Game UI/Scenes/Houses 1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "skillBar",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "topbar_placeholder.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "topBar",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "topbar_placeholder.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "touchRadius",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ControllerRadius.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "controllerPosition",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ControllerPosition.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "controllerCenter",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "NewObject2-1-2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "events": [
@@ -943,7 +1421,7 @@
               },
               "parameters": [
                 "",
-                "Road",
+                "road",
                 "no",
                 "",
                 ""
@@ -977,7 +1455,7 @@
                 "value": "TopDownMovementBehavior::SimulateLeftKey"
               },
               "parameters": [
-                "Car",
+                "player",
                 "TopDownMovement"
               ],
               "subInstructions": []
@@ -988,7 +1466,7 @@
                 "value": "RotateTowardAngle"
               },
               "parameters": [
-                "Car",
+                "player",
                 "-30",
                 "60",
                 ""
@@ -1022,7 +1500,7 @@
                 "value": "TopDownMovementBehavior::SimulateRightKey"
               },
               "parameters": [
-                "Car",
+                "player",
                 "TopDownMovement"
               ],
               "subInstructions": []
@@ -1033,7 +1511,7 @@
                 "value": "RotateTowardAngle"
               },
               "parameters": [
-                "Car",
+                "player",
                 "30",
                 "60",
                 ""
@@ -1078,7 +1556,7 @@
                 "value": "RotateTowardAngle"
               },
               "parameters": [
-                "Car",
+                "player",
                 "0",
                 "90",
                 ""
@@ -1170,7 +1648,7 @@
                   },
                   "parameters": [
                     "",
-                    "Car_blue",
+                    "car4",
                     "120",
                     "-50",
                     "2"
@@ -1183,7 +1661,7 @@
                     "value": "AddForceXY"
                   },
                   "parameters": [
-                    "Car_blue",
+                    "car4",
                     "0",
                     "200",
                     "1"
@@ -1196,7 +1674,7 @@
                     "value": "ChangePlan"
                   },
                   "parameters": [
-                    "Car_blue",
+                    "car4",
                     "=",
                     "2"
                   ],
@@ -1231,7 +1709,7 @@
                   },
                   "parameters": [
                     "",
-                    "Car_green",
+                    "car2",
                     "280",
                     "-50",
                     ""
@@ -1244,7 +1722,7 @@
                     "value": "AddForceXY"
                   },
                   "parameters": [
-                    "Car_green",
+                    "car2",
                     "0",
                     "200",
                     "1"
@@ -1280,7 +1758,7 @@
                   },
                   "parameters": [
                     "",
-                    "Car_gray",
+                    "car1",
                     "440",
                     "-50",
                     ""
@@ -1293,7 +1771,7 @@
                     "value": "AddForceXY"
                   },
                   "parameters": [
-                    "Car_gray",
+                    "car1",
                     "0",
                     "200",
                     "1"
@@ -1380,7 +1858,7 @@
               },
               "parameters": [
                 "",
-                "Tree",
+                "tree",
                 "-150",
                 "-200",
                 "2"
@@ -1394,7 +1872,7 @@
               },
               "parameters": [
                 "",
-                "Tree",
+                "tree",
                 "800",
                 "-400",
                 "2"
@@ -1418,7 +1896,7 @@
                 "value": "AddForceXY"
               },
               "parameters": [
-                "Tree",
+                "tree",
                 "0",
                 "250",
                 "1"
@@ -1431,7 +1909,7 @@
                 "value": "ChangePlan"
               },
               "parameters": [
-                "Tree",
+                "tree",
                 "=",
                 "2"
               ],
@@ -1511,11 +1989,56 @@
         {
           "disabled": false,
           "folded": false,
-          "type": "BuiltinCommonInstructions::JsCode",
-          "inlineCode": "runtimeScene.setBackgroundColor(100,100,240);\n\n",
-          "parameterObjects": "",
-          "useStrict": true,
-          "eventsSheetExpanded": false
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "摇杆控制",
+          "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "touchRadius",
+                "=",
+                "controllerCenter.X()",
+                "=",
+                "controllerCenter.Y()"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
         },
         {
           "disabled": false,
@@ -1525,15 +2048,366 @@
             {
               "type": {
                 "inverted": false,
-                "value": "KeyPressed"
+                "value": "VarScene"
               },
               "parameters": [
-                "",
-                "t"
+                "touchInOut",
+                "=",
+                "2"
               ],
               "subInstructions": []
             }
           ],
+          "actions": [],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MouseButtonPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "Left"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "controllerPosition",
+                    "=",
+                    "MouseX(\"UI\")",
+                    "=",
+                    "MouseY(\"UI\")"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "Distance"
+                      },
+                      "parameters": [
+                        "controllerPosition",
+                        "controllerCenter",
+                        "100",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "MettreAutour"
+                      },
+                      "parameters": [
+                        "controllerPosition",
+                        "controllerCenter",
+                        "100",
+                        "controllerCenter.Angle()"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "controllerAngle",
+                        "=",
+                        "controllerCenter.Angle()"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "MouseButtonReleased"
+              },
+              "parameters": [
+                "",
+                "Left"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "controllerPosition",
+                "=",
+                "controllerPosition.X()",
+                "=",
+                "controllerPosition.Y()"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Tween::AddObjectPositionTween"
+              },
+              "parameters": [
+                "controllerPosition",
+                "Tween",
+                "\"BackToCenter\"",
+                "controllerCenter.X()",
+                "controllerCenter.Y()",
+                "\"easeInOutQuad\"",
+                "700",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "touchRadius",
+                "",
+                "yes",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "touchInOut",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MouseButtonPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "Left"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "touchInOut",
+                    "=",
+                    "2"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MouseButtonReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "Left"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "touchInOut",
+                    "=",
+                    "2"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ]
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "touchRadius",
+                "",
+                "yes",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "touchInOut",
+                    "=",
+                    "2"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "MouseButtonReleased"
+                      },
+                      "parameters": [
+                        "",
+                        "Left"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "touchInOut",
+                        "=",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
           "actions": [],
           "events": []
         },
@@ -1568,12 +2442,27 @@
             }
           ],
           "effects": []
+        },
+        {
+          "ambientLightColorB": 1702453580,
+          "ambientLightColorG": 6022704,
+          "ambientLightColorR": -2147483632,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "UI layer",
+          "visibility": true,
+          "cameras": [],
+          "effects": []
         }
       ],
       "behaviorsSharedData": [
         {
           "name": "TopDownMovement",
           "type": "TopDownMovementBehavior::TopDownMovementBehavior"
+        },
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
         }
       ]
     },
@@ -1851,7 +2740,7 @@
           "height": 0,
           "layer": "",
           "locked": false,
-          "name": "InsuranceSelectPanelBackground",
+          "name": "insuranceSelectPanelBackground",
           "persistentUuid": "2a79723d-0907-402d-ac99-30f037898529",
           "width": 0,
           "x": 0,
@@ -2059,7 +2948,7 @@
           "bottomMargin": 0,
           "height": 600,
           "leftMargin": 0,
-          "name": "InsuranceSelectPanelBackground",
+          "name": "insuranceSelectPanelBackground",
           "rightMargin": 0,
           "tags": "",
           "texture": "background.png",
