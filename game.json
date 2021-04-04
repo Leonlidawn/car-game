@@ -329,48 +329,6 @@
       "value": "60"
     },
     {
-      "name": "insurancePrice",
-      "type": "structure",
-      "children": [
-        {
-          "name": "3rdParty",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "comprehensive",
-          "type": "string",
-          "value": "0"
-        },
-        {
-          "name": "ctp",
-          "type": "string",
-          "value": "0"
-        }
-      ]
-    },
-    {
-      "name": "currentInsurance",
-      "type": "structure",
-      "children": [
-        {
-          "name": "3rdParty",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "comprehensive",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "ctp",
-          "type": "boolean",
-          "value": true
-        }
-      ]
-    },
-    {
       "name": "currentLevel",
       "type": "string",
       "value": "0"
@@ -379,6 +337,90 @@
       "name": "INSURANCE_BUTTON_TITLE_FONT_SIZE",
       "type": "string",
       "value": "18"
+    },
+    {
+      "name": "insurancePackage",
+      "type": "structure",
+      "children": [
+        {
+          "name": "package1",
+          "type": "structure",
+          "children": [
+            {
+              "name": "isSelected",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "name": "policyDes",
+              "type": "string",
+              "value": "XXX"
+            },
+            {
+              "name": "price",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "value": "CTP"
+            }
+          ]
+        },
+        {
+          "name": "package2",
+          "type": "structure",
+          "children": [
+            {
+              "name": "isSelected",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "name": "policyDes",
+              "type": "string",
+              "value": "XXX"
+            },
+            {
+              "name": "price",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "value": "3RDPARTY"
+            }
+          ]
+        },
+        {
+          "name": "package3",
+          "type": "structure",
+          "children": [
+            {
+              "name": "isSelected",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "name": "policyDes",
+              "type": "string",
+              "value": "xxx"
+            },
+            {
+              "name": "price",
+              "type": "number",
+              "value": 0
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "value": "xxx"
+            }
+          ]
+        }
+      ]
     }
   ],
   "layouts": [
@@ -2582,7 +2624,7 @@
                   "parameters": [
                     "confirmButtonText",
                     "=",
-                    "\"TODO: draw me in the button!Confirm\""
+                    "\"[b]CHOOSE INSURANCE[/b]\""
                   ],
                   "subInstructions": []
                 },
@@ -2594,7 +2636,7 @@
                   "parameters": [
                     "confirmButtonText",
                     "=",
-                    "confirmButton.Y()+confirmButton.Height()/2 -Variable(TITLE_FONT_SIZE)/2"
+                    "(ScreenHeight()*Variable(YPADDING_RATIO)-Variable(TITLE_FONT_SIZE)*1.2)/2"
                   ],
                   "subInstructions": []
                 },
@@ -2606,7 +2648,7 @@
                   "parameters": [
                     "confirmButtonText",
                     "=",
-                    "ScreenWidth()/2-comfirmButtonText.Width()/2"
+                    "ScreenWidth()"
                   ],
                   "subInstructions": []
                 }
