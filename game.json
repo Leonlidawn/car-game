@@ -3576,6 +3576,18 @@
                 "\"0\" + ToString(floor(Variable(time)))"
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "BBText::SetBBText"
+              },
+              "parameters": [
+                "timerNum",
+                "=",
+                "GlobalVariableString(insurancePackage.package1.isSelected)"
+              ],
+              "subInstructions": []
             }
           ],
           "events": []
@@ -3608,6 +3620,18 @@
                 "timerNum",
                 "=",
                 "ToString(floor(Variable(time)))"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "BBText::SetBBText"
+              },
+              "parameters": [
+                "timerNum",
+                "=",
+                "GlobalVariableString(insurancePackage.package1.isSelected)"
               ],
               "subInstructions": []
             }
@@ -5666,7 +5690,7 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "ToggleSceneVariableAsBoolean"
+                    "value": "ToggleGlobalVariableAsBoolean"
                   },
                   "parameters": [
                     "insurancePackage.package1.isSelected"
@@ -5710,7 +5734,7 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "ToggleSceneVariableAsBoolean"
+                    "value": "ToggleGlobalVariableAsBoolean"
                   },
                   "parameters": [
                     "insurancePackage.package2.isSelected"
