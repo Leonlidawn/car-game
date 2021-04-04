@@ -503,7 +503,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.5799999999999996
+        "zoomFactor": 1.0799999999999996
       },
       "objectsGroups": [
         {
@@ -674,10 +674,10 @@
           "locked": false,
           "name": "touchRadius",
           "persistentUuid": "0aa334c5-4605-41f8-bc4c-b29aa2d9d217",
-          "width": 68,
-          "x": 20,
-          "y": 389,
-          "zOrder": 10,
+          "width": 66,
+          "x": 93,
+          "y": 430,
+          "zOrder": 14,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -685,31 +685,31 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 27,
+          "height": 26,
           "layer": "UI layer",
           "locked": false,
           "name": "controllerPosition",
           "persistentUuid": "55c0430a-a41c-4669-a4ea-6eb780c97786",
-          "width": 28,
-          "x": 40,
-          "y": 409,
-          "zOrder": 11,
+          "width": 26,
+          "x": 82,
+          "y": 298,
+          "zOrder": 8,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "height": 20,
           "layer": "UI layer",
           "locked": false,
           "name": "controllerCenter",
           "persistentUuid": "ded9ebb3-e1f5-4981-8943-ab69b6a6a5a2",
-          "width": 0,
-          "x": 35,
-          "y": 409,
-          "zOrder": 10,
+          "width": 20,
+          "x": 55,
+          "y": 435,
+          "zOrder": 7,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1306,8 +1306,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 100,
+                        "y": 100
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -1350,8 +1350,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 32,
+                        "y": 32
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -1389,8 +1389,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 16,
+                        "y": 16
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -2021,6 +2021,62 @@
           "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Opacity"
+              },
+              "parameters": [
+                "touchRadius",
+                "=",
+                "35"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "controllerPosition",
+                "=",
+                "controllerCenter.X()",
+                "=",
+                "controllerCenter.Y()"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Cache"
+              },
+              "parameters": [
+                "controllerCenter"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
             {
@@ -2034,6 +2090,20 @@
                 "controllerCenter.X()",
                 "=",
                 "controllerCenter.Y()"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "RotateTowardPosition"
+              },
+              "parameters": [
+                "controllerCenter",
+                "MouseX(\"UI\")",
+                "MouseY(\"UI\")",
+                "0",
+                ""
               ],
               "subInstructions": []
             }
@@ -2107,7 +2177,7 @@
                       "parameters": [
                         "controllerPosition",
                         "controllerCenter",
-                        "100",
+                        "33",
                         ""
                       ],
                       "subInstructions": []
@@ -2122,7 +2192,7 @@
                       "parameters": [
                         "controllerPosition",
                         "controllerCenter",
-                        "100",
+                        "33",
                         "controllerCenter.Angle()"
                       ],
                       "subInstructions": []
