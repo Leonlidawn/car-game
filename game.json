@@ -153,60 +153,6 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "Explosion_1.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Explosion_1.png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "Explosion_2.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Explosion_2.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "Explosion_3.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Explosion_3.png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "Explosion_4.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Explosion_4.png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "Explosion_5.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Explosion_5.png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "Explosion_6.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Explosion_6.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
         "file": "background.png",
         "kind": "image",
         "metadata": "",
@@ -344,6 +290,78 @@
         "name": "blue-car.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Explosion_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Explosion_1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Explosion_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Explosion_2.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Explosion_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Explosion_3.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Explosion_4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Explosion_4.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Explosion_5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Explosion_5.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Explosion_6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Explosion_6.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "NewObject-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "NewObject-1.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Car Game UI/Coins + Balloon/coins.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "Car Game UI\\Coins + Balloon\\coins.jpg",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -503,7 +521,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 1.0799999999999996
+        "zoomFactor": 0.7999999999999994
       },
       "objectsGroups": [
         {
@@ -744,6 +762,70 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 30,
+          "layer": "",
+          "locked": false,
+          "name": "timer",
+          "persistentUuid": "baf6f809-688c-487e-ab12-1def561ee4e3",
+          "width": 35,
+          "x": 1,
+          "y": 4,
+          "zOrder": 15,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "timerNum",
+          "persistentUuid": "46a88c40-bf7a-4210-a2aa-c7bbb0947a65",
+          "width": 0,
+          "x": 41,
+          "y": 4,
+          "zOrder": 16,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 37,
+          "layer": "",
+          "locked": false,
+          "name": "coin",
+          "persistentUuid": "6ba57dce-b614-45c5-8ae5-b149a386c13c",
+          "width": 36,
+          "x": 232,
+          "y": 3,
+          "zOrder": 17,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "coinNum",
+          "persistentUuid": "d584f631-f524-438e-bbf8-1732c785a269",
+          "width": 0,
+          "x": 273,
+          "y": 3,
+          "zOrder": 18,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -883,7 +965,7 @@
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 0.08,
+                  "timeBetweenFrames": 0.07999999821186066,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
@@ -956,6 +1038,23 @@
                     {
                       "hasCustomCollisionMask": false,
                       "image": "Explosion_5.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Explosion_6.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -1650,6 +1749,118 @@
                         "name": "origine",
                         "x": 16,
                         "y": 16
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "timer",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "NewObject",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.07999999821186066,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "NewObject-1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "coinNum",
+          "tags": "",
+          "type": "BBText::BBText",
+          "variables": [],
+          "behaviors": [],
+          "content": {
+            "text": "0",
+            "opacity": 255,
+            "fontSize": 20,
+            "visible": true,
+            "color": "#000000",
+            "fontFamily": "Bimbo_JVE.ttf",
+            "align": "left",
+            "wordWrap": true
+          }
+        },
+        {
+          "name": "timerNum",
+          "tags": "",
+          "type": "BBText::BBText",
+          "variables": [],
+          "behaviors": [],
+          "content": {
+            "text": "60",
+            "opacity": 255,
+            "fontSize": 20,
+            "visible": true,
+            "color": "#000000",
+            "fontFamily": "Bimbo_JVE.ttf",
+            "align": "left",
+            "wordWrap": true
+          }
+        },
+        {
+          "name": "coin",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Car Game UI\\Coins + Balloon\\coins.jpg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -2977,7 +3188,20 @@
           "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Timer"
+              },
+              "parameters": [
+                "",
+                "60",
+                "\"sceneTimer\""
+              ],
+              "subInstructions": []
+            }
+          ],
           "actions": [],
           "events": []
         },
