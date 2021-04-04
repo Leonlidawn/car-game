@@ -375,6 +375,33 @@
           "identifier": "https://resources.gdevelop-app.com/assets/Industrial Platformer Pack (110 assets)/PNG/Retina/tiled_Blue background.png",
           "name": "gdevelop-asset-store"
         }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Car Game UI/Skills/Insurance1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Car Game UI\\Skills\\Insurance1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Car Game UI/Skills/Insurance2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Car Game UI\\Skills\\Insurance2.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Car Game UI/Skills/Insurance3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Car Game UI\\Skills\\Insurance3.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -434,7 +461,7 @@
             {
               "name": "isSelected",
               "type": "boolean",
-              "value": false
+              "value": true
             },
             {
               "name": "policyDes",
@@ -506,6 +533,75 @@
           ]
         }
       ]
+    },
+    {
+      "name": "skillSet",
+      "type": "structure",
+      "children": [
+        {
+          "name": "skill1",
+          "type": "structure",
+          "children": [
+            {
+              "name": "description",
+              "type": "string",
+              "value": "des"
+            },
+            {
+              "name": "isSelected",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "value": "skillName"
+            }
+          ]
+        },
+        {
+          "name": "skill2",
+          "type": "structure",
+          "children": [
+            {
+              "name": "description",
+              "type": "string",
+              "value": "des"
+            },
+            {
+              "name": "isSelected",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "value": "name"
+            }
+          ]
+        },
+        {
+          "name": "skill3",
+          "type": "structure",
+          "children": [
+            {
+              "name": "description",
+              "type": "string",
+              "value": "des"
+            },
+            {
+              "name": "isSelected",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "value": "name"
+            }
+          ]
+        }
+      ]
     }
   ],
   "layouts": [
@@ -534,7 +630,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.7999999999999994
+        "zoomFactor": 0.6199999999999992
       },
       "objectsGroups": [
         {
@@ -837,6 +933,54 @@
           "x": 16,
           "y": 113,
           "zOrder": 19,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 45,
+          "layer": "",
+          "locked": false,
+          "name": "skill1",
+          "persistentUuid": "ede96e6d-ee40-48b3-b133-793706e1e7a7",
+          "width": 35,
+          "x": 68,
+          "y": 540,
+          "zOrder": 20,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 43,
+          "layer": "",
+          "locked": false,
+          "name": "skill2",
+          "persistentUuid": "31ec67ff-fd66-4a7c-b847-18d91ee31049",
+          "width": 38,
+          "x": 134,
+          "y": 542,
+          "zOrder": 21,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 43,
+          "layer": "",
+          "locked": false,
+          "name": "skill3",
+          "persistentUuid": "8de23d79-8254-4785-a738-6809bf66b42a",
+          "width": 38,
+          "x": 201,
+          "y": 541,
+          "zOrder": 22,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1899,6 +2043,123 @@
           "width": 128,
           "variables": [],
           "behaviors": []
+        },
+        {
+          "name": "skill1",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Car Game UI\\Skills\\Insurance1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "skill2",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Car Game UI\\Skills\\Insurance2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "skill3",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Car Game UI\\Skills\\Insurance3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "events": [
