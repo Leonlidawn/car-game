@@ -528,7 +528,7 @@
             {
               "name": "title",
               "type": "string",
-              "value": "xxx"
+              "value": "Comprehensive"
             }
           ]
         }
@@ -539,13 +539,18 @@
       "type": "structure",
       "children": [
         {
-          "name": "skill1",
+          "name": "selectedCount",
+          "type": "number",
+          "value": 0
+        },
+        {
+          "name": "skill0",
           "type": "structure",
           "children": [
             {
               "name": "description",
               "type": "string",
-              "value": "des"
+              "value": "injure of a person des"
             },
             {
               "name": "isSelected",
@@ -555,7 +560,28 @@
             {
               "name": "name",
               "type": "string",
-              "value": "skillName"
+              "value": "injure of a person"
+            }
+          ]
+        },
+        {
+          "name": "skill1",
+          "type": "structure",
+          "children": [
+            {
+              "name": "description",
+              "type": "string",
+              "value": "damage to own car des"
+            },
+            {
+              "name": "isSelected",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "value": "damage to own car"
             }
           ]
         },
@@ -566,7 +592,7 @@
             {
               "name": "description",
               "type": "string",
-              "value": "des"
+              "value": "damage to someone's car des"
             },
             {
               "name": "isSelected",
@@ -576,28 +602,7 @@
             {
               "name": "name",
               "type": "string",
-              "value": "name"
-            }
-          ]
-        },
-        {
-          "name": "skill3",
-          "type": "structure",
-          "children": [
-            {
-              "name": "description",
-              "type": "string",
-              "value": "des"
-            },
-            {
-              "name": "isSelected",
-              "type": "boolean",
-              "value": false
-            },
-            {
-              "name": "name",
-              "type": "string",
-              "value": "name"
+              "value": "damage to someone's car"
             }
           ]
         }
@@ -933,54 +938,6 @@
           "x": 16,
           "y": 113,
           "zOrder": 19,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 45,
-          "layer": "",
-          "locked": false,
-          "name": "skill1",
-          "persistentUuid": "ede96e6d-ee40-48b3-b133-793706e1e7a7",
-          "width": 35,
-          "x": 68,
-          "y": 540,
-          "zOrder": 20,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 43,
-          "layer": "",
-          "locked": false,
-          "name": "skill2",
-          "persistentUuid": "31ec67ff-fd66-4a7c-b847-18d91ee31049",
-          "width": 38,
-          "x": 134,
-          "y": 542,
-          "zOrder": 21,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 43,
-          "layer": "",
-          "locked": false,
-          "name": "skill3",
-          "persistentUuid": "8de23d79-8254-4785-a738-6809bf66b42a",
-          "width": 38,
-          "x": 201,
-          "y": 541,
-          "zOrder": 22,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2066,8 +2023,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 163,
+                        "y": 193
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -2105,8 +2062,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 157.5,
+                        "y": 205.5
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -2144,8 +2101,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 156,
+                        "y": 194.5
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -3704,8 +3661,35 @@
         {
           "disabled": false,
           "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "skill set initial",
+          "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "GlobalVariableAsBoolean"
+              },
+              "parameters": [
+                "skillSet.skill0.isSelected",
+                "True"
+              ],
+              "subInstructions": []
+            }
+          ],
           "actions": [],
           "events": []
         }
@@ -3874,7 +3858,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.8079999999999998
+        "zoomFactor": 0.7479999999999998
       },
       "objectsGroups": [
         {
@@ -5256,7 +5240,7 @@
                       "parameters": [
                         "insuranceButton0Des",
                         "=",
-                        "\"📜policy1: xxxxxxx \"+NewLine()+NewLine()+\n\"📜policy2: xxxxxxxxxxxxxxxxx\"+NewLine()+NewLine()+\"📜policy3: xxxxxxxxxx\""
+                        "\"📜\" + GlobalVariableString(skillSet.skill0.description) "
                       ],
                       "subInstructions": []
                     },
@@ -5268,7 +5252,7 @@
                       "parameters": [
                         "insuranceButton1Des",
                         "=",
-                        "\"📜policy1: xxxxxxx \"+NewLine()+NewLine()+\n\"📜policy2: xxxxxxxxxxxxxxxxx\"+NewLine()+NewLine()+\"📜policy3: xxxxxxxxxx\""
+                        "\"📜\"+GlobalVariableString(skillSet.skill2.description)"
                       ],
                       "subInstructions": []
                     },
@@ -5280,7 +5264,7 @@
                       "parameters": [
                         "insuranceButton2Des",
                         "=",
-                        "\"📜policy1: xxxxxxx \"+NewLine()+NewLine()+\n\"📜policy2: xxxxxxxxxxxxxxxxx\"+NewLine()+NewLine()+\"📜policy3: xxxxxxxxxx\""
+                        "\"📜\"+GlobalVariableString(skillSet.skill1.description)+NewLine()+NewLine()+\n\"📜\"+GlobalVariableString(skillSet.skill2.description)"
                       ],
                       "subInstructions": []
                     }
@@ -5672,31 +5656,259 @@
                   "subInstructions": []
                 }
               ],
-              "actions": [
+              "actions": [],
+              "events": [
                 {
-                  "type": {
-                    "inverted": false,
-                    "value": "Scene"
-                  },
-                  "parameters": [
-                    "",
-                    "\"Game Play - Level 1\"",
-                    "yes"
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "skillSet.selectedCount",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
                   ],
-                  "subInstructions": []
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "GlobalVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "insurancePackage.package0.isSelected",
+                        "True"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SetGlobalVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "skillSet.skill0.isSelected",
+                        "True"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "GlobalVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "insurancePackage.package1.isSelected",
+                        "True"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SetGlobalVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "skillSet.skill2.isSelected",
+                        "True"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "GlobalVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "insurancePackage.package2.isSelected",
+                        "True"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SetGlobalVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "skillSet.skill1.isSelected",
+                        "True"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SetGlobalVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "skillSet.skill2.isSelected",
+                        "True"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "GlobalVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "skillSet.skill0.isSelected",
+                        "True"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "skillSet.selectedCount",
+                        "+",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "GlobalVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "skillSet.skill1.isSelected",
+                        "True"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "skillSet.selectedCount",
+                        "+",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "GlobalVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "skillSet.skill2.isSelected",
+                        "True"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "skillSet.selectedCount",
+                        "+",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Scene"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Game Play - Level 1\"",
+                        "yes"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
                 }
-              ],
-              "events": []
+              ]
             }
           ]
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
-          "events": []
         }
       ],
       "layers": [
