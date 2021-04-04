@@ -362,6 +362,19 @@
         "name": "Car Game UI\\Coins + Balloon\\coins.jpg",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tiled_Blue background.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "tiled_Blue background.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/Industrial Platformer Pack (110 assets)/PNG/Retina/tiled_Blue background.png",
+          "name": "gdevelop-asset-store"
+        }
       }
     ],
     "resourceFolders": []
@@ -398,7 +411,7 @@
     {
       "name": "LEVEL_TIME",
       "type": "string",
-      "value": "60"
+      "value": "5"
     },
     {
       "name": "currentLevel",
@@ -507,7 +520,7 @@
       "r": 209,
       "standardSortMethod": true,
       "stopSoundsOnStartup": true,
-      "title": "",
+      "title": "Car Insurance Simulation - Level 1",
       "v": 209,
       "uiSettings": {
         "grid": false,
@@ -581,24 +594,9 @@
           "value": "0"
         },
         {
-          "name": "up",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "down",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "left",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "right",
-          "type": "boolean",
-          "value": false
+          "name": "time",
+          "type": "string",
+          "value": "60"
         }
       ],
       "instances": [
@@ -823,6 +821,22 @@
           "x": 273,
           "y": 3,
           "zOrder": 18,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 346,
+          "layer": "Report Layer",
+          "locked": false,
+          "name": "BlueBackground",
+          "persistentUuid": "05be68ee-0d51-433e-b35c-2a2df7ae95e3",
+          "width": 282,
+          "x": 16,
+          "y": 113,
+          "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1875,6 +1889,16 @@
               ]
             }
           ]
+        },
+        {
+          "height": 128,
+          "name": "BlueBackground",
+          "tags": "",
+          "texture": "tiled_Blue background.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 128,
+          "variables": [],
+          "behaviors": []
         }
       ],
       "events": [
@@ -2672,6 +2696,18 @@
                     "Left"
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "time",
+                    ">=",
+                    "1"
+                  ],
+                  "subInstructions": []
                 }
               ],
               "actions": [
@@ -3187,22 +3223,213 @@
         {
           "disabled": false,
           "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "timer 的管理",
+          "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
                 "inverted": false,
-                "value": "Timer"
+                "value": "DepartScene"
               },
               "parameters": [
-                "",
-                "60",
-                "\"sceneTimer\""
+                ""
               ],
               "subInstructions": []
             }
           ],
-          "actions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "time",
+                "=",
+                "GlobalVariable(LEVEL_TIME\n)"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarScene"
+              },
+              "parameters": [
+                "time",
+                ">=",
+                "1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "time",
+                "-",
+                "TimeDelta()"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarScene"
+              },
+              "parameters": [
+                "time",
+                "<",
+                "10"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "BBText::SetBBText"
+              },
+              "parameters": [
+                "timerNum",
+                "=",
+                "\"0\" + ToString(floor(Variable(time)))"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarScene"
+              },
+              "parameters": [
+                "time",
+                ">=",
+                "10"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "BBText::SetBBText"
+              },
+              "parameters": [
+                "timerNum",
+                "=",
+                "ToString(floor(Variable(time)))"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarScene"
+              },
+              "parameters": [
+                "time",
+                "<",
+                "1"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ShowLayer"
+              },
+              "parameters": [
+                "",
+                "\"Report Layer\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Arreter"
+              },
+              "parameters": [
+                "mediuamCarGroup"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "player",
+                "TopDownMovement",
+                "no"
+              ],
+              "subInstructions": []
+            }
+          ],
           "events": []
         },
         {
@@ -3253,6 +3480,17 @@
           "isLightingLayer": false,
           "name": "UI layer",
           "visibility": true,
+          "cameras": [],
+          "effects": []
+        },
+        {
+          "ambientLightColorB": 1702453580,
+          "ambientLightColorG": 7651136,
+          "ambientLightColorR": -2147483632,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "Report Layer",
+          "visibility": false,
           "cameras": [],
           "effects": []
         }
