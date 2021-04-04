@@ -343,7 +343,7 @@
       "type": "structure",
       "children": [
         {
-          "name": "package1",
+          "name": "package0",
           "type": "structure",
           "children": [
             {
@@ -369,7 +369,7 @@
           ]
         },
         {
-          "name": "package2",
+          "name": "package1",
           "type": "structure",
           "children": [
             {
@@ -395,7 +395,7 @@
           ]
         },
         {
-          "name": "package3",
+          "name": "package2",
           "type": "structure",
           "children": [
             {
@@ -449,7 +449,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 1
+        "zoomFactor": 0.5799999999999996
       },
       "objectsGroups": [],
       "variables": [
@@ -2030,8 +2030,8 @@
           "name": "confirmButton",
           "persistentUuid": "1bd294cf-d6f2-4b27-9ae7-6243445d4aa5",
           "width": 137,
-          "x": 83,
-          "y": 551,
+          "x": 74,
+          "y": 553,
           "zOrder": 13,
           "numberProperties": [],
           "stringProperties": [],
@@ -2624,7 +2624,7 @@
                   "parameters": [
                     "confirmButtonText",
                     "=",
-                    "\"[b]CHOOSE INSURANCE[/b]\""
+                    "\"TODO: draw me in the button!Confirm\""
                   ],
                   "subInstructions": []
                 },
@@ -2636,7 +2636,7 @@
                   "parameters": [
                     "confirmButtonText",
                     "=",
-                    "(ScreenHeight()*Variable(YPADDING_RATIO)-Variable(TITLE_FONT_SIZE)*1.2)/2"
+                    "confirmButton.Y()+confirmButton.Height()/2 -Variable(TITLE_FONT_SIZE)/2"
                   ],
                   "subInstructions": []
                 },
@@ -2648,7 +2648,7 @@
                   "parameters": [
                     "confirmButtonText",
                     "=",
-                    "ScreenWidth()"
+                    "ScreenWidth()/2-comfirmButtonText.Width()/2"
                   ],
                   "subInstructions": []
                 }
@@ -2857,12 +2857,48 @@
                     {
                       "type": {
                         "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "insurancePackage.package0.title",
+                        "=",
+                        "\"CTP   (Compulsory)\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "insurancePackage.package1.title",
+                        "=",
+                        "\"Third Party Insurance\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "insurancePackage.package2.title",
+                        "=",
+                        "\"Comprehensive Insurance\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
                         "value": "BBText::SetBBText"
                       },
                       "parameters": [
                         "insuranceTitle0",
                         "=",
-                        "\"CTP   (Compulsory)\""
+                        "GlobalVariableString(insurancePackage.package0.title)"
                       ],
                       "subInstructions": []
                     },
@@ -2874,7 +2910,7 @@
                       "parameters": [
                         "insuranceTitle1",
                         "=",
-                        "\"Third Party Insurance\""
+                        "GlobalVariableString(insurancePackage.package1.title)"
                       ],
                       "subInstructions": []
                     },
@@ -2886,7 +2922,7 @@
                       "parameters": [
                         "insuranceTitle2",
                         "=",
-                        "\"Comprehensive Insurance\""
+                        "GlobalVariableString(insurancePackage.package2.title)"
                       ],
                       "subInstructions": []
                     }
@@ -3096,6 +3132,17 @@
                 "True"
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetSceneVariableAsBoolean"
+              },
+              "parameters": [
+                "insurancePackage.package0.isSelected",
+                "True"
+              ],
+              "subInstructions": []
             }
           ],
           "events": []
@@ -3149,6 +3196,16 @@
                     "isSelected"
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ToggleSceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "insurancePackage.package1.isSelected"
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": []
@@ -3181,6 +3238,16 @@
                   "parameters": [
                     "insuranceButton2",
                     "isSelected"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ToggleSceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "insurancePackage.package2.isSelected"
                   ],
                   "subInstructions": []
                 }
@@ -3365,10 +3432,73 @@
         {
           "disabled": false,
           "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "点击confirm button",
+          "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "MouseButtonReleased"
+              },
+              "parameters": [
+                "insuranceButton1",
+                "Left"
+              ],
+              "subInstructions": []
+            }
+          ],
           "actions": [],
-          "events": []
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "confirmButton",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Game Play - Level 1\"",
+                    "yes"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ]
         },
         {
           "disabled": false,
