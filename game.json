@@ -293,51 +293,6 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "Explosion_1.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Explosion_1.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "Explosion_2.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Explosion_2.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "Explosion_3.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Explosion_3.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "Explosion_4.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Explosion_4.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "Explosion_5.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Explosion_5.png",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
         "file": "Explosion_6.png",
         "kind": "image",
         "metadata": "",
@@ -402,6 +357,129 @@
         "name": "Car Game UI\\Skills\\Insurance3.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Coin_Outlined.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Coin_Outlined.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/GrafxKid Pack/Mini FX, Items & UI/Mini UI/Coin_Outlined.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Coin_Drop-shadowed.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Coin_Drop-shadowed.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/GrafxKid Pack/Mini FX, Items & UI/Mini UI/Coin_Drop-shadowed.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Coin_Spin_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Coin_Spin_1.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/GrafxKid Pack/Mini FX, Items & UI/Common Pick-ups/Coin_Spin_1.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Coin_Spin_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Coin_Spin_2.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/GrafxKid Pack/Mini FX, Items & UI/Common Pick-ups/Coin_Spin_2.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Coin_Spin_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Coin_Spin_3.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/GrafxKid Pack/Mini FX, Items & UI/Common Pick-ups/Coin_Spin_3.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Coin_Spin_4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Coin_Spin_4.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/GrafxKid Pack/Mini FX, Items & UI/Common Pick-ups/Coin_Spin_4.png",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Explosion_1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Explosion_1.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Explosion_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Explosion_2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Explosion_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Explosion_3.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Explosion_4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Explosion_4.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Explosion_5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Explosion_5.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -666,9 +744,6 @@
             },
             {
               "name": "car3"
-            },
-            {
-              "name": "car4"
             }
           ]
         },
@@ -685,16 +760,33 @@
               "name": "skill0"
             }
           ]
+        },
+        {
+          "name": "movingGroup",
+          "objects": [
+            {
+              "name": "car3"
+            },
+            {
+              "name": "car2"
+            },
+            {
+              "name": "car1"
+            },
+            {
+              "name": "roadCoin"
+            }
+          ]
         }
       ],
       "variables": [
         {
-          "name": "CarLeft",
+          "name": "carGenerator",
           "type": "string",
           "value": ""
         },
         {
-          "name": "CarRight",
+          "name": "coinGenerator",
           "type": "string",
           "value": ""
         },
@@ -714,7 +806,7 @@
           "value": "60"
         },
         {
-          "name": "renderedSkillCout",
+          "name": "renderedSkillCount",
           "type": "string",
           "value": "0"
         }
@@ -1057,7 +1149,7 @@
           ]
         },
         {
-          "name": "car4",
+          "name": "car3",
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
@@ -1074,12 +1166,12 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "gray-car.png",
+                      "image": "pink-car.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 37.80859375,
+                        "y": 79.5234375
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -1185,79 +1277,6 @@
                         "y": 0
                       },
                       "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "Explosion_6.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "Explosion_6.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "car3",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "pink-car.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 37.80859375,
-                        "y": 79.5234375
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
                     }
                   ]
                 }
@@ -1308,7 +1327,7 @@
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 0.08,
+                  "timeBetweenFrames": 0.07999999821186066,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
@@ -1394,23 +1413,6 @@
                         "y": 0
                       },
                       "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "Explosion_6.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
                     }
                   ]
                 }
@@ -1442,6 +1444,103 @@
                         "name": "origine",
                         "x": 38.6484375,
                         "y": 79.8046875
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "explosion",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.07999999821186066,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Explosion_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Explosion_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Explosion_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Explosion_4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Explosion_5.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -2136,6 +2235,107 @@
               ]
             }
           ]
+        },
+        {
+          "name": "roadCoin",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Spin",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.25,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Coin_Spin_1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Coin_Spin_2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Coin_Spin_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Coin_Spin_4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "collided",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": []
+                }
+              ]
+            }
+          ]
         }
       ],
       "events": [
@@ -2260,6 +2460,21 @@
         {
           "disabled": false,
           "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "",
+          "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -2269,7 +2484,7 @@
               },
               "parameters": [
                 "",
-                "2.5",
+                "0.5",
                 "\"TrafficTimer\""
               ],
               "subInstructions": []
@@ -2282,21 +2497,9 @@
                 "value": "ModVarScene"
               },
               "parameters": [
-                "CarLeft",
+                "carGenerator",
                 "=",
-                "RandomInRange(1,2)"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "CarRight",
-                "=",
-                "RandomInRange(1,2)"
+                "RandomInRange(1,3)"
               ],
               "subInstructions": []
             },
@@ -2324,7 +2527,7 @@
                     "value": "VarScene"
                   },
                   "parameters": [
-                    "CarLeft",
+                    "carGenerator",
                     "=",
                     "1"
                   ],
@@ -2339,8 +2542,8 @@
                   },
                   "parameters": [
                     "",
-                    "car4",
-                    "RandomInRange(sideLeft.X()+car4.Width(),sideRight.X()-car4.Width())",
+                    "car1",
+                    "RandomInRange(sideLeft.X()+sideLeft.Width()+car1.Width(),sideRight.X()-car1.Width()*1.5)",
                     "-50",
                     "2"
                   ],
@@ -2352,7 +2555,7 @@
                     "value": "AddForceXY"
                   },
                   "parameters": [
-                    "car4",
+                    "car1",
                     "0",
                     "200",
                     "1"
@@ -2365,7 +2568,7 @@
                     "value": "ChangePlan"
                   },
                   "parameters": [
-                    "car4",
+                    "car1",
                     "=",
                     "2"
                   ],
@@ -2385,7 +2588,7 @@
                     "value": "VarScene"
                   },
                   "parameters": [
-                    "CarLeft",
+                    "carGenerator",
                     "=",
                     "2"
                   ],
@@ -2401,7 +2604,7 @@
                   "parameters": [
                     "",
                     "car2",
-                    "RandomInRange(sideLeft.X()+car4.Width(),sideRight.X()-car4.Width())",
+                    "RandomInRange(sideLeft.X()+sideLeft.Width()+car2.Width(),sideRight.X()-car2.Width()*1.5)",
                     "-50",
                     "2"
                   ],
@@ -2419,77 +2622,40 @@
                     "1"
                   ],
                   "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "VarScene"
-                  },
-                  "parameters": [
-                    "CarRight",
-                    "=",
-                    "1"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "car1",
-                    "440",
-                    "-50",
-                    ""
-                  ],
-                  "subInstructions": []
                 },
                 {
                   "type": {
                     "inverted": false,
-                    "value": "AddForceXY"
+                    "value": "ChangePlan"
                   },
                   "parameters": [
-                    "car1",
-                    "0",
-                    "200",
-                    "1"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "VarScene"
-                  },
-                  "parameters": [
-                    "CarRight",
+                    "car2",
                     "=",
                     "2"
                   ],
                   "subInstructions": []
                 }
               ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarScene"
+                  },
+                  "parameters": [
+                    "carGenerator",
+                    "=",
+                    "3"
+                  ],
+                  "subInstructions": []
+                }
+              ],
               "actions": [
                 {
                   "type": {
@@ -2498,10 +2664,10 @@
                   },
                   "parameters": [
                     "",
-                    "Car_pink",
-                    "590",
+                    "car3",
+                    "RandomInRange(sideLeft.X()+sideLeft.Width()+car3.Width(),sideRight.X()-car3.Width()*1.5)",
                     "-50",
-                    ""
+                    "2"
                   ],
                   "subInstructions": []
                 },
@@ -2511,14 +2677,34 @@
                     "value": "AddForceXY"
                   },
                   "parameters": [
-                    "Car_pink",
+                    "car3",
                     "0",
                     "200",
                     "1"
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "car3",
+                    "=",
+                    "2"
+                  ],
+                  "subInstructions": []
                 }
               ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [],
               "events": []
             }
           ]
@@ -2527,9 +2713,95 @@
           "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
-          "events": []
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Timer"
+              },
+              "parameters": [
+                "",
+                "2.5",
+                "\"CoinTimer\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "coinGenerator",
+                "=",
+                "RandomInRange(1,3)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "",
+                "\"CoinTimer\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "roadCoin",
+                    "RandomInRange(sideLeft.X()+car1.Width(),sideRight.X()-car1.Width())",
+                    "-50",
+                    "2"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "AddForceXY"
+                  },
+                  "parameters": [
+                    "roadCoin",
+                    "0",
+                    "100",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "roadCoin",
+                    "=",
+                    "2"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ]
         },
         {
           "disabled": false,
@@ -2691,39 +2963,28 @@
                 ""
               ],
               "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
+            },
             {
               "type": {
                 "inverted": false,
-                "value": "CollisionNP"
+                "value": "ChangeHeight"
               },
               "parameters": [
-                "player",
-                "mediuamCarGroup",
-                "player",
-                "",
-                ""
+                "roadCoin",
+                "=",
+                "30"
               ],
               "subInstructions": []
-            }
-          ],
-          "actions": [
+            },
             {
               "type": {
                 "inverted": false,
-                "value": "SetAnimationName"
+                "value": "ChangeWidth"
               },
               "parameters": [
-                "mediuamCarGroup",
-                "\"explosion\""
+                "roadCoin",
+                "=",
+                "30"
               ],
               "subInstructions": []
             }
@@ -2733,10 +2994,17 @@
         {
           "disabled": false,
           "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
-          "events": []
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "碰撞检测   TODO: delay timer play animation 然后 delete",
+          "comment2": ""
         },
         {
           "disabled": false,
@@ -2744,7 +3012,176 @@
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [],
-          "events": []
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "player",
+                    "mediuamCarGroup",
+                    "player",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SetAnimationName"
+                  },
+                  "parameters": [
+                    "mediuamCarGroup",
+                    "\"explosion\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "AnimationName"
+                  },
+                  "parameters": [
+                    "mediuamCarGroup",
+                    "\"explosion\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "AnimationEnded"
+                      },
+                      "parameters": [
+                        "mediuamCarGroup"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "mediuamCarGroup",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "player",
+                    "roadCoin",
+                    "player",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeWidth"
+                  },
+                  "parameters": [
+                    "roadCoin",
+                    "*",
+                    "1.5\n"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeHeight"
+                  },
+                  "parameters": [
+                    "roadCoin",
+                    "*",
+                    "1.5"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "coin",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "roadCoin",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
+            }
+          ]
         },
         {
           "disabled": false,
@@ -2780,14 +3217,6 @@
               "subInstructions": []
             }
           ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
           "events": []
         },
         {
@@ -2900,7 +3329,7 @@
         },
         {
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -3271,7 +3700,7 @@
         },
         {
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -3373,7 +3802,7 @@
         },
         {
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -3469,7 +3898,7 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "timer 的管理",
+          "comment": "scene timer的管理",
           "comment2": ""
         },
         {
@@ -3576,18 +4005,6 @@
                 "\"0\" + ToString(floor(Variable(time)))"
               ],
               "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "BBText::SetBBText"
-              },
-              "parameters": [
-                "timerNum",
-                "=",
-                "GlobalVariableString(insurancePackage.package1.isSelected)"
-              ],
-              "subInstructions": []
             }
           ],
           "events": []
@@ -3620,18 +4037,6 @@
                 "timerNum",
                 "=",
                 "ToString(floor(Variable(time)))"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "BBText::SetBBText"
-              },
-              "parameters": [
-                "timerNum",
-                "=",
-                "GlobalVariableString(insurancePackage.package1.isSelected)"
               ],
               "subInstructions": []
             }
@@ -3674,7 +4079,7 @@
                 "value": "Arreter"
               },
               "parameters": [
-                "mediuamCarGroup"
+                "movingGroup"
               ],
               "subInstructions": []
             },
@@ -3720,221 +4125,241 @@
           "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "GlobalVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "skillSet.skill0.isSelected",
+                    "True"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "renderedSkillCount",
+                    "+",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "skill0",
+                    "ScreenWidth()/(GlobalVariable(skillSet.selectedCount)+1)*(Variable(renderedSkillCount))",
+                    "skillBar.Y()+skillBar.Height()/2",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeHeight"
+                  },
+                  "parameters": [
+                    "skillButtonGroup",
+                    "=",
+                    "skillBar.Height()*0.8"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeWidth"
+                  },
+                  "parameters": [
+                    "skillButtonGroup",
+                    "=",
+                    "skillButtonGroup.Height()"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "GlobalVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "skillSet.skill1.isSelected",
+                    "True"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "renderedSkillCount",
+                    "+",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "skill1",
+                    "ScreenWidth()/(GlobalVariable(skillSet.selectedCount)+1)*(Variable(renderedSkillCount))",
+                    "skillBar.Y()+skillBar.Height()/2",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeHeight"
+                  },
+                  "parameters": [
+                    "skillButtonGroup",
+                    "=",
+                    "skillBar.Height()*0.8"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeWidth"
+                  },
+                  "parameters": [
+                    "skillButtonGroup",
+                    "=",
+                    "skillButtonGroup.Height()"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "GlobalVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "skillSet.skill2.isSelected",
+                    "True"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarScene"
+                  },
+                  "parameters": [
+                    "renderedSkillCount",
+                    "+",
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "skill2",
+                    "ScreenWidth()/(GlobalVariable(skillSet.selectedCount)+1)*(Variable(renderedSkillCount))",
+                    "skillBar.Y()+skillBar.Height()/2",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeHeight"
+                  },
+                  "parameters": [
+                    "skillButtonGroup",
+                    "=",
+                    "skillBar.Height()*0.8"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeWidth"
+                  },
+                  "parameters": [
+                    "skillButtonGroup",
+                    "=",
+                    "skillButtonGroup.Height()"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ]
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "GlobalVariableAsBoolean"
-              },
-              "parameters": [
-                "skillSet.skill0.isSelected",
-                "True"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "Create"
-              },
-              "parameters": [
-                "",
-                "skill0",
-                "ScreenWidth()/(GlobalVariable(skillSet.selectedCount)+1)*(Variable(renderedSkillCount)+1)",
-                "skillBar.Y()+skillBar.Height()/2",
-                ""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ChangeHeight"
-              },
-              "parameters": [
-                "skillButtonGroup",
-                "=",
-                "skillBar.Height()*0.8"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ChangeWidth"
-              },
-              "parameters": [
-                "skillButtonGroup",
-                "=",
-                "skillButtonGroup.Height()"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "renderedSkillCout",
-                "+",
-                "1"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "GlobalVariableAsBoolean"
-              },
-              "parameters": [
-                "skillSet.skill1.isSelected",
-                "True"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "Create"
-              },
-              "parameters": [
-                "",
-                "skill1",
-                "ScreenWidth()/(GlobalVariable(skillSet.selectedCount)+1)*(Variable(renderedSkillCount)+1)",
-                "skillBar.Y()+skillBar.Height()/2",
-                ""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ChangeHeight"
-              },
-              "parameters": [
-                "skillButtonGroup",
-                "=",
-                "skillBar.Height()*0.8"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ChangeWidth"
-              },
-              "parameters": [
-                "skillButtonGroup",
-                "=",
-                "skillButtonGroup.Height()"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "renderedSkillCout",
-                "+",
-                "1"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "GlobalVariableAsBoolean"
-              },
-              "parameters": [
-                "skillSet.skill2.isSelected",
-                "True"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "Create"
-              },
-              "parameters": [
-                "",
-                "skill2",
-                "ScreenWidth()/(GlobalVariable(skillSet.selectedCount)+1)*(Variable(renderedSkillCount)+1)",
-                "skillBar.Y()+skillBar.Height()/2",
-                ""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ChangeHeight"
-              },
-              "parameters": [
-                "skillButtonGroup",
-                "=",
-                "skillBar.Height()*0.8"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ChangeWidth"
-              },
-              "parameters": [
-                "skillButtonGroup",
-                "=",
-                "skillButtonGroup.Height()"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ModVarScene"
-              },
-              "parameters": [
-                "renderedSkillCout",
-                "+",
-                "1"
-              ],
-              "subInstructions": []
-            }
-          ],
           "events": []
         },
         {
