@@ -7606,9 +7606,9 @@
                 "value": "MettreX"
               },
               "parameters": [
-                "insurancePriceGroup",
+                "price0",
                 "=",
-                "ScreenWidth()*Variable(XPADDING_RATIO) + insuranceButton0."
+                "insuranceButton0.X() + insuranceButton0.Width() - price0.Width() - 2*Variable(TEXT_MARGIN)"
               ],
               "subInstructions": []
             },
@@ -7620,7 +7620,55 @@
               "parameters": [
                 "price0",
                 "=",
-                "insuranceTitle0.Y()+insuranceTitleGroup.GetFontSize()+insurancePolicyGroup.GetFontSize()"
+                "insuranceButton0.Y() + insuranceButton0.Height() - price0.GetFontSize() - 2*Variable(TEXT_MARGIN)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreX"
+              },
+              "parameters": [
+                "price1",
+                "=",
+                "insuranceButton1.X() + insuranceButton1.Width() - price1.Width() - 2*Variable(TEXT_MARGIN)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreX"
+              },
+              "parameters": [
+                "price2",
+                "=",
+                "insuranceButton2.X() + insuranceButton2.Width() - price2.Width() - 2*Variable(TEXT_MARGIN)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreY"
+              },
+              "parameters": [
+                "price1",
+                "=",
+                "insuranceButton1.Y() + insuranceButton1.Height() - price1.GetFontSize() - 2*Variable(TEXT_MARGIN)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreY"
+              },
+              "parameters": [
+                "price2",
+                "=",
+                "insuranceButton2.Y() + insuranceButton2.Height() - price2.GetFontSize() - 2*Variable(TEXT_MARGIN)"
               ],
               "subInstructions": []
             }
