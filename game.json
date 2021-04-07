@@ -624,6 +624,24 @@
         "name": "Car Game UI\\Coins + Balloon\\coins.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "receipt.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "receipt.jpg",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "paid.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "paid.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -814,6 +832,11 @@
           ]
         }
       ]
+    },
+    {
+      "name": "transactionList",
+      "type": "string",
+      "value": "111"
     }
   ],
   "layouts": [
@@ -3710,7 +3733,7 @@
             },
             {
               "disabled": false,
-              "folded": false,
+              "folded": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -5242,7 +5265,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.7879999999999998
+        "zoomFactor": 0.6079999999999997
       },
       "objectsGroups": [
         {
@@ -7606,9 +7629,9 @@
                 "value": "MettreX"
               },
               "parameters": [
-                "price0",
+                "insurancePriceGroup",
                 "=",
-                "insuranceButton0.X() + insuranceButton0.Width() - price0.Width() - 2*Variable(TEXT_MARGIN)"
+                "ScreenWidth()*Variable(XPADDING_RATIO) + insuranceButton0."
               ],
               "subInstructions": []
             },
@@ -7620,55 +7643,7 @@
               "parameters": [
                 "price0",
                 "=",
-                "insuranceButton0.Y() + insuranceButton0.Height() - price0.GetFontSize() - 2*Variable(TEXT_MARGIN)"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "MettreX"
-              },
-              "parameters": [
-                "price1",
-                "=",
-                "insuranceButton1.X() + insuranceButton1.Width() - price1.Width() - 2*Variable(TEXT_MARGIN)"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "MettreX"
-              },
-              "parameters": [
-                "price2",
-                "=",
-                "insuranceButton2.X() + insuranceButton2.Width() - price2.Width() - 2*Variable(TEXT_MARGIN)"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "MettreY"
-              },
-              "parameters": [
-                "price1",
-                "=",
-                "insuranceButton1.Y() + insuranceButton1.Height() - price1.GetFontSize() - 2*Variable(TEXT_MARGIN)"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "MettreY"
-              },
-              "parameters": [
-                "price2",
-                "=",
-                "insuranceButton2.Y() + insuranceButton2.Height() - price2.GetFontSize() - 2*Variable(TEXT_MARGIN)"
+                "insuranceTitle0.Y()+insuranceTitleGroup.GetFontSize()+insurancePolicyGroup.GetFontSize()"
               ],
               "subInstructions": []
             }
@@ -7737,8 +7712,8 @@
     {
       "b": 209,
       "disableInputWhenNotFocused": true,
-      "mangledName": "New_32scene",
-      "name": "New scene",
+      "mangledName": "Report",
+      "name": "Report",
       "oglFOV": 90,
       "oglZFar": 500,
       "oglZNear": 1,
@@ -7759,13 +7734,206 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 1
+        "zoomFactor": 0.6100000000000003
       },
       "objectsGroups": [],
       "variables": [],
-      "instances": [],
-      "objects": [],
-      "events": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 638,
+          "layer": "",
+          "locked": false,
+          "name": "receiptBackground",
+          "persistentUuid": "14571146-11e7-4c15-9cc8-b299e13e1455",
+          "width": 450,
+          "x": -63,
+          "y": 3,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 87,
+          "layer": "",
+          "locked": false,
+          "name": "paid",
+          "persistentUuid": "9fada3a6-6842-4009-a04c-fcac89c97bad",
+          "width": 105,
+          "x": 18,
+          "y": 476,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "transactions",
+          "persistentUuid": "3933f237-8f79-4d81-86d2-b8b1e3cbd45f",
+          "width": 0,
+          "x": 43,
+          "y": 143,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [
+        {
+          "name": "receiptBackground",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "receipt.jpg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "paid",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "paid.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "transactions",
+          "tags": "",
+          "type": "BBText::BBText",
+          "variables": [],
+          "behaviors": [],
+          "content": {
+            "text": "[i]transactions[/i] \n",
+            "opacity": 255,
+            "fontSize": 20,
+            "visible": true,
+            "color": "#000000",
+            "fontFamily": "Arial",
+            "align": "left",
+            "wordWrap": true
+          }
+        }
+      ],
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "",
+          "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "BBText::SetBBText"
+              },
+              "parameters": [
+                "transactions",
+                "=",
+                "ToString(GlobalVariable(transactionList))"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        }
+      ],
       "layers": [
         {
           "ambientLightColorB": 0,
