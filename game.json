@@ -655,27 +655,6 @@
       "value": 1000
     },
     {
-      "name": "INIT_INSURANCE_PRICE",
-      "type": "structure",
-      "children": [
-        {
-          "name": "3RDPARTY",
-          "type": "string",
-          "value": "500"
-        },
-        {
-          "name": "COMPREHENSIVE",
-          "type": "string",
-          "value": "1500"
-        },
-        {
-          "name": "CTP",
-          "type": "string",
-          "value": "500"
-        }
-      ]
-    },
-    {
       "name": "LEVEL_TIME",
       "type": "string",
       "value": "60"
@@ -834,12 +813,17 @@
       ]
     },
     {
-      "name": "transactionList",
-      "type": "string",
-      "value": "111"
+      "name": "currentCoin",
+      "type": "number",
+      "value": 0
     },
     {
-      "name": "currentCoin",
+      "name": "eventNum",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "transactionY",
       "type": "number",
       "value": 0
     }
@@ -870,7 +854,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.6199999999999992
+        "zoomFactor": 0.25
       },
       "objectsGroups": [
         {
@@ -1236,6 +1220,28 @@
           "initialVariables": [
             {
               "name": "isSelect",
+              "type": "boolean",
+              "value": false
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 638,
+          "layer": "",
+          "locked": false,
+          "name": "receiptBackground",
+          "persistentUuid": "71adb343-7afd-4f29-845a-f06abe156e7b",
+          "width": 450,
+          "x": 546,
+          "y": -10,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "show",
               "type": "boolean",
               "value": false
             }
@@ -2266,6 +2272,101 @@
           }
         },
         {
+          "name": "transaction",
+          "tags": "",
+          "type": "BBText::BBText",
+          "variables": [],
+          "behaviors": [],
+          "content": {
+            "text": "",
+            "opacity": 255,
+            "fontSize": 10,
+            "visible": true,
+            "color": "#000000",
+            "fontFamily": "Arial",
+            "align": "left",
+            "wordWrap": true
+          }
+        },
+        {
+          "name": "paid",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "paid.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "receiptBackground",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "receipt.jpg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "coin",
           "tags": "",
           "type": "Sprite",
@@ -2694,7 +2795,7 @@
         },
         {
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [],
@@ -2786,7 +2887,7 @@
         },
         {
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -3373,6 +3474,21 @@
                 {
                   "disabled": false,
                   "folded": false,
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "交易出现的位置需要改",
+                  "comment2": ""
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -3388,12 +3504,12 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "ModVarScene"
+                        "value": "ModVarGlobal"
                       },
                       "parameters": [
-                        "coinNumScene",
+                        "currentCoin",
                         "-",
-                        "10"
+                        "1"
                       ],
                       "subInstructions": []
                     },
@@ -3405,7 +3521,57 @@
                       "parameters": [
                         "coinNum",
                         "=",
-                        "ToString(Variable(coinNumScene))"
+                        "ToString(GlobalVariable(currentCoin))"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "eventNum",
+                        "+",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "transaction",
+                        "680",
+                        "60 + GlobalVariable(transactionY)",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BBText::SetBBText"
+                      },
+                      "parameters": [
+                        "transaction",
+                        "=",
+                        "GlobalVariableString(eventNum) + \". accident: coin -1\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "transactionY",
+                        "+",
+                        "transaction.Height()"
                       ],
                       "subInstructions": []
                     }
@@ -3426,7 +3592,7 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "金币 TODO： 金币增加值 待定",
+              "comment": "金币 TODO： 金币增加值 待定 交易出现的位置需要改",
               "comment2": ""
             },
             {
@@ -3505,10 +3671,10 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "ModVarScene"
+                        "value": "ModVarGlobal"
                       },
                       "parameters": [
-                        "coinNumScene",
+                        "currentCoin",
                         "+",
                         "1"
                       ],
@@ -3522,7 +3688,57 @@
                       "parameters": [
                         "coinNum",
                         "=",
-                        "ToString(Variable(coinNumScene))"
+                        "ToString(GlobalVariable(currentCoin))"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "eventNum",
+                        "+",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "transaction",
+                        "660",
+                        "80 + GlobalVariable(transactionY)",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BBText::SetBBText"
+                      },
+                      "parameters": [
+                        "transaction",
+                        "=",
+                        "GlobalVariableString(eventNum) + \". colleted: coin +1\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "transactionY",
+                        "+",
+                        "transaction.Height()"
                       ],
                       "subInstructions": []
                     }
@@ -4498,7 +4714,108 @@
                   "subInstructions": []
                 }
               ],
-              "events": []
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "ToDo: 显示账单",
+                  "comment2": ""
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "AnyKeyPressed"
+                      },
+                      "parameters": [
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SetObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "receiptBackground",
+                        "show",
+                        "True"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": [
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ObjectVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "receiptBackground",
+                            "show",
+                            "True"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "FixCamera"
+                          },
+                          "parameters": [
+                            "",
+                            "receiptBackground",
+                            "610",
+                            "0",
+                            "920",
+                            "560",
+                            "",
+                            "",
+                            ""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ChangePlan"
+                          },
+                          "parameters": [
+                            "receiptBackground",
+                            "=",
+                            "10"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -5104,6 +5421,29 @@
           "conditions": [],
           "actions": [],
           "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "",
+          "comment2": ""
         }
       ],
       "layers": [
@@ -6969,76 +7309,7 @@
                   "subInstructions": []
                 }
               ],
-              "events": [
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ObjectVariableAsBoolean"
-                      },
-                      "parameters": [
-                        "insuranceButton1",
-                        "isSelected",
-                        "True"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarGlobal"
-                      },
-                      "parameters": [
-                        "currentCoin",
-                        "-",
-                        "GlobalVariable(insurancePackage.package1.price)"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ObjectVariableAsBoolean"
-                      },
-                      "parameters": [
-                        "insuranceButton1",
-                        "isSelected",
-                        "False"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarGlobal"
-                      },
-                      "parameters": [
-                        "currentCoin",
-                        "+",
-                        "GlobalVariable(insurancePackage.package1.price)"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                }
-              ]
+              "events": []
             },
             {
               "disabled": false,
@@ -7592,18 +7863,7 @@
           "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "DepartScene"
-              },
-              "parameters": [
-                ""
-              ],
-              "subInstructions": []
-            }
-          ],
+          "conditions": [],
           "actions": [
             {
               "type": {
@@ -7652,18 +7912,6 @@
                 "\"$\" + GlobalVariableString(INIT_MONEY)"
               ],
               "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ModVarGlobal"
-              },
-              "parameters": [
-                "currentCoin",
-                "-",
-                "GlobalVariable(insurancePackage.package0.price)"
-              ],
-              "subInstructions": []
             }
           ],
           "events": []
@@ -7672,18 +7920,7 @@
           "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "DepartScene"
-              },
-              "parameters": [
-                ""
-              ],
-              "subInstructions": []
-            }
-          ],
+          "conditions": [],
           "actions": [
             {
               "type": {
@@ -7757,21 +7994,6 @@
             }
           ],
           "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Confirm button 状态",
-          "comment2": ""
         },
         {
           "disabled": false,
@@ -7908,7 +8130,13 @@
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
-          "initialVariables": []
+          "initialVariables": [
+            {
+              "name": "value",
+              "type": "string",
+              "value": ""
+            }
+          ]
         }
       ],
       "objects": [
@@ -7997,7 +8225,24 @@
           "variables": [],
           "behaviors": [],
           "content": {
-            "text": "[i]transactions[/i] \n",
+            "text": "Transactions:\n",
+            "opacity": 255,
+            "fontSize": 20,
+            "visible": true,
+            "color": "#000000",
+            "fontFamily": "Arial",
+            "align": "left",
+            "wordWrap": true
+          }
+        },
+        {
+          "name": "transaction",
+          "tags": "",
+          "type": "BBText::BBText",
+          "variables": [],
+          "behaviors": [],
+          "content": {
+            "text": "",
             "opacity": 255,
             "fontSize": 20,
             "visible": true,
@@ -8044,12 +8289,12 @@
             {
               "type": {
                 "inverted": false,
-                "value": "BBText::SetBBText"
+                "value": "ModVarGlobalTxt"
               },
               "parameters": [
-                "transactions",
+                "transactionString",
                 "=",
-                "ToString(GlobalVariable(transactionList))"
+                "ToString(GlobalVariable(transArray[0]))"
               ],
               "subInstructions": []
             }
