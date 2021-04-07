@@ -311,15 +311,6 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "Car Game UI/Coins + Balloon/coins.jpg",
-        "kind": "image",
-        "metadata": "",
-        "name": "Car Game UI\\Coins + Balloon\\coins.jpg",
-        "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
         "file": "assets/tiled_Blue background.png",
         "kind": "image",
         "metadata": "",
@@ -615,6 +606,24 @@
         "name": "assets/Coin_Spin_1 - Copy.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Car Game UI/Coins + Balloon/coins.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "Car Game UI\\Coins + Balloon\\coins.jpg",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Car Game UI/Coins + Balloon/coins.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Car Game UI\\Coins + Balloon\\coins.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -684,12 +693,12 @@
             {
               "name": "price",
               "type": "number",
-              "value": 0
+              "value": 100
             },
             {
               "name": "title",
               "type": "string",
-              "value": "CTP"
+              "value": "Compulsory Third Party (CTP)"
             }
           ]
         },
@@ -710,12 +719,12 @@
             {
               "name": "price",
               "type": "number",
-              "value": 0
+              "value": 300
             },
             {
               "name": "title",
               "type": "string",
-              "value": "3RDPARTY"
+              "value": "Third Party Property"
             }
           ]
         },
@@ -736,7 +745,7 @@
             {
               "name": "price",
               "type": "number",
-              "value": 0
+              "value": 800
             },
             {
               "name": "title",
@@ -763,17 +772,12 @@
             {
               "name": "description",
               "type": "string",
-              "value": "injure of a person des"
+              "value": "Personal injury."
             },
             {
               "name": "isSelected",
               "type": "boolean",
               "value": false
-            },
-            {
-              "name": "name",
-              "type": "string",
-              "value": "injure of a person"
             }
           ]
         },
@@ -784,17 +788,12 @@
             {
               "name": "description",
               "type": "string",
-              "value": "damage to own car des"
+              "value": "Damage to your own car."
             },
             {
               "name": "isSelected",
               "type": "boolean",
               "value": false
-            },
-            {
-              "name": "name",
-              "type": "string",
-              "value": "damage to own car"
             }
           ]
         },
@@ -805,17 +804,12 @@
             {
               "name": "description",
               "type": "string",
-              "value": "damage to someone's car des"
+              "value": "Damage to other's car or property."
             },
             {
               "name": "isSelected",
               "type": "boolean",
               "value": false
-            },
-            {
-              "name": "name",
-              "type": "string",
-              "value": "damage to someone's car"
             }
           ]
         }
@@ -1195,15 +1189,21 @@
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
+          "variables": [
+            {
+              "name": "value",
+              "type": "number",
+              "value": 20000
+            }
+          ],
           "behaviors": [
             {
+              "name": "TopDownMovement",
+              "type": "TopDownMovementBehavior::TopDownMovementBehavior",
               "acceleration": 500,
               "deceleration": 500,
               "maxSpeed": 200,
               "movementAngleOffset": 0,
-              "name": "TopDownMovement",
-              "type": "TopDownMovementBehavior::TopDownMovementBehavior",
               "viewpoint": "TopDown",
               "allowDiagonals": true,
               "angleOffset": 0,
@@ -2215,16 +2215,16 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "",
+              "name": "coins",
               "useMultipleDirections": false,
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 0.08,
+                  "timeBetweenFrames": 0.07999999821186066,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "Car Game UI\\Coins + Balloon\\coins.jpg",
+                      "image": "Car Game UI\\Coins + Balloon\\coins.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -2727,7 +2727,7 @@
         },
         {
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -2964,7 +2964,7 @@
         },
         {
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -3506,7 +3506,7 @@
         },
         {
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [],
@@ -4174,7 +4174,7 @@
         },
         {
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [],
@@ -4387,7 +4387,7 @@
         },
         {
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -4718,8 +4718,150 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "",
+          "comment": "撞车的三种情况（都是自己的责任）： 人受伤，对方车损失，自己车损失； level 1 - 轻微损伤 对方和自己车受损（爆炸动画）(10%-30%)   level 2 - 严重损伤  自己和对方的车严重受损（爆炸动画）(30%-60%)  level 3 - 严重损伤以及人员受伤  （显示爆炸和人受伤的动画）(60%-90%)",
           "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "damageValue = Random(LevelRange) * (ownCarValue + otherCarValue + peopleInjuryValue)       //todo: ？？加速度变化的影响  ",
+          "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "claimBackValue = damageValue - excessFee",
+          "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
         }
       ],
       "layers": [
@@ -4886,7 +5028,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.7479999999999998
+        "zoomFactor": 0.7879999999999998
       },
       "objectsGroups": [
         {
@@ -4928,6 +5070,20 @@
             },
             {
               "name": "insuranceButton2Des"
+            }
+          ]
+        },
+        {
+          "name": "insurancePriceGroup",
+          "objects": [
+            {
+              "name": "price0"
+            },
+            {
+              "name": "price1"
+            },
+            {
+              "name": "price2"
             }
           ]
         }
@@ -5216,8 +5372,8 @@
           "name": "PageTitle",
           "persistentUuid": "58197e99-b34f-4c54-b8c0-d765add20016",
           "width": 0,
-          "x": 57,
-          "y": 10,
+          "x": 58,
+          "y": 17,
           "zOrder": 12,
           "numberProperties": [],
           "stringProperties": [],
@@ -5251,6 +5407,86 @@
           "x": 117,
           "y": 555,
           "zOrder": 14,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "price1",
+          "persistentUuid": "698ebe2b-b358-46da-9f6e-1ad63305e140",
+          "width": 0,
+          "x": 191,
+          "y": 326,
+          "zOrder": 15,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "price0",
+          "persistentUuid": "709a756b-bba8-4bc4-85d7-ada656bddbda",
+          "width": 0,
+          "x": 193,
+          "y": 132,
+          "zOrder": 16,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "price2",
+          "persistentUuid": "af9d8cdc-e489-440f-a0bb-31319798f799",
+          "width": 0,
+          "x": 202,
+          "y": 495,
+          "zOrder": 17,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "locked": false,
+          "name": "coinNum",
+          "persistentUuid": "df992ef6-a86b-472d-b5c7-896e4d79aa96",
+          "width": 0,
+          "x": 253,
+          "y": -2,
+          "zOrder": 18,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 29,
+          "layer": "",
+          "locked": false,
+          "name": "coin",
+          "persistentUuid": "88ca0457-21f0-4922-ad6b-85dec8fdd516",
+          "width": 31,
+          "x": 226,
+          "y": 1,
+          "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -5581,6 +5817,113 @@
             "align": "left",
             "wordWrap": true
           }
+        },
+        {
+          "name": "price0",
+          "tags": "",
+          "type": "BBText::BBText",
+          "variables": [],
+          "behaviors": [],
+          "content": {
+            "text": "$0",
+            "opacity": 255,
+            "fontSize": 20,
+            "visible": true,
+            "color": "#000000",
+            "fontFamily": "Arial",
+            "align": "left",
+            "wordWrap": true
+          }
+        },
+        {
+          "name": "price1",
+          "tags": "",
+          "type": "BBText::BBText",
+          "variables": [],
+          "behaviors": [],
+          "content": {
+            "text": "$0",
+            "opacity": 255,
+            "fontSize": 20,
+            "visible": true,
+            "color": "#000000",
+            "fontFamily": "Arial",
+            "align": "left",
+            "wordWrap": true
+          }
+        },
+        {
+          "name": "price2",
+          "tags": "",
+          "type": "BBText::BBText",
+          "variables": [],
+          "behaviors": [],
+          "content": {
+            "text": "$0",
+            "opacity": 255,
+            "fontSize": 20,
+            "visible": true,
+            "color": "#000000",
+            "fontFamily": "Arial",
+            "align": "left",
+            "wordWrap": true
+          }
+        },
+        {
+          "name": "coinNum",
+          "tags": "",
+          "type": "BBText::BBText",
+          "variables": [],
+          "behaviors": [],
+          "content": {
+            "text": "1000",
+            "opacity": 255,
+            "fontSize": 20,
+            "visible": true,
+            "color": "#000000",
+            "fontFamily": "Arial",
+            "align": "left",
+            "wordWrap": true
+          }
+        },
+        {
+          "name": "coin",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "coins",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.07999999821186066,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Car Game UI\\Coins + Balloon\\coins.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "events": [
@@ -5874,7 +6217,7 @@
             },
             {
               "disabled": false,
-              "folded": true,
+              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": [
@@ -6918,6 +7261,189 @@
               ]
             }
           ]
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "初始化金钱",
+          "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "BBText::SetBBText"
+              },
+              "parameters": [
+                "price0",
+                "=",
+                "\"$\" + GlobalVariableString(insurancePackage.package0.price)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "BBText::SetBBText"
+              },
+              "parameters": [
+                "price1",
+                "=",
+                "\"$\" + GlobalVariableString(insurancePackage.package1.price)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "BBText::SetBBText"
+              },
+              "parameters": [
+                "price2",
+                "=",
+                "\"$\" + GlobalVariableString(insurancePackage.package2.price)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "BBText::SetBBText"
+              },
+              "parameters": [
+                "coinNum",
+                "=",
+                "\"$\" + GlobalVariableString(INIT_MONEY)"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "BBText::SetFontSize"
+              },
+              "parameters": [
+                "coinNum",
+                "=",
+                "Variable(TITLE_FONT_SIZE)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "BBText::SetFontSize"
+              },
+              "parameters": [
+                "insurancePriceGroup",
+                "=",
+                "Variable(TITLE_FONT_SIZE)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "BBText::SetWordWrap"
+              },
+              "parameters": [
+                "coinNum",
+                "no"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "BBText::SetWordWrap"
+              },
+              "parameters": [
+                "insurancePriceGroup",
+                "no"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreX"
+              },
+              "parameters": [
+                "insurancePriceGroup",
+                "=",
+                "ScreenWidth()*Variable(XPADDING_RATIO) + insuranceButton0."
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreY"
+              },
+              "parameters": [
+                "price0",
+                "=",
+                "insuranceTitle0.Y()+insuranceTitleGroup.GetFontSize()+insurancePolicyGroup.GetFontSize()"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
         }
       ],
       "layers": [
