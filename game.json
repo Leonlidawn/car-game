@@ -642,11 +642,47 @@
         "name": "paid.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Button_Confirm.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Button_Confirm.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "report_temp.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "report_temp.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
   },
-  "objects": [],
+  "objects": [
+    {
+      "name": "transaction",
+      "tags": "",
+      "type": "BBText::BBText",
+      "variables": [],
+      "behaviors": [],
+      "content": {
+        "text": "",
+        "opacity": 255,
+        "fontSize": 10,
+        "visible": true,
+        "color": "#000000",
+        "fontFamily": "Arial",
+        "align": "left",
+        "wordWrap": true
+      }
+    }
+  ],
   "objectsGroups": [],
   "variables": [
     {
@@ -826,6 +862,16 @@
       "name": "transactionY",
       "type": "number",
       "value": 0
+    },
+    {
+      "name": "coinCollected",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "accidentCoinDeduct",
+      "type": "number",
+      "value": 0
     }
   ],
   "layouts": [
@@ -854,7 +900,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.25
+        "zoomFactor": 0.3700000000000001
       },
       "objectsGroups": [
         {
@@ -2272,101 +2318,6 @@
           }
         },
         {
-          "name": "transaction",
-          "tags": "",
-          "type": "BBText::BBText",
-          "variables": [],
-          "behaviors": [],
-          "content": {
-            "text": "",
-            "opacity": 255,
-            "fontSize": 10,
-            "visible": true,
-            "color": "#000000",
-            "fontFamily": "Arial",
-            "align": "left",
-            "wordWrap": true
-          }
-        },
-        {
-          "name": "paid",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "paid.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "receiptBackground",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "receipt.jpg",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
           "name": "coin",
           "tags": "",
           "type": "Sprite",
@@ -2733,6 +2684,84 @@
                     {
                       "hasCustomCollisionMask": false,
                       "image": "assets/Coin_Spin_1 - Copy.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "confirmButton",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Button_Confirm.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "reportBackground",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "report_temp.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -3545,9 +3574,9 @@
                       "parameters": [
                         "",
                         "transaction",
-                        "680",
+                        "20",
                         "60 + GlobalVariable(transactionY)",
-                        ""
+                        "\"Report Layer\""
                       ],
                       "subInstructions": []
                     },
@@ -3712,9 +3741,9 @@
                       "parameters": [
                         "",
                         "transaction",
-                        "660",
-                        "80 + GlobalVariable(transactionY)",
-                        ""
+                        "20",
+                        "60\n + GlobalVariable(transactionY)",
+                        "\"Report Layer\""
                       ],
                       "subInstructions": []
                     },
@@ -4683,17 +4712,6 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "ShowLayer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"Report Layer\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
                     "value": "Arreter"
                   },
                   "parameters": [
@@ -4712,110 +4730,58 @@
                     "no"
                   ],
                   "subInstructions": []
-                }
-              ],
-              "events": [
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "ToDo: 显示账单",
-                  "comment2": ""
                 },
                 {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "AnyKeyPressed"
-                      },
-                      "parameters": [
-                        ""
-                      ],
-                      "subInstructions": []
-                    }
+                  "type": {
+                    "inverted": false,
+                    "value": "ShowLayer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Report Layer\""
                   ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "SetObjectVariableAsBoolean"
-                      },
-                      "parameters": [
-                        "receiptBackground",
-                        "show",
-                        "True"
-                      ],
-                      "subInstructions": []
-                    }
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "reportBackground",
+                    "0",
+                    "0",
+                    "\"Report Layer\""
                   ],
-                  "events": [
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ObjectVariableAsBoolean"
-                          },
-                          "parameters": [
-                            "receiptBackground",
-                            "show",
-                            "True"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "FixCamera"
-                          },
-                          "parameters": [
-                            "",
-                            "receiptBackground",
-                            "610",
-                            "0",
-                            "920",
-                            "560",
-                            "",
-                            "",
-                            ""
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "ChangePlan"
-                          },
-                          "parameters": [
-                            "receiptBackground",
-                            "=",
-                            "10"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    }
-                  ]
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeHeight"
+                  },
+                  "parameters": [
+                    "reportBackground",
+                    "=",
+                    "SceneWindowHeight()"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeWidth"
+                  },
+                  "parameters": [
+                    "reportBackground",
+                    "=",
+                    "SceneWindowWidth()"
+                  ],
+                  "subInstructions": []
                 }
-              ]
+              ],
+              "events": []
             }
           ]
         },
@@ -4851,7 +4817,7 @@
         },
         {
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -8087,56 +8053,18 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 638,
+          "height": 597,
           "layer": "",
           "locked": false,
           "name": "receiptBackground",
           "persistentUuid": "14571146-11e7-4c15-9cc8-b299e13e1455",
-          "width": 450,
-          "x": -63,
-          "y": 3,
+          "width": 318,
+          "x": 1,
+          "y": 1,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 87,
-          "layer": "",
-          "locked": false,
-          "name": "paid",
-          "persistentUuid": "9fada3a6-6842-4009-a04c-fcac89c97bad",
-          "width": 105,
-          "x": 18,
-          "y": 476,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "transactions",
-          "persistentUuid": "3933f237-8f79-4d81-86d2-b8b1e3cbd45f",
-          "width": 0,
-          "x": 43,
-          "y": 143,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": [
-            {
-              "name": "value",
-              "type": "string",
-              "value": ""
-            }
-          ]
         }
       ],
       "objects": [
@@ -8158,46 +8086,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "receipt.jpg",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "paid",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "paid.png",
+                      "image": "report_temp.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -8273,32 +8162,8 @@
           "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "DepartScene"
-              },
-              "parameters": [
-                ""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "ModVarGlobalTxt"
-              },
-              "parameters": [
-                "transactionString",
-                "=",
-                "ToString(GlobalVariable(transArray[0]))"
-              ],
-              "subInstructions": []
-            }
-          ],
+          "conditions": [],
+          "actions": [],
           "events": []
         }
       ],
