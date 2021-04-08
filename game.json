@@ -864,12 +864,12 @@
       "value": 0
     },
     {
-      "name": "coinCollected",
+      "name": "coinCollectedSum",
       "type": "number",
       "value": 0
     },
     {
-      "name": "accidentCoinDeduct",
+      "name": "accidentCoinDeductSum",
       "type": "number",
       "value": 0
     }
@@ -900,7 +900,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.3700000000000001
+        "zoomFactor": 0.6100000000000003
       },
       "objectsGroups": [
         {
@@ -2781,6 +2781,74 @@
               ]
             }
           ]
+        },
+        {
+          "name": "accidentCoinDeduct",
+          "tags": "",
+          "type": "BBText::BBText",
+          "variables": [],
+          "behaviors": [],
+          "content": {
+            "text": "",
+            "opacity": 255,
+            "fontSize": 20,
+            "visible": true,
+            "color": "#000000",
+            "fontFamily": "Arial",
+            "align": "left",
+            "wordWrap": true
+          }
+        },
+        {
+          "name": "coinCollected",
+          "tags": "",
+          "type": "BBText::BBText",
+          "variables": [],
+          "behaviors": [],
+          "content": {
+            "text": "",
+            "opacity": 255,
+            "fontSize": 20,
+            "visible": true,
+            "color": "#000000",
+            "fontFamily": "Arial",
+            "align": "left",
+            "wordWrap": true
+          }
+        },
+        {
+          "name": "insuranceClaim",
+          "tags": "",
+          "type": "BBText::BBText",
+          "variables": [],
+          "behaviors": [],
+          "content": {
+            "text": "",
+            "opacity": 255,
+            "fontSize": 20,
+            "visible": true,
+            "color": "#000000",
+            "fontFamily": "Arial",
+            "align": "left",
+            "wordWrap": true
+          }
+        },
+        {
+          "name": "insuranceCost",
+          "tags": "",
+          "type": "BBText::BBText",
+          "variables": [],
+          "behaviors": [],
+          "content": {
+            "text": "",
+            "opacity": 255,
+            "fontSize": 20,
+            "visible": true,
+            "color": "#000000",
+            "fontFamily": "Arial",
+            "align": "left",
+            "wordWrap": true
+          }
         }
       ],
       "events": [
@@ -3569,20 +3637,6 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "Create"
-                      },
-                      "parameters": [
-                        "",
-                        "transaction",
-                        "20",
-                        "60 + GlobalVariable(transactionY)",
-                        "\"Report Layer\""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
                         "value": "BBText::SetBBText"
                       },
                       "parameters": [
@@ -3601,6 +3655,18 @@
                         "transactionY",
                         "+",
                         "transaction.Height()"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "accidentCoinDeductSum",
+                        "+",
+                        "1"
                       ],
                       "subInstructions": []
                     }
@@ -3736,20 +3802,6 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "Create"
-                      },
-                      "parameters": [
-                        "",
-                        "transaction",
-                        "20",
-                        "60\n + GlobalVariable(transactionY)",
-                        "\"Report Layer\""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
                         "value": "BBText::SetBBText"
                       },
                       "parameters": [
@@ -3768,6 +3820,18 @@
                         "transactionY",
                         "+",
                         "transaction.Height()"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "coinCollectedSum",
+                        "+",
+                        "1"
                       ],
                       "subInstructions": []
                     }
@@ -4734,10 +4798,55 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "ShowLayer"
+                    "value": "Create"
                   },
                   "parameters": [
                     "",
+                    "coinCollected",
+                    "60",
+                    "120",
+                    "\"Report Layer\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "accidentCoinDeduct",
+                    "60",
+                    "140",
+                    "\"Report Layer\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "insuranceClaim",
+                    "60",
+                    "180",
+                    "\"Report Layer\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "insuranceCost",
+                    "60",
+                    "200",
                     "\"Report Layer\""
                   ],
                   "subInstructions": []
@@ -4777,6 +4886,65 @@
                     "reportBackground",
                     "=",
                     "SceneWindowWidth()"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BBText::SetBBText"
+                  },
+                  "parameters": [
+                    "coinCollected",
+                    "=",
+                    "\"⭐ Coin Collected: \" + GlobalVariableString(coinCollectedSum)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BBText::SetBBText"
+                  },
+                  "parameters": [
+                    "accidentCoinDeduct",
+                    "=",
+                    "\"⭐ Accident Coin Deducted: \" + GlobalVariableString(accidentCoinDeductSum)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BBText::SetBBText"
+                  },
+                  "parameters": [
+                    "insuranceClaim",
+                    "=",
+                    "\"⭐ Insurance Claimed: \" "
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BBText::SetBBText"
+                  },
+                  "parameters": [
+                    "insuranceCost",
+                    "=",
+                    "\"⭐ Incurance Cost: \" "
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ShowLayer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Report Layer\""
                   ],
                   "subInstructions": []
                 }
