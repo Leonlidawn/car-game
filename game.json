@@ -660,6 +660,15 @@
         "name": "report_temp.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Report Page_Background.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Report Page_Background.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -1146,8 +1155,8 @@
           "name": "controllerPosition",
           "persistentUuid": "55c0430a-a41c-4669-a4ea-6eb780c97786",
           "width": 26,
-          "x": 82,
-          "y": 298,
+          "x": 92,
+          "y": 429,
           "zOrder": 8,
           "numberProperties": [],
           "stringProperties": [],
@@ -1162,8 +1171,8 @@
           "name": "controllerCenter",
           "persistentUuid": "ded9ebb3-e1f5-4981-8943-ab69b6a6a5a2",
           "width": 20,
-          "x": 55,
-          "y": 435,
+          "x": 89,
+          "y": 430,
           "zOrder": 7,
           "numberProperties": [],
           "stringProperties": [],
@@ -2761,7 +2770,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "report_temp.png",
+                      "image": "Report Page_Background.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -4803,7 +4812,7 @@
                   "parameters": [
                     "",
                     "coinCollected",
-                    "60",
+                    "40",
                     "120",
                     "\"Report Layer\""
                   ],
@@ -4817,7 +4826,7 @@
                   "parameters": [
                     "",
                     "accidentCoinDeduct",
-                    "60",
+                    "40",
                     "140",
                     "\"Report Layer\""
                   ],
@@ -4831,7 +4840,7 @@
                   "parameters": [
                     "",
                     "insuranceClaim",
-                    "60",
+                    "40",
                     "180",
                     "\"Report Layer\""
                   ],
@@ -4845,7 +4854,7 @@
                   "parameters": [
                     "",
                     "insuranceCost",
-                    "60",
+                    "40",
                     "200",
                     "\"Report Layer\""
                   ],
@@ -4909,7 +4918,7 @@
                   "parameters": [
                     "accidentCoinDeduct",
                     "=",
-                    "\"⭐ Accident Coin Deducted: \" + GlobalVariableString(accidentCoinDeductSum)"
+                    "\"⭐ Accidents: \" + GlobalVariableString(accidentCoinDeductSum)"
                   ],
                   "subInstructions": []
                 },
