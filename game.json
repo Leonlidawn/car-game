@@ -624,6 +624,15 @@
         "name": "Car Game UI\\Coins + Balloon\\coins.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "balloon.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "balloon.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -947,6 +956,11 @@
           "name": "coinNumScene",
           "type": "string",
           "value": "100"
+        },
+        {
+          "name": "dbg",
+          "type": "number",
+          "value": 0
         }
       ],
       "instances": [
@@ -2623,6 +2637,45 @@
               ]
             }
           ]
+        },
+        {
+          "name": "balloon",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "balloon.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "events": [
@@ -2738,6 +2791,44 @@
                 }
               ],
               "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "KeyFromTextPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "\"b\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": "const columnMax = 4;\nconst roadInstance =runtimeScene.getObjects('road')[0];\nconst bWidth = roadInstance.getWidth()/columnMax;\nconst bHeight = bWidth;\nconst margin = 5;\nconst balloonArray = runtimeScene.getObjects('balloon');\n\n//算出 一行 能有几个balloon\n//算出 最后一个ballon 的位置然后根据这个位置生成\nlet count = balloonArray.length;\nfor( let i = 0; i<count; i++ ){\n    let balloon = balloonArray[i];\n    if(balloon == undefined){\n        const bInstance = runtimeScene.createObject('balloon');\n        bInstance.setWidth(bWidth);\n        bInstance.setHeight(bHeight);\n        bInstance.setPosition(getX(i) ,getY(i));\n\n        // set animation \n        // change animation time\n\n        break;\n    }\n}\n\nfunction getX(index){\n    const columnNum = (index+1)%columnMax;\n    const x = roadInstance.x + count * (columnNum - 1)\n    return x;\n}\n\nfunction getY(index){\n    const rowNum = Math.floor((index+1)/columnMax);\n    const x = roadInstance.x + count * (rowNum - 1)\n    return x;\n}",
+                  "parameterObjects": "",
+                  "useStrict": true,
+                  "eventsSheetExpanded": true
+                }
+              ]
             }
           ]
         },
@@ -4477,17 +4568,10 @@
         {
           "disabled": false,
           "folded": false,
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "技能",
-          "comment2": ""
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
         },
         {
           "disabled": false,
@@ -4501,52 +4585,26 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "ToDo：点击变颜色 可以添加其他功能",
+          "comment": "初始化技能",
           "comment2": ""
         },
         {
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
                 "inverted": false,
-                "value": "MouseButtonReleased"
+                "value": "DepartScene"
               },
               "parameters": [
-                "insuranceButton1",
-                "Left"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "SourisSurObjet"
-              },
-              "parameters": [
-                "skill2",
-                "",
-                "",
                 ""
               ],
               "subInstructions": []
             }
           ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "ToggleObjectVariableAsBoolean"
-              },
-              "parameters": [
-                "skill2",
-                "isSelect"
-              ],
-              "subInstructions": []
-            }
-          ],
+          "actions": [],
           "events": [
             {
               "disabled": false,
@@ -4766,34 +4824,24 @@
         {
           "disabled": false,
           "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "点击技能",
+          "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "ObjectVariableAsBoolean"
-              },
-              "parameters": [
-                "skill2",
-                "isSelect",
-                "True"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "ChangeColor"
-              },
-              "parameters": [
-                "skill2",
-                "\"248;112;112\""
-              ],
-              "subInstructions": []
-            }
-          ],
+          "conditions": [],
+          "actions": [],
           "events": []
         },
         {
@@ -4804,49 +4852,154 @@
             {
               "type": {
                 "inverted": false,
-                "value": "ObjectVariableAsBoolean"
+                "value": "MouseButtonReleased"
               },
               "parameters": [
-                "skill2",
-                "isSelect",
-                "False"
+                "insuranceButton1",
+                "Left"
               ],
               "subInstructions": []
             }
           ],
-          "actions": [
+          "actions": [],
+          "events": [
             {
-              "type": {
-                "inverted": false,
-                "value": "ChangeColor"
-              },
-              "parameters": [
-                "skill2",
-                "\"248;231;28\""
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "skill0",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
               ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
+              "actions": [],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::JsCode",
+                  "inlineCode": "const columnMax = 4;\nconst roadInstance =runtimeScene.getObjects('road')[0];\nconst bWidth = roadInstance.getWidth()/columnMax;\nconst bHeight = bWidth;\nconst margin = 5;\nconst balloonArray = runtimeScene.getObjects('balloon');\n\n//算出 一行 能有几个balloon\n//算出 最后一个ballon 的位置然后根据这个位置生成\nlet count = balloonArray.length;\nfor( let i = 0; i<counnt; i++ ){\n    let balloon = balloonArray[i];\n    if(balloon == undefined){\n        const bInstance = runtimeScene.createObject('balloon');\n        bInstance.setWidth(bWidth);\n        bInstance.setHeight(bHeight);\n        bInstance.setPosition(getX(i) ,getY(i));\n\n        //set animation \n        //change animation time\n\n        break;\n    }\n}\n\nfunction getX(index){\n    const columnNum = (index+1)%columnMax;\n    const x = roadInstance.x + count * (columnNum - 1)\n    return x;\n}\n\nfunction getY(index){\n    const rowNum = Math.floor((index+1)/columnMax);\n    const x = roadInstance.x + count * (rowNum - 1)\n    return x;\n}",
+                  "parameterObjects": "",
+                  "useStrict": true,
+                  "eventsSheetExpanded": false
+                }
+              ]
+            },
             {
-              "type": {
-                "inverted": false,
-                "value": "DepartScene"
-              },
-              "parameters": [
-                ""
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "skill1",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
               ],
-              "subInstructions": []
+              "actions": [],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [],
+                  "events": []
+                }
+              ]
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "skill2",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "skill2",
+                        "isSelect",
+                        "False"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "skill2",
+                        "isSelect",
+                        "True"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [],
+                  "events": []
+                }
+              ]
             }
-          ],
-          "actions": [],
-          "events": []
+          ]
         },
         {
           "disabled": false,
@@ -4875,50 +5028,17 @@
         {
           "disabled": false,
           "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
-          "events": []
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "==碰撞事件===\n2.enable 技能按钮 5秒  => 对应最后的碰撞\n2.1.按技能，该技能disable\n- 出现气球，气球逐渐变大，开始倒计时，直到理赔结束后消失 \n如果claim对了，结束后 金币增加理赔的金额，扣取excess fee\n如果claim错了，结束后 没有金币增加\n",
+          "comment2": ""
         },
         {
           "disabled": false,
@@ -4996,6 +5116,21 @@
           "conditions": [],
           "actions": [],
           "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "技能button的TODOs: \n1.需要加上不同状态的animation\n",
+          "comment2": ""
         },
         {
           "disabled": false,
@@ -7793,7 +7928,14 @@
       "behaviorsSharedData": []
     }
   ],
-  "externalEvents": [],
+  "externalEvents": [
+    {
+      "associatedLayout": "",
+      "lastChangeTimeStamp": 0,
+      "name": "NewExternalEvents",
+      "events": []
+    }
+  ],
   "eventsFunctionsExtensions": [
     {
       "author": "",
