@@ -923,7 +923,7 @@
     {
       "name": "insuranceCost",
       "type": "string",
-      "value": "0"
+      "value": "100"
     }
   ],
   "layouts": [
@@ -5120,7 +5120,7 @@
                       "parameters": [
                         "netCoin",
                         "=",
-                        "\"Net coin: \" + GlobalVariableString(currentCoin)"
+                        "\"Net coin: \" + ToString(GlobalVariable(currentCoin) - GlobalVariable(insuranceCoin))"
                       ],
                       "subInstructions": []
                     },
@@ -5361,6 +5361,18 @@
                             "accident",
                             "=",
                             "0"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "currentCoin",
+                            "=",
+                            "1000"
                           ],
                           "subInstructions": []
                         }
@@ -5620,7 +5632,7 @@
                       "parameters": [
                         "netCoin",
                         "=",
-                        "\"Net coin: \" + GlobalVariableString(currentCoin)"
+                        "\"Net coin: \" + ToString(GlobalVariable(currentCoin) - GlobalVariable(insuranceCoin))"
                       ],
                       "subInstructions": []
                     },
@@ -5737,6 +5749,18 @@
                             "accident",
                             "=",
                             "0"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "currentCoin",
+                            "=",
+                            "1000"
                           ],
                           "subInstructions": []
                         }
