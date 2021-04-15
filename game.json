@@ -4961,6 +4961,30 @@
                     {
                       "type": {
                         "inverted": false,
+                        "value": "ChangeScale"
+                      },
+                      "parameters": [
+                        "startAgain",
+                        "/",
+                        "5"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangeScale"
+                      },
+                      "parameters": [
+                        "exit",
+                        "/",
+                        "5"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
                         "value": "Create"
                       },
                       "parameters": [
@@ -5111,6 +5135,18 @@
                         "150",
                         "500",
                         "\"Report Layer\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangeScale"
+                      },
+                      "parameters": [
+                        "confirm",
+                        "/",
+                        "5"
                       ],
                       "subInstructions": []
                     },
