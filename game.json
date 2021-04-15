@@ -669,6 +669,15 @@
         "preloadAsMusic": false,
         "preloadAsSound": false,
         "userAdded": true
+      },
+      {
+        "file": "bgm.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "bgm.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -902,7 +911,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.6199999999999992
+        "zoomFactor": 0.379999999999999
       },
       "objectsGroups": [
         {
@@ -2802,7 +2811,18 @@
           "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
           "actions": [
             {
               "type": {
@@ -2813,6 +2833,20 @@
                 "",
                 "road",
                 "no",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "PlayMusic"
+              },
+              "parameters": [
+                "",
+                "bgm.mp3",
+                "yes",
                 "",
                 ""
               ],
@@ -3680,7 +3714,7 @@
                       "parameters": [
                         "currentCoin",
                         "+",
-                        "1"
+                        "5"
                       ],
                       "subInstructions": []
                     },
@@ -3704,7 +3738,7 @@
                       "parameters": [
                         "coinCollect",
                         "+",
-                        "1"
+                        "5"
                       ],
                       "subInstructions": []
                     },
@@ -4663,17 +4697,6 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "ShowLayer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"Report Layer\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
                     "value": "Arreter"
                   },
                   "parameters": [
@@ -4732,6 +4755,58 @@
                       },
                       "parameters": [
                         "",
+                        "coinCollect",
+                        "140",
+                        "160",
+                        "\"Report Layer\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BBText::SetBBText"
+                      },
+                      "parameters": [
+                        "coinCollect",
+                        "=",
+                        "\"Coin collected: \" + ToString(GlobalVariable(coinCollect))"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "accident",
+                        "140",
+                        "190",
+                        "\"Report Layer\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BBText::SetBBText"
+                      },
+                      "parameters": [
+                        "accident",
+                        "=",
+                        "\"Accident: \" + ToString(GlobalVariable(accident))"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
                         "gameOver",
                         "0",
                         "0",
@@ -4742,7 +4817,7 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "ChangeScaleWidth"
+                        "value": "ChangeWidth"
                       },
                       "parameters": [
                         "gameOver",
@@ -4754,64 +4829,12 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "ChangeScaleHeight"
+                        "value": "ChangeHeight"
                       },
                       "parameters": [
                         "gameOver",
                         "=",
                         "SceneWindowHeight()"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Create"
-                      },
-                      "parameters": [
-                        "",
-                        "coinCollect",
-                        "40",
-                        "60",
-                        "\"Report Layer\""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "BBText::SetBBText"
-                      },
-                      "parameters": [
-                        "coinCollect",
-                        "=",
-                        "ToString(GlobalVariable(coinCollect))"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Create"
-                      },
-                      "parameters": [
-                        "",
-                        "accident",
-                        "40",
-                        "80",
-                        "\"Report Layer\""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "BBText::SetBBText"
-                      },
-                      "parameters": [
-                        "accident",
-                        "=",
-                        "ToString(GlobalVariable(accident))"
                       ],
                       "subInstructions": []
                     }
@@ -4855,6 +4878,58 @@
                       },
                       "parameters": [
                         "",
+                        "coinCollect",
+                        "40",
+                        "160",
+                        "\"Report Layer\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BBText::SetBBText"
+                      },
+                      "parameters": [
+                        "coinCollect",
+                        "=",
+                        "\"Coin collected: \"+ ToString(GlobalVariable(coinCollect))"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "accident",
+                        "40",
+                        "180",
+                        "\"Report Layer\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BBText::SetBBText"
+                      },
+                      "parameters": [
+                        "accident",
+                        "=",
+                        "\"Accident: \" + ToString(GlobalVariable(accident))"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
                         "reportPage",
                         "0",
                         "0",
@@ -4865,7 +4940,7 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "ChangeScaleWidth"
+                        "value": "ChangeWidth"
                       },
                       "parameters": [
                         "reportPage",
@@ -4877,64 +4952,12 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "ChangeScaleHeight"
+                        "value": "ChangeHeight"
                       },
                       "parameters": [
                         "reportPage",
                         "=",
                         "SceneWindowHeight()"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Create"
-                      },
-                      "parameters": [
-                        "",
-                        "coinCollect",
-                        "40",
-                        "60",
-                        "\"Report Layer\""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "BBText::SetBBText"
-                      },
-                      "parameters": [
-                        "coinCollect",
-                        "=",
-                        "ToString(GlobalVariable(coinCollect))"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Create"
-                      },
-                      "parameters": [
-                        "",
-                        "accident",
-                        "40",
-                        "80",
-                        "\"Report Layer\""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "BBText::SetBBText"
-                      },
-                      "parameters": [
-                        "accident",
-                        "=",
-                        "ToString(GlobalVariable(accident))"
                       ],
                       "subInstructions": []
                     }
