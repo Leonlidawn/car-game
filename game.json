@@ -699,15 +699,6 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "fade-1.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "fade-1.png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
         "file": "fade-2.png",
         "kind": "image",
         "metadata": "",
@@ -721,6 +712,15 @@
         "kind": "image",
         "metadata": "",
         "name": "fade-3.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "fade-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "fade-1.png",
         "smoothed": true,
         "userAdded": false
       }
@@ -2766,48 +2766,14 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 92.27734375,
+                        "y": 128.015625
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "fade-2.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "fade-3.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 389.84765625,
+                        "y": 276.21875
                       },
                       "customCollisionMask": []
                     }
@@ -2829,14 +2795,14 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 92.27734375,
+                        "y": 128.015625
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 389.84765625,
+                        "y": 276.21875
                       },
                       "customCollisionMask": []
                     },
@@ -2846,14 +2812,14 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 92.27734375,
+                        "y": 128.015625
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 389.84765625,
+                        "y": 276.21875
                       },
                       "customCollisionMask": []
                     },
@@ -2863,14 +2829,14 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 92.27734375,
+                        "y": 128.015625
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 389.84765625,
+                        "y": 276.21875
                       },
                       "customCollisionMask": []
                     }
@@ -5277,6 +5243,52 @@
                     {
                       "type": {
                         "inverted": false,
+                        "value": "ScaleHeight"
+                      },
+                      "parameters": [
+                        "balloon",
+                        "!=",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangeScale"
+                      },
+                      "parameters": [
+                        "balloon",
+                        "+",
+                        "TimeDelta()/80"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Opacity"
+                      },
+                      "parameters": [
+                        "balloon",
+                        "-",
+                        "TimeDelta()*5"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
                         "value": "VarObjet"
                       },
                       "parameters": [
@@ -5309,17 +5321,7 @@
                       "subInstructions": []
                     }
                   ],
-                  "events": [
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::JsCode",
-                      "inlineCode": "const columnMax = runtimeScene.getVariables().get('balloonColumnLimit').getValue();\nconst roadInstance =runtimeScene.getObjects('road')[0];\n\nconst bWidth = roadInstance.getWidth()/columnMax;\nconst bHeight = bWidth;\n\nobjects.forEach(\n// let balloonArray = runtimeScene.getObjects('balloon');\n// balloonArray.forEach(\n    (bInstance)=>{\n        bInstance.setWidth(bWidth);\n        bInstance.setHeight(bHeight);\n    \n})\n",
-                      "parameterObjects": "balloon",
-                      "useStrict": true,
-                      "eventsSheetExpanded": false
-                    }
-                  ]
+                  "events": []
                 }
               ]
             },
@@ -5342,6 +5344,24 @@
               ],
               "actions": [],
               "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Link",
+                  "include": {
+                    "includeConfig": 0
+                  },
+                  "target": "resizeBallonScript"
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Link",
+                  "include": {
+                    "includeConfig": 0
+                  },
+                  "target": "positionBallonScript"
+                },
                 {
                   "disabled": false,
                   "folded": false,
@@ -5372,15 +5392,6 @@
                     }
                   ],
                   "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Link",
-                  "include": {
-                    "includeConfig": 0
-                  },
-                  "target": "positionBallonScript"
                 }
               ]
             }
@@ -8275,7 +8286,7 @@
           "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::JsCode",
-          "inlineCode": "const columnMax = runtimeScene.getVariables().get('balloonColumnLimit').getValue();\n\nconst roadInstance =runtimeScene.getObjects('road')[0];\nconst topBarInstance =runtimeScene.getObjects('topBar')[0];\n\nconst bWidth = roadInstance.getWidth()/columnMax;\nconst bHeight = bWidth;\nconst margin = 5;\nconst zOrder = 4;\n\n//生成气球,但不设置位置\nconst bInstance = runtimeScene.createObject('balloon');\nbInstance.setAnimation(0);\nbInstance.setWidth(bWidth);\nbInstance.setHeight(bHeight);\nbInstance.setZOrder(zOrder);\n\n//TODOs:\n\n// set animation \n// change animation time\n\n\nfunction getX(index){\n    let columnNum = (index+1)%columnMax;\n    if (columnNum == 0) columnNum = 4;\n    const x = roadInstance.x + bWidth * (columnNum - 1);     \n    return x;\n}\n\nfunction getY(index){\n    let rowNum = 1;\n    if(index+1 > columnMax){\n        rowNum = Math.ceil((index+1)/columnMax);\n    } \n\n    const y = topBarInstance.y+topBarInstance.getHeight() + bHeight * (rowNum - 1)\n    return y;\n}\n\n\nfunction debug(value){\n    runtimeScene.getVariables().get('dbg').setValue(value);\n}\n\n",
+          "inlineCode": "const columnMax = runtimeScene.getVariables().get('balloonColumnLimit').getValue();\n\nconst roadInstance =runtimeScene.getObjects('road')[0];\nconst topBarInstance =runtimeScene.getObjects('topBar')[0];\n\nconst bWidth = roadInstance.getWidth()/columnMax;\nconst bHeight = bWidth;\nconst margin = 5;\nconst zOrder = 4;\n\n//生成气球,但不设置位置\nconst bInstance = runtimeScene.createObject('balloon');\nbInstance.setAnimation(0);\nbInstance.setWidth(bWidth/2);\nbInstance.setHeight(bHeight/2);\nbInstance.setZOrder(zOrder);\n//TODOs:\n\n// set animation \n// change animation time\n\n\nfunction getX(index){\n    let columnNum = (index+1)%columnMax;\n    if (columnNum == 0) columnNum = 4;\n    const x = roadInstance.x + bWidth * (columnNum - 1);     \n    return x;\n}\n\nfunction getY(index){\n    let rowNum = 1;\n    if(index+1 > columnMax){\n        rowNum = Math.ceil((index+1)/columnMax);\n    } \n\n    const y = topBarInstance.y+topBarInstance.getHeight() + bHeight * (rowNum - 1)\n    return y;\n}\n\n\nfunction debug(value){\n    runtimeScene.getVariables().get('dbg').setValue(value);\n}\n\n",
           "parameterObjects": "balloon",
           "useStrict": true,
           "eventsSheetExpanded": true
@@ -8316,10 +8327,26 @@
           "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::JsCode",
-          "inlineCode": "const columnMax = runtimeScene.getVariables().get('balloonColumnLimit').getValue();\nconst bArray = runtimeScene.getObjects('balloon');\nconst roadInstance =runtimeScene.getObjects('road')[0];\nconst topBarInstance =runtimeScene.getObjects('topBar')[0];\n\nconst bWidth = roadInstance.getWidth()/columnMax;\nconst bHeight = bWidth;\n\nfor(let i = 0; i <= bArray.length - 1; i++){\n    bArray[i].setPosition(getX(i) ,getY(i));\n}\n\nfunction getX(index){\n    let columnNum = (index+1)%columnMax;\n    if (columnNum == 0) columnNum = 4;\n    const x = roadInstance.x + bWidth * (columnNum - 1);     \n    return x;\n}\n\nfunction getY(index){\n    let rowNum = 1;\n    if(index+1 > columnMax){\n        rowNum = Math.ceil((index+1)/columnMax);\n    } \n\n    const y = topBarInstance.y+topBarInstance.getHeight() + bHeight * (rowNum - 1)\n    return y;\n}\n\nfunction debug(value){\n    runtimeScene.getVariables().get('dbg').setValue(value);\n}\n\n",
+          "inlineCode": "const columnMax = runtimeScene.getVariables().get('balloonColumnLimit').getValue();\nconst bArray = runtimeScene.getObjects('balloon');\nconst roadInstance =runtimeScene.getObjects('road')[0];\nconst topBarInstance =runtimeScene.getObjects('topBar')[0];\n\nconst bWidth = roadInstance.getWidth()/columnMax;\nconst bHeight = bWidth;\n\nfor(let i = 0; i <= bArray.length - 1; i++){\n    bArray[i].setPosition(getX(i) ,getY(i));\n}\n\nfunction getX(index){\n    let columnNum = (index+1)%columnMax;\n    if (columnNum == 0) columnNum = 4;\n    const x = roadInstance.x + bWidth * (columnNum - 1 + 0.5);     \n    return x;\n}\n\nfunction getY(index){\n    let rowNum = 1;\n    if(index+1 > columnMax){\n        rowNum = Math.ceil((index+1)/columnMax);\n    } \n\n    const y = topBarInstance.y+topBarInstance.getHeight() + bHeight * (rowNum - 1 + 0.5) \n    return y;\n}\n\nfunction debug(value){\n    runtimeScene.getVariables().get('dbg').setValue(value);\n}\n\n",
           "parameterObjects": "",
           "useStrict": true,
           "eventsSheetExpanded": true
+        }
+      ]
+    },
+    {
+      "associatedLayout": "Game Play - Level 1",
+      "lastChangeTimeStamp": 0,
+      "name": "resizeBallonScript",
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": "\n\nconst columnMax = runtimeScene.getVariables().get('balloonColumnLimit').getValue();\nconst roadInstance =runtimeScene.getObjects('road')[0];\n\nconst bWidth = roadInstance.getWidth()/columnMax;\nconst bHeight = bWidth;\n\nobjects.forEach(\n    (bInstance)=>{\n        bInstance.setWidth(bWidth);\n        bInstance.setHeight(bHeight);\n    \n})\n",
+          "parameterObjects": "balloon",
+          "useStrict": true,
+          "eventsSheetExpanded": false
         }
       ]
     }
