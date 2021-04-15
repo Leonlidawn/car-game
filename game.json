@@ -723,6 +723,96 @@
         "name": "fade-1.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Car Game UI/Control Arrow/Button_Confirm.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Car Game UI\\Control Arrow\\Button_Confirm.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Report Page_Background.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Report Page_Background.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "GameoverPage.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "GameoverPage.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "accident.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "accident.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "userAdded": true
+      },
+      {
+        "file": "coin.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "coin.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "userAdded": true
+      },
+      {
+        "file": "bgm.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "bgm.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Button_Start Again.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Button_Start Again.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Button_Exit Game.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Button_Exit Game.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Button_Confirm.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Button_Confirm.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "file": "choose_bgm_com.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "choose_bgm_com.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -913,6 +1003,26 @@
           ]
         }
       ]
+    },
+    {
+      "name": "currentCoin",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "coinCollect",
+      "type": "string",
+      "value": "0"
+    },
+    {
+      "name": "accident",
+      "type": "string",
+      "value": "0"
+    },
+    {
+      "name": "insuranceCost",
+      "type": "string",
+      "value": "100"
     }
   ],
   "layouts": [
@@ -941,7 +1051,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.6199999999999992
+        "zoomFactor": 0.379999999999999
       },
       "objectsGroups": [
         {
@@ -1061,6 +1171,31 @@
           "name": "balloonCount",
           "type": "string",
           "value": "0"
+        },
+        {
+          "name": "BUTTON_HEIGHT",
+          "type": "string",
+          "value": "30"
+        },
+        {
+          "name": "YPADDING_RATIO",
+          "type": "string",
+          "value": "0.1"
+        },
+        {
+          "name": "reportTextBeginX",
+          "type": "string",
+          "value": "60"
+        },
+        {
+          "name": "reportTextBeginY",
+          "type": "string",
+          "value": "250"
+        },
+        {
+          "name": "reportTextGap",
+          "type": "string",
+          "value": "30"
         }
       ],
       "instances": [
@@ -2845,14 +2980,311 @@
               ]
             }
           ]
+        },
+        {
+          "name": "reportPage",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Report Page_Background.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "gameOver",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "GameoverPage.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "coinCollect",
+          "tags": "",
+          "type": "BBText::BBText",
+          "variables": [],
+          "behaviors": [],
+          "content": {
+            "text": "",
+            "opacity": 255,
+            "fontSize": 20,
+            "visible": true,
+            "color": "#000000",
+            "fontFamily": "Arial",
+            "align": "left",
+            "wordWrap": true
+          }
+        },
+        {
+          "name": "accident",
+          "tags": "",
+          "type": "BBText::BBText",
+          "variables": [],
+          "behaviors": [],
+          "content": {
+            "text": " ",
+            "opacity": 255,
+            "fontSize": 20,
+            "visible": true,
+            "color": "#000000",
+            "fontFamily": "Arial",
+            "align": "left",
+            "wordWrap": true
+          }
+        },
+        {
+          "name": "startAgain",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Button_Start Again.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "exit",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Button_Exit Game.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "confirm",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Button_Confirm.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "claim",
+          "tags": "",
+          "type": "BBText::BBText",
+          "variables": [],
+          "behaviors": [],
+          "content": {
+            "text": "",
+            "opacity": 255,
+            "fontSize": 20,
+            "visible": true,
+            "color": "#000000",
+            "fontFamily": "Arial",
+            "align": "left",
+            "wordWrap": true
+          }
+        },
+        {
+          "name": "pay",
+          "tags": "",
+          "type": "BBText::BBText",
+          "variables": [],
+          "behaviors": [],
+          "content": {
+            "text": "[b]bold[/b] [i]italic[/i] [size=15]smaller[/size] [font=times]times[/font] font\n[spacing=12]spaced out[/spacing]\n[outline=yellow]outlined[/outline] [shadow=red]DropShadow[/shadow] ",
+            "opacity": 255,
+            "fontSize": 20,
+            "visible": true,
+            "color": "#000000",
+            "fontFamily": "Arial",
+            "align": "left",
+            "wordWrap": true
+          }
+        },
+        {
+          "name": "netCoin",
+          "tags": "",
+          "type": "BBText::BBText",
+          "variables": [],
+          "behaviors": [],
+          "content": {
+            "text": "",
+            "opacity": 255,
+            "fontSize": 20,
+            "visible": true,
+            "color": "#000000",
+            "fontFamily": "Arial",
+            "align": "left",
+            "wordWrap": true
+          }
         }
+
+
+
+     
+     
       ],
+
       "events": [
         {
           "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
           "actions": [
             {
               "type": {
@@ -2865,6 +3297,32 @@
                 "no",
                 "",
                 ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "bgm.mp3",
+                "yes",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "BBText::SetBBText"
+              },
+              "parameters": [
+                "coinNum",
+                "=",
+                "ToString(GlobalVariable(currentCoin))"
               ],
               "subInstructions": []
             }
@@ -2965,14 +3423,6 @@
               "disabled": false,
               "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
@@ -3026,7 +3476,7 @@
         },
         {
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -3628,12 +4078,12 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "ModVarScene"
+                        "value": "ModVarGlobal"
                       },
                       "parameters": [
-                        "coinNumScene",
+                        "currentCoin",
                         "-",
-                        "10"
+                        "1"
                       ],
                       "subInstructions": []
                     },
@@ -3645,7 +4095,33 @@
                       "parameters": [
                         "coinNum",
                         "=",
-                        "ToString(Variable(coinNumScene))"
+                        "ToString(GlobalVariable(currentCoin))"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "accident",
+                        "+",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "accident.mp3",
+                        "",
+                        "",
+                        ""
                       ],
                       "subInstructions": []
                     }
@@ -3745,12 +4221,12 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "ModVarScene"
+                        "value": "ModVarGlobal"
                       },
                       "parameters": [
-                        "coinNumScene",
+                        "currentCoin",
                         "+",
-                        "1"
+                        "5"
                       ],
                       "subInstructions": []
                     },
@@ -3762,7 +4238,33 @@
                       "parameters": [
                         "coinNum",
                         "=",
-                        "ToString(Variable(coinNumScene))"
+                        "ToString(GlobalVariable(currentCoin))"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "coinCollect",
+                        "+",
+                        "5"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "coin.mp3",
+                        "",
+                        "",
+                        ""
                       ],
                       "subInstructions": []
                     }
@@ -3878,7 +4380,7 @@
         },
         {
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [],
@@ -4698,23 +5200,12 @@
                   "parameters": [
                     "time",
                     "<",
-                    "1"
+                    "55"
                   ],
                   "subInstructions": []
                 }
               ],
               "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ShowLayer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"Report Layer\""
-                  ],
-                  "subInstructions": []
-                },
                 {
                   "type": {
                     "inverted": false,
@@ -4738,17 +5229,830 @@
                   "subInstructions": []
                 }
               ],
-              "events": []
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Egal"
+                      },
+                      "parameters": [
+                        "GlobalVariable(currentCoin)",
+                        "<",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ShowLayer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Report Layer\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "coinCollect",
+                        "Variable(reportTextBeginX)",
+                        "Variable(reportTextBeginY)",
+                        "\"Report Layer\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BBText::SetBBText"
+                      },
+                      "parameters": [
+                        "coinCollect",
+                        "=",
+                        "\"Coin collected: \" + ToString(GlobalVariable(coinCollect))"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "accident",
+                        "Variable(reportTextBeginX)",
+                        "Variable(reportTextBeginY)+Variable(reportTextGap)",
+                        "\"Report Layer\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BBText::SetBBText"
+                      },
+                      "parameters": [
+                        "accident",
+                        "=",
+                        "\"Accident: \" + ToString(GlobalVariable(accident))"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "claim",
+                        "Variable(reportTextBeginX)",
+                        "Variable(reportTextBeginY) + Variable(reportTextGap)*2",
+                        "\"Report Layer\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BBText::SetBBText"
+                      },
+                      "parameters": [
+                        "claim",
+                        "=",
+                        "\"Insurance Claimed: \" "
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "pay",
+                        "Variable(reportTextBeginX)",
+                        "Variable(reportTextBeginY) + Variable(reportTextGap)*3",
+                        "\"Report Layer\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BBText::SetBBText"
+                      },
+                      "parameters": [
+                        "pay",
+                        "=",
+                        "\"Insurance Cost: \" +GlobalVariableString(insuranceCost)"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "netCoin",
+                        "Variable(reportTextBeginX)",
+                        "Variable(reportTextBeginY) + Variable(reportTextGap)*5",
+                        "\"Report Layer\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BBText::SetBBText"
+                      },
+                      "parameters": [
+                        "netCoin",
+                        "=",
+                        "\"Net coin: \" + ToString(GlobalVariable(currentCoin) - GlobalVariable(insuranceCoin))"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "startAgain",
+                        "50",
+                        "500",
+                        "\"Report Layer\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangeHeight"
+                      },
+                      "parameters": [
+                        "startAgain",
+                        "=",
+                        "Variable(BUTTON_HEIGHT)"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangeWidth"
+                      },
+                      "parameters": [
+                        "startAgain",
+                        "=",
+                        "ScreenWidth()/3"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "MettreY"
+                      },
+                      "parameters": [
+                        "startAgain",
+                        "=",
+                        "ScreenHeight() - 150"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "MettreX"
+                      },
+                      "parameters": [
+                        "startAgain",
+                        "=",
+                        "ScreenWidth()/6"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "exit",
+                        "200",
+                        "500",
+                        "\"Report Layer\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangeHeight"
+                      },
+                      "parameters": [
+                        "exit",
+                        "=",
+                        "Variable(BUTTON_HEIGHT)"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangeWidth"
+                      },
+                      "parameters": [
+                        "exit",
+                        "=",
+                        "ScreenWidth()/3"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "MettreX"
+                      },
+                      "parameters": [
+                        "exit",
+                        "=",
+                        "3*ScreenWidth()/6"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "MettreY"
+                      },
+                      "parameters": [
+                        "exit",
+                        "=",
+                        "ScreenHeight()-150"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "gameOver",
+                        "0",
+                        "0",
+                        "\"Report Layer\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangeWidth"
+                      },
+                      "parameters": [
+                        "gameOver",
+                        "=",
+                        "SceneWindowWidth()"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangeHeight"
+                      },
+                      "parameters": [
+                        "gameOver",
+                        "=",
+                        "SceneWindowHeight()"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "MouseButtonReleased"
+                      },
+                      "parameters": [
+                        "insuranceButton1",
+                        "Left"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "SourisSurObjet"
+                          },
+                          "parameters": [
+                            "startAgain",
+                            "",
+                            "",
+                            ""
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Scene"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Choose Insurance - Level 1\"",
+                            ""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "coinCollect",
+                            "=",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "accident",
+                            "=",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "currentCoin",
+                            "=",
+                            "1000"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "SourisSurObjet"
+                          },
+                          "parameters": [
+                            "exit",
+                            "",
+                            "",
+                            ""
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Quit"
+                          },
+                          "parameters": [
+                            ""
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    }
+                  ]
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Egal"
+                      },
+                      "parameters": [
+                        "GlobalVariable(currentCoin)",
+                        ">=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ShowLayer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"Report Layer\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "confirm",
+                        "150",
+                        "500",
+                        "\"Report Layer\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "MettreY"
+                      },
+                      "parameters": [
+                        "confirm",
+                        "=",
+                        "ScreenHeight()*(1-Variable(YPADDING_RATIO)) -25"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "MettreX"
+                      },
+                      "parameters": [
+                        "confirm",
+                        "=",
+                        "ScreenWidth()/3"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangeHeight"
+                      },
+                      "parameters": [
+                        "confirm",
+                        "=",
+                        "Variable(BUTTON_HEIGHT)"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangeWidth"
+                      },
+                      "parameters": [
+                        "confirm",
+                        "=",
+                        "ScreenWidth()/3"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "coinCollect",
+                        "Variable(reportTextBeginX)",
+                        "Variable(reportTextBeginY)-100",
+                        "\"Report Layer\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BBText::SetBBText"
+                      },
+                      "parameters": [
+                        "coinCollect",
+                        "=",
+                        "\"Coin collected: \"+ ToString(GlobalVariable(coinCollect))"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "accident",
+                        "Variable(reportTextBeginX)",
+                        "Variable(reportTextBeginY) + Variable(reportTextGap)-100",
+                        "\"Report Layer\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BBText::SetBBText"
+                      },
+                      "parameters": [
+                        "accident",
+                        "=",
+                        "\"Accident: \" + ToString(GlobalVariable(accident))"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "claim",
+                        "Variable(reportTextBeginX)",
+                        "Variable(reportTextBeginY) + Variable(reportTextGap)*2-100",
+                        "\"Report Layer\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BBText::SetBBText"
+                      },
+                      "parameters": [
+                        "claim",
+                        "=",
+                        "\"Insurance Claimed: \" "
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "pay",
+                        "Variable(reportTextBeginX)",
+                        "Variable(reportTextBeginY) + Variable(reportTextGap)*3-100",
+                        "\"Report Layer\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BBText::SetBBText"
+                      },
+                      "parameters": [
+                        "pay",
+                        "=",
+                        "\"Insurance Cost: \" +GlobalVariableString(insuranceCost)"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "netCoin",
+                        "Variable(reportTextBeginX)",
+                        "Variable(reportTextBeginY) + Variable(reportTextGap)*7-100",
+                        "\"Report Layer\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BBText::SetBBText"
+                      },
+                      "parameters": [
+                        "netCoin",
+                        "=",
+                        "\"Net coin: \" + ToString(GlobalVariable(currentCoin) - GlobalVariable(insuranceCoin))"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "reportPage",
+                        "0",
+                        "0",
+                        "\"Report Layer\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangeWidth"
+                      },
+                      "parameters": [
+                        "reportPage",
+                        "=",
+                        "SceneWindowWidth()"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangeHeight"
+                      },
+                      "parameters": [
+                        "reportPage",
+                        "=",
+                        "SceneWindowHeight()"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "MouseButtonReleased"
+                      },
+                      "parameters": [
+                        "insuranceButton1",
+                        "Left"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "SourisSurObjet"
+                          },
+                          "parameters": [
+                            "confirm",
+                            "",
+                            "",
+                            ""
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Scene"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Choose Insurance - Level 1\"",
+                            ""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "coinCollect",
+                            "=",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "accident",
+                            "=",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "currentCoin",
+                            "=",
+                            "1000"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
         {
           "disabled": false,
           "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
-          "events": []
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "技能",
+          "comment2": ""
         },
         {
           "disabled": false,
@@ -5770,7 +7074,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.7879999999999998
+        "zoomFactor": 0.6679999999999997
       },
       "objectsGroups": [
         {
@@ -6143,22 +7447,6 @@
           "height": 0,
           "layer": "",
           "locked": false,
-          "name": "confirmButtonText",
-          "persistentUuid": "d43f8aca-6a6b-42a3-a77e-69deabb1f0c8",
-          "width": 0,
-          "x": 117,
-          "y": 555,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
           "name": "price1",
           "persistentUuid": "698ebe2b-b358-46da-9f6e-1ad63305e140",
           "width": 0,
@@ -6513,16 +7801,16 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "",
+              "name": "confirmButtonBackground",
               "useMultipleDirections": false,
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 0.08,
+                  "timeBetweenFrames": 0.07999999821186066,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "confirmButtonBackground.png",
+                      "image": "Car Game UI\\Control Arrow\\Button_Confirm.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -6542,23 +7830,6 @@
               ]
             }
           ]
-        },
-        {
-          "name": "confirmButtonText",
-          "tags": "",
-          "type": "BBText::BBText",
-          "variables": [],
-          "behaviors": [],
-          "content": {
-            "text": "confirm",
-            "opacity": 255,
-            "fontSize": 20,
-            "visible": true,
-            "color": "#000000",
-            "fontFamily": "",
-            "align": "left",
-            "wordWrap": true
-          }
         },
         {
           "name": "price0",
@@ -6700,7 +7971,22 @@
               "subInstructions": []
             }
           ],
-          "actions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "choose_bgm_com.mp3",
+                "yes",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
           "events": [
             {
               "disabled": false,
@@ -6878,68 +8164,7 @@
               "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "BBText::SetFontSize"
-                  },
-                  "parameters": [
-                    "confirmButtonText",
-                    "=",
-                    "Variable(TITLE_FONT_SIZE)"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "BBText::SetWrappingWidth"
-                  },
-                  "parameters": [
-                    "confirmButtonText",
-                    "=",
-                    "ScreenWidth()/3-4"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "BBText::SetBBText"
-                  },
-                  "parameters": [
-                    "confirmButtonText",
-                    "=",
-                    "\"TODO: draw me in the button!Confirm\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "MettreY"
-                  },
-                  "parameters": [
-                    "confirmButtonText",
-                    "=",
-                    "confirmButton.Y()+confirmButton.Height()/2 -Variable(TITLE_FONT_SIZE)/2"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "MettreX"
-                  },
-                  "parameters": [
-                    "confirmButtonText",
-                    "=",
-                    "ScreenWidth()/2-comfirmButtonText.Width()/2"
-                  ],
-                  "subInstructions": []
-                }
-              ],
+              "actions": [],
               "events": []
             },
             {
@@ -7446,30 +8671,144 @@
                   "subInstructions": []
                 }
               ],
-              "actions": [
+              "actions": [],
+              "events": [
                 {
-                  "type": {
-                    "inverted": false,
-                    "value": "ToggleObjectVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "insuranceButton1",
-                    "isSelected"
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarGlobal"
+                      },
+                      "parameters": [
+                        "currentCoin",
+                        ">=",
+                        "GlobalVariable(insurancePackage.package1.price)"
+                      ],
+                      "subInstructions": []
+                    }
                   ],
-                  "subInstructions": []
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ToggleObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "insuranceButton1",
+                        "isSelected"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ToggleGlobalVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "insurancePackage.package1.isSelected"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
                 },
                 {
-                  "type": {
-                    "inverted": false,
-                    "value": "ToggleGlobalVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "insurancePackage.package1.isSelected"
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "insuranceButton1",
+                        "isSelected",
+                        "True"
+                      ],
+                      "subInstructions": []
+                    }
                   ],
-                  "subInstructions": []
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "currentCoin",
+                        "-",
+                        "GlobalVariable(insurancePackage.package1.price)"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "insuranceCost",
+                        "+",
+                        "GlobalVariable(insurancePackage.package1.price)"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "insuranceButton1",
+                        "isSelected",
+                        "False"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "currentCoin",
+                        "+",
+                        "GlobalVariable(insurancePackage.package1.price)"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "insuranceCost",
+                        "-",
+                        "GlobalVariable(insurancePackage.package1.price)"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
                 }
-              ],
-              "events": []
+              ]
             },
             {
               "disabled": false,
@@ -7486,6 +8825,18 @@
                     "",
                     "",
                     ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarGlobal"
+                  },
+                  "parameters": [
+                    "currentCoin",
+                    ">=",
+                    "GlobalVariable(insurancePackage.package2.price)"
                   ],
                   "subInstructions": []
                 }
@@ -7513,7 +8864,100 @@
                   "subInstructions": []
                 }
               ],
-              "events": []
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "insuranceButton2",
+                        "isSelected",
+                        "True"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "currentCoin",
+                        "-",
+                        "GlobalVariable(insurancePackage.package2.price)"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "insuranceCost",
+                        "+",
+                        "GlobalVariable(insurancePackage.package2.price)"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "insuranceButton2",
+                        "isSelected",
+                        "False"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "currentCoin",
+                        "+",
+                        "GlobalVariable(insurancePackage.package2.price)"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "insuranceCost",
+                        "-",
+                        "GlobalVariable(insurancePackage.package2.price)"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
             },
             {
               "disabled": false,
@@ -7725,6 +9169,18 @@
               "parameters": [
                 "insuranceButton1",
                 "Left"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarGlobal"
+              },
+              "parameters": [
+                "currentCoin",
+                ">=",
+                "0"
               ],
               "subInstructions": []
             }
@@ -8031,45 +9487,81 @@
                 "value": "BBText::SetBBText"
               },
               "parameters": [
-                "price0",
+                "coinNum",
                 "=",
-                "\"$\" + GlobalVariableString(insurancePackage.package0.price)"
+                "\"$\" + GlobalVariableString(currentCoin)"
               ],
               "subInstructions": []
             },
             {
               "type": {
                 "inverted": false,
-                "value": "BBText::SetBBText"
+                "value": "MettreX"
+              },
+              "parameters": [
+                "price0",
+                "=",
+                "insuranceButton0.X() + insuranceButton0.Width() - price0.Width() - 2*Variable(TEXT_MARGIN)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreY"
+              },
+              "parameters": [
+                "price0",
+                "=",
+                "insuranceButton0.Y() + insuranceButton0.Height() - price0.GetFontSize() - 2*Variable(TEXT_MARGIN)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreX"
               },
               "parameters": [
                 "price1",
                 "=",
-                "\"$\" + GlobalVariableString(insurancePackage.package1.price)"
+                "insuranceButton1.X() + insuranceButton1.Width() - price1.Width() - 2*Variable(TEXT_MARGIN)"
               ],
               "subInstructions": []
             },
             {
               "type": {
                 "inverted": false,
-                "value": "BBText::SetBBText"
+                "value": "MettreY"
+              },
+              "parameters": [
+                "price1",
+                "=",
+                "insuranceButton1.Y() + insuranceButton1.Height() - price1.GetFontSize() - 2*Variable(TEXT_MARGIN)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreX"
               },
               "parameters": [
                 "price2",
                 "=",
-                "\"$\" + GlobalVariableString(insurancePackage.package2.price)"
+                "insuranceButton2.X() + insuranceButton2.Width() - price2.Width() - 2*Variable(TEXT_MARGIN)"
               ],
               "subInstructions": []
             },
             {
               "type": {
                 "inverted": false,
-                "value": "BBText::SetBBText"
+                "value": "MettreY"
               },
               "parameters": [
-                "coinNum",
+                "price2",
                 "=",
-                "\"$\" + GlobalVariableString(INIT_MONEY)"
+                "insuranceButton2.Y() + insuranceButton2.Height() - price2.GetFontSize() - 2*Variable(TEXT_MARGIN)"
               ],
               "subInstructions": []
             }
@@ -8080,7 +9572,18 @@
           "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
           "actions": [
             {
               "type": {
@@ -8131,72 +9634,153 @@
             {
               "type": {
                 "inverted": false,
-                "value": "MettreX"
+                "value": "BBText::SetBBText"
               },
               "parameters": [
                 "price0",
                 "=",
-                "insuranceButton0.X() + insuranceButton0.Width() - price0.Width() - 2*Variable(TEXT_MARGIN)"
+                "\"$\" + GlobalVariableString(insurancePackage.package0.price)"
               ],
               "subInstructions": []
             },
             {
               "type": {
                 "inverted": false,
-                "value": "MettreY"
-              },
-              "parameters": [
-                "price0",
-                "=",
-                "insuranceButton0.Y() + insuranceButton0.Height() - price0.GetFontSize() - 2*Variable(TEXT_MARGIN)"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "MettreX"
+                "value": "BBText::SetBBText"
               },
               "parameters": [
                 "price1",
                 "=",
-                "insuranceButton1.X() + insuranceButton1.Width() - price1.Width() - 2*Variable(TEXT_MARGIN)"
+                "\"$\" + GlobalVariableString(insurancePackage.package1.price)"
               ],
               "subInstructions": []
             },
             {
               "type": {
                 "inverted": false,
-                "value": "MettreX"
+                "value": "BBText::SetBBText"
               },
               "parameters": [
                 "price2",
                 "=",
-                "insuranceButton2.X() + insuranceButton2.Width() - price2.Width() - 2*Variable(TEXT_MARGIN)"
+                "\"$\" + GlobalVariableString(insurancePackage.package2.price)"
               ],
               "subInstructions": []
             },
             {
               "type": {
                 "inverted": false,
-                "value": "MettreY"
+                "value": "ModVarGlobal"
               },
               "parameters": [
-                "price1",
+                "currentCoin",
                 "=",
-                "insuranceButton1.Y() + insuranceButton1.Height() - price1.GetFontSize() - 2*Variable(TEXT_MARGIN)"
+                "GlobalVariable(INIT_MONEY) - GlobalVariable(insurancePackage.package0.price)"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "insurance package button 状态",
+          "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarGlobal"
+              },
+              "parameters": [
+                "currentCoin",
+                "<",
+                "GlobalVariable(insurancePackage.package1.price)"
               ],
               "subInstructions": []
             },
             {
               "type": {
                 "inverted": false,
-                "value": "MettreY"
+                "value": "ObjectVariableAsBoolean"
               },
               "parameters": [
-                "price2",
-                "=",
-                "insuranceButton2.Y() + insuranceButton2.Height() - price2.GetFontSize() - 2*Variable(TEXT_MARGIN)"
+                "insuranceButton1",
+                "isSelected",
+                "False"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeColor"
+              },
+              "parameters": [
+                "insuranceButton1",
+                "\"155;155;155\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarGlobal"
+              },
+              "parameters": [
+                "currentCoin",
+                "<",
+                "GlobalVariable(insurancePackage.package2.price)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "insuranceButton2",
+                "isSelected",
+                "False"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeColor"
+              },
+              "parameters": [
+                "insuranceButton2",
+                "\"155;155;155\""
               ],
               "subInstructions": []
             }
@@ -8218,6 +9802,21 @@
           "conditions": [],
           "actions": [],
           "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "金钱变化",
+          "comment2": ""
         },
         {
           "disabled": false,
