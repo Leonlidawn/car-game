@@ -633,6 +633,96 @@
         "name": "balloon.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "balloon2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "balloon2.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Balloon_explosion.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Balloon_explosion.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Balloon_explosion2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Balloon_explosion2.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Balloon_explosion3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Balloon_explosion3.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Balloon_explosion4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Balloon_explosion4.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Balloon_explosion22.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Balloon_explosion22.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Balloon_explosion32.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Balloon_explosion32.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "fade-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "fade-1.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "fade-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "fade-2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "fade-3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "fade-3.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -961,6 +1051,16 @@
           "name": "dbg",
           "type": "string",
           "value": ""
+        },
+        {
+          "name": "balloonColumnLimit",
+          "type": "number",
+          "value": 4
+        },
+        {
+          "name": "balloonCount",
+          "type": "string",
+          "value": "0"
         }
       ],
       "instances": [
@@ -2643,20 +2743,123 @@
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
+          "variables": [
+            {
+              "name": "life",
+              "type": "string",
+              "value": "10"
+            }
+          ],
           "behaviors": [],
           "animations": [
             {
-              "name": "",
+              "name": "fade",
               "useMultipleDirections": false,
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 0.08,
+                  "timeBetweenFrames": 5,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "balloon.png",
+                      "image": "fade-1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "fade-2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "fade-3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "explosion",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.10000000149011612,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Balloon_explosion4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Balloon_explosion22.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Balloon_explosion32.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -2796,6 +2999,14 @@
               "disabled": false,
               "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
                   "type": {
@@ -2822,19 +3033,11 @@
                 {
                   "disabled": false,
                   "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [],
-                  "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::JsCode",
-                  "inlineCode": "const columnMax = 4;\nconst roadInstance =runtimeScene.getObjects('road')[0];\nconst topBarInstance =runtimeScene.getObjects('topBar')[0];\n\nconst bWidth = roadInstance.getWidth()/columnMax;\nconst bHeight = bWidth;\nconst margin = 5;\nconst zOrder = 4;\n\nlet balloonArray = runtimeScene.getObjects('balloon');\n\n\nlet count = balloonArray.length+1;\nlet posIndex = 0;\n\nlet message = '->';\n//找空缺位置\nfor( let i = 0; i<count; i++ ){\n    let balloon = balloonArray[i];\n    message = message+' '+i;\n    if(balloon == undefined){\n         message = message+' found:'+i;\n        posIndex = i;\n        break;\n    }\n}\n\ndebug(posIndex)\n\n\n//生成气球\nconst bInstance = runtimeScene.createObject('balloon');\nbInstance.setWidth(bWidth);\nbInstance.setHeight(bHeight);\nbInstance.setPosition(getX(posIndex) ,getY(posIndex));\nbInstance.setZOrder(zOrder);\n//TODOs:\n// set animation \n// change animation time\n\n\nfunction getX(index){\n    let columnNum = (index+1)%columnMax;\n    if (columnNum == 0) columnNum = 4;\n    const x = roadInstance.x + bWidth * (columnNum - 1);     \n    return x;\n}\n\nfunction getY(index){\n    let rowNum = 1;\n    if(index+1 > columnMax){\n        rowNum = Math.ceil((index+1)/columnMax);\n    } \n\n    const y = topBarInstance.y+topBarInstance.getHeight() + bHeight * (rowNum - 1)\n    return y;\n}\n\nfunction debug(value){\n    runtimeScene.getVariables().get('dbg').setValue(value);\n}\n\n",
-                  "parameterObjects": "",
-                  "useStrict": true,
-                  "eventsSheetExpanded": true
+                  "type": "BuiltinCommonInstructions::Link",
+                  "include": {
+                    "includeConfig": 0
+                  },
+                  "target": "createBallonScript"
                 }
               ]
             }
@@ -2857,7 +3060,7 @@
         },
         {
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -3709,7 +3912,7 @@
         },
         {
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [],
@@ -4377,7 +4580,7 @@
         },
         {
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [],
@@ -4598,7 +4801,7 @@
         },
         {
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -4854,7 +5057,7 @@
         },
         {
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -4895,19 +5098,11 @@
                 {
                   "disabled": false,
                   "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [],
-                  "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::JsCode",
-                  "inlineCode": "const columnMax = 4;\nconst roadInstance =runtimeScene.getObjects('road')[0];\nconst bWidth = roadInstance.getWidth()/columnMax;\nconst bHeight = bWidth;\nconst margin = 5;\nconst balloonArray = runtimeScene.getObjects('balloon');\n\n//算出 一行 能有几个balloon\n//算出 最后一个ballon 的位置然后根据这个位置生成\nlet count = balloonArray.length;\nfor( let i = 0; i<counnt; i++ ){\n    let balloon = balloonArray[i];\n    if(balloon == undefined){\n        const bInstance = runtimeScene.createObject('balloon');\n        bInstance.setWidth(bWidth);\n        bInstance.setHeight(bHeight);\n        bInstance.setPosition(getX(i) ,getY(i));\n\n        //set animation \n        //change animation time\n\n        break;\n    }\n}\n\nfunction getX(index){\n    const columnNum = (index+1)%columnMax;\n    const x = roadInstance.x + count * (columnNum - 1)\n    return x;\n}\n\nfunction getY(index){\n    const rowNum = Math.floor((index+1)/columnMax);\n    const x = roadInstance.x + count * (rowNum - 1)\n    return x;\n}",
-                  "parameterObjects": "",
-                  "useStrict": true,
-                  "eventsSheetExpanded": false
+                  "type": "BuiltinCommonInstructions::Link",
+                  "include": {
+                    "includeConfig": 0
+                  },
+                  "target": "createBallonScript"
                 }
               ]
             },
@@ -4935,10 +5130,11 @@
                 {
                   "disabled": false,
                   "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [],
-                  "events": []
+                  "type": "BuiltinCommonInstructions::Link",
+                  "include": {
+                    "includeConfig": 0
+                  },
+                  "target": "createBallonScript"
                 }
               ]
             },
@@ -4963,6 +5159,15 @@
               ],
               "actions": [],
               "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Link",
+                  "include": {
+                    "includeConfig": 0
+                  },
+                  "target": "createBallonScript"
+                },
                 {
                   "disabled": false,
                   "folded": false,
@@ -5012,10 +5217,17 @@
         {
           "disabled": false,
           "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
-          "events": []
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "气球相关逻辑",
+          "comment2": ""
         },
         {
           "disabled": false,
@@ -5023,15 +5235,156 @@
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
-          "events": []
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "AnimationName"
+                  },
+                  "parameters": [
+                    "balloon",
+                    "\"fade\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "balloon",
+                    "life",
+                    "-",
+                    "TimeDelta()"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarObjet"
+                      },
+                      "parameters": [
+                        "balloon",
+                        "life",
+                        "<",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": [],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SetAnimationName"
+                      },
+                      "parameters": [
+                        "balloon",
+                        "\"explosion\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": [
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::JsCode",
+                      "inlineCode": "const columnMax = runtimeScene.getVariables().get('balloonColumnLimit').getValue();\nconst roadInstance =runtimeScene.getObjects('road')[0];\n\nconst bWidth = roadInstance.getWidth()/columnMax;\nconst bHeight = bWidth;\n\nobjects.forEach(\n// let balloonArray = runtimeScene.getObjects('balloon');\n// balloonArray.forEach(\n    (bInstance)=>{\n        bInstance.setWidth(bWidth);\n        bInstance.setHeight(bHeight);\n    \n})\n",
+                      "parameterObjects": "balloon",
+                      "useStrict": true,
+                      "eventsSheetExpanded": false
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "AnimationName"
+                  },
+                  "parameters": [
+                    "balloon",
+                    "\"explosion\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "AnimationEnded"
+                      },
+                      "parameters": [
+                        "balloon"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Delete"
+                      },
+                      "parameters": [
+                        "balloon",
+                        ""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Link",
+                  "include": {
+                    "includeConfig": 0
+                  },
+                  "target": "positionBallonScript"
+                }
+              ]
+            }
+          ]
         },
         {
           "disabled": false,
@@ -5104,30 +5457,6 @@
         {
           "disabled": false,
           "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -5139,14 +5468,6 @@
           },
           "comment": "技能button的TODOs: \n1.需要加上不同状态的animation\n",
           "comment2": ""
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
-          "events": []
         },
         {
           "disabled": false,
@@ -7938,10 +8259,69 @@
   ],
   "externalEvents": [
     {
-      "associatedLayout": "",
+      "associatedLayout": "Game Play - Level 1",
       "lastChangeTimeStamp": 0,
-      "name": "NewExternalEvents",
-      "events": []
+      "name": "createBallonScript",
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": "const columnMax = runtimeScene.getVariables().get('balloonColumnLimit').getValue();\n\nconst roadInstance =runtimeScene.getObjects('road')[0];\nconst topBarInstance =runtimeScene.getObjects('topBar')[0];\n\nconst bWidth = roadInstance.getWidth()/columnMax;\nconst bHeight = bWidth;\nconst margin = 5;\nconst zOrder = 4;\n\n//生成气球,但不设置位置\nconst bInstance = runtimeScene.createObject('balloon');\nbInstance.setAnimation(0);\nbInstance.setWidth(bWidth);\nbInstance.setHeight(bHeight);\nbInstance.setZOrder(zOrder);\n\n//TODOs:\n\n// set animation \n// change animation time\n\n\nfunction getX(index){\n    let columnNum = (index+1)%columnMax;\n    if (columnNum == 0) columnNum = 4;\n    const x = roadInstance.x + bWidth * (columnNum - 1);     \n    return x;\n}\n\nfunction getY(index){\n    let rowNum = 1;\n    if(index+1 > columnMax){\n        rowNum = Math.ceil((index+1)/columnMax);\n    } \n\n    const y = topBarInstance.y+topBarInstance.getHeight() + bHeight * (rowNum - 1)\n    return y;\n}\n\n\nfunction debug(value){\n    runtimeScene.getVariables().get('dbg').setValue(value);\n}\n\n",
+          "parameterObjects": "balloon",
+          "useStrict": true,
+          "eventsSheetExpanded": true
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "positionBallonScript"
+        }
+      ]
+    },
+    {
+      "associatedLayout": "Game Play - Level 1",
+      "lastChangeTimeStamp": 0,
+      "name": "positionBallonScript",
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": "const columnMax = runtimeScene.getVariables().get('balloonColumnLimit').getValue();\nconst bArray = runtimeScene.getObjects('balloon');\nconst roadInstance =runtimeScene.getObjects('road')[0];\nconst topBarInstance =runtimeScene.getObjects('topBar')[0];\n\nconst bWidth = roadInstance.getWidth()/columnMax;\nconst bHeight = bWidth;\n\nfor(let i = 0; i <= bArray.length - 1; i++){\n    bArray[i].setPosition(getX(i) ,getY(i));\n}\n\nfunction getX(index){\n    let columnNum = (index+1)%columnMax;\n    if (columnNum == 0) columnNum = 4;\n    const x = roadInstance.x + bWidth * (columnNum - 1);     \n    return x;\n}\n\nfunction getY(index){\n    let rowNum = 1;\n    if(index+1 > columnMax){\n        rowNum = Math.ceil((index+1)/columnMax);\n    } \n\n    const y = topBarInstance.y+topBarInstance.getHeight() + bHeight * (rowNum - 1)\n    return y;\n}\n\nfunction debug(value){\n    runtimeScene.getVariables().get('dbg').setValue(value);\n}\n\n",
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": true
+        }
+      ]
     }
   ],
   "eventsFunctionsExtensions": [
