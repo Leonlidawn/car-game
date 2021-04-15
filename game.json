@@ -919,6 +919,11 @@
       "name": "accident",
       "type": "string",
       "value": "0"
+    },
+    {
+      "name": "insuranceCost",
+      "type": "string",
+      "value": "0"
     }
   ],
   "layouts": [
@@ -5089,7 +5094,7 @@
                       "parameters": [
                         "pay",
                         "=",
-                        "\"Insurance Cost: \" "
+                        "\"Insurance Cost: \" +GlobalVariableString(insuranceCost)"
                       ],
                       "subInstructions": []
                     },
@@ -5589,7 +5594,7 @@
                       "parameters": [
                         "pay",
                         "=",
-                        "\"Insurance Cost: \" "
+                        "\"Insurance Cost: \" +GlobalVariableString(insuranceCost)"
                       ],
                       "subInstructions": []
                     },
@@ -8184,6 +8189,18 @@
                         "GlobalVariable(insurancePackage.package1.price)"
                       ],
                       "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "insuranceCost",
+                        "+",
+                        "GlobalVariable(insurancePackage.package1.price)"
+                      ],
+                      "subInstructions": []
                     }
                   ],
                   "events": []
@@ -8215,6 +8232,18 @@
                       "parameters": [
                         "currentCoin",
                         "+",
+                        "GlobalVariable(insurancePackage.package1.price)"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "insuranceCost",
+                        "-",
                         "GlobalVariable(insurancePackage.package1.price)"
                       ],
                       "subInstructions": []
@@ -8309,6 +8338,18 @@
                         "GlobalVariable(insurancePackage.package2.price)"
                       ],
                       "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "insuranceCost",
+                        "+",
+                        "GlobalVariable(insurancePackage.package2.price)"
+                      ],
+                      "subInstructions": []
                     }
                   ],
                   "events": []
@@ -8340,6 +8381,18 @@
                       "parameters": [
                         "currentCoin",
                         "+",
+                        "GlobalVariable(insurancePackage.package2.price)"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "insuranceCost",
+                        "-",
                         "GlobalVariable(insurancePackage.package2.price)"
                       ],
                       "subInstructions": []
