@@ -7241,12 +7241,12 @@
         {
           "name": "YPADDING_RATIO",
           "type": "string",
-          "value": "0.05"
+          "value": "0.12"
         },
         {
           "name": "BUTTON_MARGIN_RATIO",
           "type": "string",
-          "value": "0.008"
+          "value": "0"
         },
         {
           "name": "TEXT_MARGIN",
@@ -8146,7 +8146,7 @@
                   "parameters": [
                     "confirmButton",
                     "=",
-                    "ScreenHeight()*(1-Variable(YPADDING_RATIO))"
+                    "ScreenHeight()*(1-Variable(YPADDING_RATIO)/2)-Variable(CONFIRM_BUTTON_HEIGHT)/2"
                   ],
                   "subInstructions": []
                 },
@@ -8690,7 +8690,7 @@
               "parameters": [
                 "insuranceButton0",
                 "isSelected",
-                "True"
+                "False"
               ],
               "subInstructions": []
             }
@@ -8703,7 +8703,7 @@
               },
               "parameters": [
                 "insuranceButton0",
-                "\"130;248;170\""
+                "\"233;207;248\""
               ],
               "subInstructions": []
             }
@@ -8993,6 +8993,39 @@
               "parameters": [
                 "insuranceButton1",
                 "isSelected",
+                "False"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeColor"
+              },
+              "parameters": [
+                "insuranceButton1",
+                "\"223;177;248\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "insuranceButton1",
+                "isSelected",
                 "True"
               ],
               "subInstructions": []
@@ -9006,7 +9039,7 @@
               },
               "parameters": [
                 "insuranceButton1",
-                "\"130;248;170\""
+                "\"255;255;255\""
               ],
               "subInstructions": []
             }
@@ -9051,7 +9084,7 @@
               },
               "parameters": [
                 "insuranceButton1",
-                "\"155;155;155\""
+                "\"74;74;74\""
               ],
               "subInstructions": []
             }
@@ -9341,6 +9374,39 @@
               "parameters": [
                 "insuranceButton2",
                 "isSelected",
+                "False"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeColor"
+              },
+              "parameters": [
+                "insuranceButton2",
+                "\"223;177;248\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "insuranceButton2",
+                "isSelected",
                 "True"
               ],
               "subInstructions": []
@@ -9354,7 +9420,7 @@
               },
               "parameters": [
                 "insuranceButton2",
-                "\"130;248;170\""
+                "\"255;255;255\""
               ],
               "subInstructions": []
             }
@@ -9399,7 +9465,7 @@
               },
               "parameters": [
                 "insuranceButton2",
-                "\"155;155;155\""
+                "\"74;74;74\""
               ],
               "subInstructions": []
             }
