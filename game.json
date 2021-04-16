@@ -813,6 +813,33 @@
         "preloadAsMusic": false,
         "preloadAsSound": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Car Game UI/insurance/Insuracne Choise_CTP.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Car Game UI\\insurance\\Insuracne Choise_CTP.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Car Game UI/insurance/Insuracne Choise_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Car Game UI\\insurance\\Insuracne Choise_3.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Car Game UI/insurance/Insuracne Choise_C.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Car Game UI\\insurance\\Insuracne Choise_C.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -3261,13 +3288,7 @@
             "wordWrap": true
           }
         }
-
-
-
-     
-     
       ],
-
       "events": [
         {
           "disabled": false,
@@ -7553,16 +7574,16 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "",
+              "name": "ScreenShot2021-04-03at948",
               "useMultipleDirections": false,
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 0.08,
+                  "timeBetweenFrames": 0.07999999821186066,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "Screen Shot 2021-04-03 at 9.48.25 pm2.png",
+                      "image": "Car Game UI\\insurance\\Insuracne Choise_C.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -7598,16 +7619,16 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "",
+              "name": "ScreenShot2021-04-03at948",
               "useMultipleDirections": false,
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 0.08,
+                  "timeBetweenFrames": 0.07999999821186066,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "Screen Shot 2021-04-03 at 9.48.25 pm3.png",
+                      "image": "Car Game UI\\insurance\\Insuracne Choise_3.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -7643,16 +7664,16 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "",
+              "name": "ScreenShot2021-04-03at948",
               "useMultipleDirections": false,
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 0.08,
+                  "timeBetweenFrames": 0.07999999821186066,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "Screen Shot 2021-04-03 at 9.48.25 pm4.png",
+                      "image": "Car Game UI\\insurance\\Insuracne Choise_CTP.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -8618,6 +8639,29 @@
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Button 0 相关操作",
+          "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
           "actions": [
             {
               "type": {
@@ -8632,6 +8676,54 @@
             }
           ],
           "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "insuranceButton0",
+                "isSelected",
+                "True"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeColor"
+              },
+              "parameters": [
+                "insuranceButton0",
+                "\"130;248;170\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Button 1 相关操作",
+          "comment2": ""
         },
         {
           "disabled": false,
@@ -8681,17 +8773,69 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "VarGlobal"
+                        "value": "BuiltinCommonInstructions::Or"
                       },
-                      "parameters": [
-                        "currentCoin",
-                        ">=",
-                        "GlobalVariable(insurancePackage.package1.price)"
-                      ],
-                      "subInstructions": []
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "BuiltinCommonInstructions::And"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ObjectVariableAsBoolean"
+                              },
+                              "parameters": [
+                                "insuranceButton1",
+                                "isSelected",
+                                "False"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarGlobal"
+                              },
+                              "parameters": [
+                                "currentCoin",
+                                ">=",
+                                "GlobalVariable(insurancePackage.package1.price)"
+                              ],
+                              "subInstructions": []
+                            }
+                          ]
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ObjectVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "insuranceButton1",
+                            "isSelected",
+                            "True"
+                          ],
+                          "subInstructions": []
+                        }
+                      ]
                     }
                   ],
                   "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ToggleGlobalVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "insurancePackage.package1.isSelected"
+                      ],
+                      "subInstructions": []
+                    },
                     {
                       "type": {
                         "inverted": false,
@@ -8702,114 +8846,252 @@
                         "isSelected"
                       ],
                       "subInstructions": []
+                    }
+                  ],
+                  "events": [
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ObjectVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "insuranceButton1",
+                            "isSelected",
+                            "True"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "currentCoin",
+                            "-",
+                            "GlobalVariable(insurancePackage.package1.price)"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "insuranceCost",
+                            "+",
+                            "GlobalVariable(insurancePackage.package1.price)"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
                     },
                     {
-                      "type": {
-                        "inverted": false,
-                        "value": "ToggleGlobalVariableAsBoolean"
-                      },
-                      "parameters": [
-                        "insurancePackage.package1.isSelected"
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ObjectVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "insuranceButton1",
+                            "isSelected",
+                            "False"
+                          ],
+                          "subInstructions": []
+                        }
                       ],
-                      "subInstructions": []
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "currentCoin",
+                            "+",
+                            "GlobalVariable(insurancePackage.package1.price)"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "insuranceCost",
+                            "-",
+                            "GlobalVariable(insurancePackage.package1.price)"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
                     }
-                  ],
-                  "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ObjectVariableAsBoolean"
-                      },
-                      "parameters": [
-                        "insuranceButton1",
-                        "isSelected",
-                        "True"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarGlobal"
-                      },
-                      "parameters": [
-                        "currentCoin",
-                        "-",
-                        "GlobalVariable(insurancePackage.package1.price)"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarGlobal"
-                      },
-                      "parameters": [
-                        "insuranceCost",
-                        "+",
-                        "GlobalVariable(insurancePackage.package1.price)"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ObjectVariableAsBoolean"
-                      },
-                      "parameters": [
-                        "insuranceButton1",
-                        "isSelected",
-                        "False"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarGlobal"
-                      },
-                      "parameters": [
-                        "currentCoin",
-                        "+",
-                        "GlobalVariable(insurancePackage.package1.price)"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarGlobal"
-                      },
-                      "parameters": [
-                        "insuranceCost",
-                        "-",
-                        "GlobalVariable(insurancePackage.package1.price)"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
+                  ]
                 }
               ]
+            }
+          ]
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "insuranceButton1",
+                "isSelected",
+                "False"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeColor"
+              },
+              "parameters": [
+                "insuranceButton1",
+                "\"255;255;255\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "insuranceButton1",
+                "isSelected",
+                "True"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeColor"
+              },
+              "parameters": [
+                "insuranceButton1",
+                "\"130;248;170\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarGlobal"
+              },
+              "parameters": [
+                "currentCoin",
+                "<",
+                "GlobalVariable(insurancePackage.package1.price)"
+              ],
+              "subInstructions": []
             },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "insuranceButton1",
+                "isSelected",
+                "False"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeColor"
+              },
+              "parameters": [
+                "insuranceButton1",
+                "\"155;155;155\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Button 2 相关操作",
+          "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "MouseButtonReleased"
+              },
+              "parameters": [
+                "insuranceButton1",
+                "Left"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [],
+          "events": [
             {
               "disabled": false,
               "folded": false,
@@ -8827,43 +9109,9 @@
                     ""
                   ],
                   "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "VarGlobal"
-                  },
-                  "parameters": [
-                    "currentCoin",
-                    ">=",
-                    "GlobalVariable(insurancePackage.package2.price)"
-                  ],
-                  "subInstructions": []
                 }
               ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ToggleObjectVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "insuranceButton2",
-                    "isSelected"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ToggleGlobalVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "insurancePackage.package2.isSelected"
-                  ],
-                  "subInstructions": []
-                }
-              ],
+              "actions": [],
               "events": [
                 {
                   "disabled": false,
@@ -8873,240 +9121,179 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "ObjectVariableAsBoolean"
+                        "value": "BuiltinCommonInstructions::Or"
                       },
-                      "parameters": [
-                        "insuranceButton2",
-                        "isSelected",
-                        "True"
-                      ],
-                      "subInstructions": []
+                      "parameters": [],
+                      "subInstructions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "BuiltinCommonInstructions::And"
+                          },
+                          "parameters": [],
+                          "subInstructions": [
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "ObjectVariableAsBoolean"
+                              },
+                              "parameters": [
+                                "insuranceButton2",
+                                "isSelected",
+                                "False"
+                              ],
+                              "subInstructions": []
+                            },
+                            {
+                              "type": {
+                                "inverted": false,
+                                "value": "VarGlobal"
+                              },
+                              "parameters": [
+                                "currentCoin",
+                                ">=",
+                                "GlobalVariable(insurancePackage.package2.price)"
+                              ],
+                              "subInstructions": []
+                            }
+                          ]
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ObjectVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "insuranceButton2",
+                            "isSelected",
+                            "True"
+                          ],
+                          "subInstructions": []
+                        }
+                      ]
                     }
                   ],
                   "actions": [
                     {
                       "type": {
                         "inverted": false,
-                        "value": "ModVarGlobal"
+                        "value": "ToggleGlobalVariableAsBoolean"
                       },
                       "parameters": [
-                        "currentCoin",
-                        "-",
-                        "GlobalVariable(insurancePackage.package2.price)"
+                        "insurancePackage.package2.isSelected"
                       ],
                       "subInstructions": []
                     },
                     {
                       "type": {
                         "inverted": false,
-                        "value": "ModVarGlobal"
-                      },
-                      "parameters": [
-                        "insuranceCost",
-                        "+",
-                        "GlobalVariable(insurancePackage.package2.price)"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ObjectVariableAsBoolean"
+                        "value": "ToggleObjectVariableAsBoolean"
                       },
                       "parameters": [
                         "insuranceButton2",
-                        "isSelected",
-                        "False"
+                        "isSelected"
                       ],
                       "subInstructions": []
                     }
                   ],
-                  "actions": [
+                  "events": [
                     {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarGlobal"
-                      },
-                      "parameters": [
-                        "currentCoin",
-                        "+",
-                        "GlobalVariable(insurancePackage.package2.price)"
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ObjectVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "insuranceButton2",
+                            "isSelected",
+                            "True"
+                          ],
+                          "subInstructions": []
+                        }
                       ],
-                      "subInstructions": []
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "currentCoin",
+                            "-",
+                            "GlobalVariable(insurancePackage.package2.price)"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "insuranceCost",
+                            "+",
+                            "GlobalVariable(insurancePackage.package2.price)"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
                     },
                     {
-                      "type": {
-                        "inverted": false,
-                        "value": "ModVarGlobal"
-                      },
-                      "parameters": [
-                        "insuranceCost",
-                        "-",
-                        "GlobalVariable(insurancePackage.package2.price)"
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ObjectVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "insuranceButton2",
+                            "isSelected",
+                            "False"
+                          ],
+                          "subInstructions": []
+                        }
                       ],
-                      "subInstructions": []
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "currentCoin",
+                            "+",
+                            "GlobalVariable(insurancePackage.package2.price)"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "insuranceCost",
+                            "-",
+                            "GlobalVariable(insurancePackage.package2.price)"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
                     }
-                  ],
-                  "events": []
+                  ]
                 }
               ]
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ObjectVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "insuranceButton1",
-                    "isSelected",
-                    "False"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ChangeColor"
-                  },
-                  "parameters": [
-                    "insuranceButton1",
-                    "\"255;255;255\""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ObjectVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "insuranceButton1",
-                    "isSelected",
-                    "True"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ChangeColor"
-                  },
-                  "parameters": [
-                    "insuranceButton1",
-                    "\"130;248;170\""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ObjectVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "insuranceButton2",
-                    "isSelected",
-                    "False"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ChangeColor"
-                  },
-                  "parameters": [
-                    "insuranceButton2",
-                    "\"255;255;255\""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
-            },
-            {
-              "disabled": false,
-              "folded": false,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ObjectVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "insuranceButton2",
-                    "isSelected",
-                    "True"
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ChangeColor"
-                  },
-                  "parameters": [
-                    "insuranceButton2",
-                    "\"130;248;170\""
-                  ],
-                  "subInstructions": []
-                }
-              ],
-              "events": []
             }
           ]
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "选中button渲染",
-          "comment2": ""
         },
         {
           "disabled": false,
@@ -9119,7 +9306,40 @@
                 "value": "ObjectVariableAsBoolean"
               },
               "parameters": [
-                "insuranceButton0",
+                "insuranceButton2",
+                "isSelected",
+                "False"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeColor"
+              },
+              "parameters": [
+                "insuranceButton2",
+                "\"255;255;255\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "insuranceButton2",
                 "isSelected",
                 "True"
               ],
@@ -9133,12 +9353,65 @@
                 "value": "ChangeColor"
               },
               "parameters": [
-                "insuranceButton0",
+                "insuranceButton2",
                 "\"130;248;170\""
               ],
               "subInstructions": []
             }
           ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarGlobal"
+              },
+              "parameters": [
+                "currentCoin",
+                "<",
+                "GlobalVariable(insurancePackage.package2.price)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "insuranceButton2",
+                "isSelected",
+                "False"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeColor"
+              },
+              "parameters": [
+                "insuranceButton2",
+                "\"155;155;155\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
           "events": []
         },
         {
@@ -9701,96 +9974,6 @@
           "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "VarGlobal"
-              },
-              "parameters": [
-                "currentCoin",
-                "<",
-                "GlobalVariable(insurancePackage.package1.price)"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ObjectVariableAsBoolean"
-              },
-              "parameters": [
-                "insuranceButton1",
-                "isSelected",
-                "False"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "ChangeColor"
-              },
-              "parameters": [
-                "insuranceButton1",
-                "\"155;155;155\""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "VarGlobal"
-              },
-              "parameters": [
-                "currentCoin",
-                "<",
-                "GlobalVariable(insurancePackage.package2.price)"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ObjectVariableAsBoolean"
-              },
-              "parameters": [
-                "insuranceButton2",
-                "isSelected",
-                "False"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "ChangeColor"
-              },
-              "parameters": [
-                "insuranceButton2",
-                "\"155;155;155\""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [],
           "events": []
@@ -9833,6 +10016,21 @@
           "conditions": [],
           "actions": [],
           "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "",
+          "comment2": ""
         }
       ],
       "layers": [
