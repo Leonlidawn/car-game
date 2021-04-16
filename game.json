@@ -627,6 +627,105 @@
       },
       {
         "alwaysLoaded": false,
+        "file": "balloon.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "balloon.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "balloon2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "balloon2.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Balloon_explosion.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Balloon_explosion.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Balloon_explosion2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Balloon_explosion2.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Balloon_explosion3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Balloon_explosion3.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Balloon_explosion4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Balloon_explosion4.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Balloon_explosion22.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Balloon_explosion22.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Balloon_explosion32.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Balloon_explosion32.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "fade-2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "fade-2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "fade-3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "fade-3.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "fade-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "fade-1.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
         "file": "Car Game UI/Control Arrow/Button_Confirm.png",
         "kind": "image",
         "metadata": "",
@@ -1057,6 +1156,21 @@
           "name": "coinNumScene",
           "type": "string",
           "value": "100"
+        },
+        {
+          "name": "dbg",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "name": "balloonColumnLimit",
+          "type": "number",
+          "value": 4
+        },
+        {
+          "name": "balloonCount",
+          "type": "string",
+          "value": "0"
         },
         {
           "name": "BUTTON_HEIGHT",
@@ -2760,6 +2874,114 @@
           ]
         },
         {
+          "name": "balloon",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "life",
+              "type": "string",
+              "value": "10"
+            }
+          ],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "fade",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 5,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "fade-1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 92.27734375,
+                        "y": 128.015625
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 92.27734375,
+                        "y": 128.015625
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "explosion",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.10000000149011612,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Balloon_explosion4.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 391.1953125,
+                        "y": 271.7109375
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 391.44921875,
+                        "y": 271.8359375
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Balloon_explosion22.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 391.1953125,
+                        "y": 271.7109375
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 391.44921875,
+                        "y": 271.8359375
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Balloon_explosion32.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 391.1953125,
+                        "y": 271.7109375
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 391.44921875,
+                        "y": 271.8359375
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "reportPage",
           "tags": "",
           "type": "Sprite",
@@ -3039,7 +3261,13 @@
             "wordWrap": true
           }
         }
+
+
+
+     
+     
       ],
+
       "events": [
         {
           "disabled": false,
@@ -3190,6 +3418,44 @@
                 }
               ],
               "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "KeyFromTextReleased"
+                  },
+                  "parameters": [
+                    "",
+                    "\"b\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": [],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Link",
+                  "include": {
+                    "includeConfig": 0
+                  },
+                  "target": "createBallonScript"
+                }
+              ]
             }
           ]
         },
@@ -4782,7 +5048,7 @@
         },
         {
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [],
@@ -5800,7 +6066,7 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "ToDo：点击变颜色 可以添加其他功能",
+          "comment": "初始化技能",
           "comment2": ""
         },
         {
@@ -5811,41 +6077,15 @@
             {
               "type": {
                 "inverted": false,
-                "value": "MouseButtonReleased"
+                "value": "DepartScene"
               },
               "parameters": [
-                "insuranceButton1",
-                "Left"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "SourisSurObjet"
-              },
-              "parameters": [
-                "skill2",
-                "",
-                "",
                 ""
               ],
               "subInstructions": []
             }
           ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "ToggleObjectVariableAsBoolean"
-              },
-              "parameters": [
-                "skill2",
-                "isSelect"
-              ],
-              "subInstructions": []
-            }
-          ],
+          "actions": [],
           "events": [
             {
               "disabled": false,
@@ -6065,159 +6305,485 @@
         {
           "disabled": false,
           "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "点击技能",
+          "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
                 "inverted": false,
-                "value": "ObjectVariableAsBoolean"
+                "value": "MouseButtonReleased"
               },
               "parameters": [
-                "skill2",
-                "isSelect",
-                "True"
+                "insuranceButton1",
+                "Left"
               ],
               "subInstructions": []
             }
           ],
-          "actions": [
+          "actions": [],
+          "events": [
             {
-              "type": {
-                "inverted": false,
-                "value": "ChangeColor"
-              },
-              "parameters": [
-                "skill2",
-                "\"248;112;112\""
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "skill0",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
               ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
+              "actions": [],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Link",
+                  "include": {
+                    "includeConfig": 0
+                  },
+                  "target": "createBallonScript"
+                }
+              ]
+            },
             {
-              "type": {
-                "inverted": false,
-                "value": "ObjectVariableAsBoolean"
-              },
-              "parameters": [
-                "skill2",
-                "isSelect",
-                "False"
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "skill1",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
               ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
+              "actions": [],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Link",
+                  "include": {
+                    "includeConfig": 0
+                  },
+                  "target": "createBallonScript"
+                }
+              ]
+            },
             {
-              "type": {
-                "inverted": false,
-                "value": "ChangeColor"
-              },
-              "parameters": [
-                "skill2",
-                "\"248;231;28\""
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "skill2",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
               ],
-              "subInstructions": []
+              "actions": [],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Link",
+                  "include": {
+                    "includeConfig": 0
+                  },
+                  "target": "createBallonScript"
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "skill2",
+                        "isSelect",
+                        "False"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "skill2",
+                        "isSelect",
+                        "True"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [],
+                  "events": []
+                }
+              ]
             }
-          ],
-          "events": []
+          ]
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "气球相关逻辑",
+          "comment2": ""
         },
         {
           "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
+          "conditions": [],
+          "actions": [],
+          "events": [
             {
-              "type": {
-                "inverted": false,
-                "value": "DepartScene"
-              },
-              "parameters": [
-                ""
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "AnimationName"
+                  },
+                  "parameters": [
+                    "balloon",
+                    "\"fade\""
+                  ],
+                  "subInstructions": []
+                }
               ],
-              "subInstructions": []
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "balloon",
+                    "life",
+                    "-",
+                    "TimeDelta()"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ScaleHeight"
+                      },
+                      "parameters": [
+                        "balloon",
+                        "!=",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangeScale"
+                      },
+                      "parameters": [
+                        "balloon",
+                        "+",
+                        "TimeDelta()/80"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Opacity"
+                      },
+                      "parameters": [
+                        "balloon",
+                        "-",
+                        "TimeDelta()*5"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarObjet"
+                      },
+                      "parameters": [
+                        "balloon",
+                        "life",
+                        "<",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": [],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SetAnimationName"
+                      },
+                      "parameters": [
+                        "balloon",
+                        "\"explosion\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "AnimationName"
+                  },
+                  "parameters": [
+                    "balloon",
+                    "\"explosion\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Link",
+                  "include": {
+                    "includeConfig": 0
+                  },
+                  "target": "resizeBallonScript"
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "AnimationEnded"
+                      },
+                      "parameters": [
+                        "balloon"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Opacity"
+                          },
+                          "parameters": [
+                            "balloon",
+                            ">",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Opacity"
+                          },
+                          "parameters": [
+                            "balloon",
+                            "-",
+                            "TimeDelta()*2000"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ChangeScale"
+                          },
+                          "parameters": [
+                            "balloon",
+                            "*",
+                            "1+TimeDelta()"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Opacity"
+                          },
+                          "parameters": [
+                            "balloon",
+                            "<=",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Delete"
+                          },
+                          "parameters": [
+                            "balloon",
+                            ""
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": [
+                        {
+                          "disabled": false,
+                          "folded": false,
+                          "type": "BuiltinCommonInstructions::Link",
+                          "include": {
+                            "includeConfig": 0
+                          },
+                          "target": "positionBallonScript"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
             }
-          ],
-          "actions": [],
-          "events": []
+          ]
         },
         {
           "disabled": false,
           "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
-          "events": []
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "==碰撞事件===\n2.enable 技能按钮 5秒  => 对应最后的碰撞\n2.1.按技能，该技能disable\n- 出现气球，气球逐渐变大，开始倒计时，直到理赔结束后消失 \n如果claim对了，结束后 金币增加理赔的金额，扣取excess fee\n如果claim错了，结束后 没有金币增加\n",
+          "comment2": ""
         },
         {
           "disabled": false,
@@ -6275,50 +6841,17 @@
         {
           "disabled": false,
           "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
-          "events": []
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "技能button的TODOs: \n1.需要加上不同状态的animation\n",
+          "comment2": ""
         },
         {
           "disabled": false,
@@ -9327,67 +9860,91 @@
         }
       ],
       "behaviorsSharedData": []
-    },
-    {
-      "b": 209,
-      "disableInputWhenNotFocused": true,
-      "mangledName": "New_32scene",
-      "name": "New scene",
-      "oglFOV": 90,
-      "oglZFar": 500,
-      "oglZNear": 1,
-      "r": 209,
-      "standardSortMethod": true,
-      "stopSoundsOnStartup": true,
-      "title": "",
-      "v": 209,
-      "uiSettings": {
-        "grid": false,
-        "gridB": 255,
-        "gridG": 180,
-        "gridHeight": 32,
-        "gridOffsetX": 0,
-        "gridOffsetY": 0,
-        "gridR": 158,
-        "gridType": "rectangular",
-        "gridWidth": 32,
-        "snap": true,
-        "windowMask": false,
-        "zoomFactor": 1
-      },
-      "objectsGroups": [],
-      "variables": [],
-      "instances": [],
-      "objects": [],
-      "events": [],
-      "layers": [
-        {
-          "ambientLightColorB": 0,
-          "ambientLightColorG": 7419968,
-          "ambientLightColorR": 0,
-          "followBaseLayerCamera": false,
-          "isLightingLayer": false,
-          "name": "",
-          "visibility": true,
-          "cameras": [
-            {
-              "defaultSize": true,
-              "defaultViewport": true,
-              "height": 0,
-              "viewportBottom": 1,
-              "viewportLeft": 0,
-              "viewportRight": 1,
-              "viewportTop": 0,
-              "width": 0
-            }
-          ],
-          "effects": []
-        }
-      ],
-      "behaviorsSharedData": []
     }
   ],
-  "externalEvents": [],
+  "externalEvents": [
+    {
+      "associatedLayout": "Game Play - Level 1",
+      "lastChangeTimeStamp": 0,
+      "name": "createBallonScript",
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": "const columnMax = runtimeScene.getVariables().get('balloonColumnLimit').getValue();\n\nconst roadInstance =runtimeScene.getObjects('road')[0];\nconst topBarInstance =runtimeScene.getObjects('topBar')[0];\n\nconst bWidth = roadInstance.getWidth()/columnMax;\nconst bHeight = bWidth;\nconst margin = 5;\nconst zOrder = 4;\n\n//生成气球,但不设置位置\nconst bInstance = runtimeScene.createObject('balloon');\nbInstance.setAnimation(0);\nbInstance.setWidth(bWidth/2);\nbInstance.setHeight(bHeight/2);\nbInstance.setZOrder(zOrder);\n//TODOs:\n\n// set animation \n// change animation time\n\n\nfunction getX(index){\n    let columnNum = (index+1)%columnMax;\n    if (columnNum == 0) columnNum = 4;\n    const x = roadInstance.x + bWidth * (columnNum - 1);     \n    return x;\n}\n\nfunction getY(index){\n    let rowNum = 1;\n    if(index+1 > columnMax){\n        rowNum = Math.ceil((index+1)/columnMax);\n    } \n\n    const y = topBarInstance.y+topBarInstance.getHeight() + bHeight * (rowNum - 1)\n    return y;\n}\n\n\nfunction debug(value){\n    runtimeScene.getVariables().get('dbg').setValue(value);\n}\n\n",
+          "parameterObjects": "balloon",
+          "useStrict": true,
+          "eventsSheetExpanded": true
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "positionBallonScript"
+        }
+      ]
+    },
+    {
+      "associatedLayout": "Game Play - Level 1",
+      "lastChangeTimeStamp": 0,
+      "name": "positionBallonScript",
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": "const columnMax = runtimeScene.getVariables().get('balloonColumnLimit').getValue();\nconst bArray = runtimeScene.getObjects('balloon');\nconst roadInstance =runtimeScene.getObjects('road')[0];\nconst topBarInstance =runtimeScene.getObjects('topBar')[0];\nconst margin = 5;\nconst bWidth = roadInstance.getWidth()/columnMax;\nconst bHeight = bWidth;\n\nfor(let i = 0; i <= bArray.length - 1; i++){\n    bArray[i].setPosition(getX(i) ,getY(i));\n}\n\nfunction getX(index){\n    let columnNum = (index+1)%columnMax;\n    if (columnNum == 0) columnNum = 4;\n    const x = roadInstance.x + bWidth * (columnNum - 1 + 0.5);     \n    return x;\n}\n\nfunction getY(index){\n    let rowNum = 1;\n    if(index+1 > columnMax){\n        rowNum = Math.ceil((index+1)/columnMax);\n    } \n\n    const y = topBarInstance.y+topBarInstance.getHeight() + bHeight * (rowNum - 1 + 0.5) + margin; \n    return y;\n}\n\nfunction debug(value){\n    runtimeScene.getVariables().get('dbg').setValue(value);\n}\n\n",
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": true
+        }
+      ]
+    },
+    {
+      "associatedLayout": "Game Play - Level 1",
+      "lastChangeTimeStamp": 0,
+      "name": "resizeBallonScript",
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": "\n\nconst columnMax = runtimeScene.getVariables().get('balloonColumnLimit').getValue();\nconst roadInstance =runtimeScene.getObjects('road')[0];\n\nconst bWidth = roadInstance.getWidth()/columnMax;\nconst bHeight = bWidth;\n\nobjects.forEach(\n    (bInstance)=>{\n        bInstance.setWidth(bWidth);\n        bInstance.setHeight(bHeight);\n    \n})\n",
+          "parameterObjects": "balloon",
+          "useStrict": true,
+          "eventsSheetExpanded": true
+        }
+      ]
+    }
+  ],
   "eventsFunctionsExtensions": [
     {
       "author": "",
