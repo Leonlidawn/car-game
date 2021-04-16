@@ -813,6 +813,15 @@
         "preloadAsMusic": false,
         "preloadAsSound": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Injured Icon.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Injured Icon.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -1196,6 +1205,16 @@
           "name": "reportTextGap",
           "type": "string",
           "value": "30"
+        },
+        {
+          "name": "damageLevel",
+          "type": "string",
+          "value": "2"
+        },
+        {
+          "name": "damageDeduct",
+          "type": "string",
+          "value": "0"
         }
       ],
       "instances": [
@@ -1439,28 +1458,6 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 38,
-          "layer": "",
-          "locked": false,
-          "name": "skill2",
-          "persistentUuid": "75ddda13-aa09-47c0-afe3-0686202c27f6",
-          "width": 33,
-          "x": 259,
-          "y": 433,
-          "zOrder": 20,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": [
-            {
-              "name": "isSelect",
-              "type": "boolean",
-              "value": false
-            }
-          ]
         }
       ],
       "objects": [
@@ -2276,6 +2273,45 @@
                         "name": "origine",
                         "x": 0,
                         "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "touchRadius2",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "ControllerRadius.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 100,
+                        "y": 100
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -3260,14 +3296,53 @@
             "align": "left",
             "wordWrap": true
           }
+        },
+        {
+          "name": "injury",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [
+            {
+              "name": "life",
+              "type": "string",
+              "value": "10"
+            }
+          ],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.07999999821186066,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Injured Icon.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 90.8333740234375,
+                        "y": 75.33332824707031
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 91.5,
+                        "y": 76.66667175292969
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
-
-
-
-     
-     
       ],
-
       "events": [
         {
           "disabled": false,
@@ -4078,12 +4153,38 @@
                     {
                       "type": {
                         "inverted": false,
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "accident.mp3",
+                        "",
+                        "",
+                        ""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "damageDeduct",
+                        "=",
+                        "RandomInRange(1,100)*10"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
                         "value": "ModVarGlobal"
                       },
                       "parameters": [
                         "currentCoin",
                         "-",
-                        "1"
+                        "Variable(damageDeduct)"
                       ],
                       "subInstructions": []
                     },
@@ -4107,28 +4208,144 @@
                       "parameters": [
                         "accident",
                         "+",
-                        "1"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "PlaySound"
-                      },
-                      "parameters": [
-                        "",
-                        "accident.mp3",
-                        "",
-                        "",
-                        ""
+                        "Variable(damageDeduct)"
                       ],
                       "subInstructions": []
                     }
                   ],
-                  "events": []
+                  "events": [
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Egal"
+                          },
+                          "parameters": [
+                            "Variable(damageDeduct)/10",
+                            "<=",
+                            "30"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "damageLevel",
+                            "=",
+                            "1"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Egal"
+                          },
+                          "parameters": [
+                            "Variable(damageDeduct)/10",
+                            ">=",
+                            "60"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "damageLevel",
+                            "=",
+                            "3"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "injury",
+                            "player.PointX(\"Center\")",
+                            "player.PointY(\"Center\")",
+                            "\"UI layer\""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ChangeScale"
+                          },
+                          "parameters": [
+                            "injury",
+                            "=",
+                            "0.2"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    }
+                  ]
                 }
               ]
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "injury",
+                    "=",
+                    "player.PointX(\"Center\")",
+                    "=",
+                    "player.PointY(\"Center\")"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Opacity"
+                  },
+                  "parameters": [
+                    "injury",
+                    "-",
+                    "2"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
             },
             {
               "disabled": false,
@@ -5048,7 +5265,7 @@
         },
         {
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [],
@@ -5200,7 +5417,7 @@
                   "parameters": [
                     "time",
                     "<",
-                    "55"
+                    "30"
                   ],
                   "subInstructions": []
                 }
@@ -9943,6 +10160,12 @@
           "eventsSheetExpanded": true
         }
       ]
+    },
+    {
+      "associatedLayout": "Game Play - Level 1",
+      "lastChangeTimeStamp": 0,
+      "name": "NewExternalEvents",
+      "events": []
     }
   ],
   "eventsFunctionsExtensions": [
