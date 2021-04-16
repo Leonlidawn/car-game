@@ -7236,22 +7236,22 @@
         {
           "name": "XPADDING_RATIO",
           "type": "string",
-          "value": "0.025"
+          "value": "0.02"
         },
         {
           "name": "YPADDING_RATIO",
           "type": "string",
-          "value": "0.1"
+          "value": "0.05"
         },
         {
           "name": "BUTTON_MARGIN_RATIO",
           "type": "string",
-          "value": "0.01"
+          "value": "0.008"
         },
         {
           "name": "TEXT_MARGIN",
           "type": "string",
-          "value": "12"
+          "value": "18"
         },
         {
           "name": "TITLE_FONT_SIZE",
@@ -7261,7 +7261,7 @@
         {
           "name": "CONFIRM_BUTTON_HEIGHT",
           "type": "string",
-          "value": "20"
+          "value": "40"
         },
         {
           "name": "",
@@ -7835,8 +7835,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 355.5,
+                        "y": 175.5
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -8134,7 +8134,7 @@
                   "parameters": [
                     "confirmButton",
                     "=",
-                    "ScreenWidth()/3"
+                    "ScreenWidth()/2\n"
                   ],
                   "subInstructions": []
                 },
@@ -8158,7 +8158,7 @@
                   "parameters": [
                     "confirmButton",
                     "=",
-                    "ScreenWidth()/3"
+                    "ScreenWidth()/2"
                   ],
                   "subInstructions": []
                 }
