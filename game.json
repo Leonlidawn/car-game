@@ -879,15 +879,6 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "Car Game UI/insurance/Insuracne Choise_3rd party.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Car Game UI\\insurance\\Insuracne Choise_3rd party.png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
         "file": "Car Game UI/insurance/Insuracne Choise_CTP.png",
         "kind": "image",
         "metadata": "",
@@ -1088,6 +1079,42 @@
         "kind": "image",
         "metadata": "",
         "name": "Car Game UI\\insurance\\Insuracne Choise_Comp_withText_NotPick.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Car Game UI/insurance/Insuracne Choise_3rd party.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Car Game UI\\insurance\\Insuracne Choise_3rd party.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "background-1-1-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "background-1-1-1.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "background-1-1-1-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "background-1-1-1-1.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "background-1-1-1-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "background-1-1-1-0.png",
         "smoothed": true,
         "userAdded": false
       }
@@ -1623,7 +1650,7 @@
           "name": "insuranceSelectPanelBackground",
           "rightMargin": 0,
           "tags": "",
-          "texture": "background-1-1.png",
+          "texture": "background-1-1-1-0.png",
           "tiled": true,
           "topMargin": 0,
           "type": "PanelSpriteObject::PanelSprite",
@@ -1729,7 +1756,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "Car Game UI\\insurance\\Insuracne Choise_3rd party (1).png",
+                      "image": "Car Game UI\\insurance\\Insuracne Choise_3rd party.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -2330,7 +2357,7 @@
                   "parameters": [
                     "confirmButton",
                     "=",
-                    "GlobalVariable(screenHeight)*(1-Variable(YPADDING_RATIO)/2)-Variable(CONFIRM_BUTTON_HEIGHT)/2"
+                    "GlobalVariable(screenHeight)*(1-Variable(YPADDING_RATIO)/3)-Variable(CONFIRM_BUTTON_HEIGHT)/2"
                   ],
                   "subInstructions": []
                 },
@@ -4298,7 +4325,7 @@
               "parameters": [
                 "coinNum",
                 "=",
-                "GlobalVariable(screenHeight) * Variable(XPADDING_RATIO)"
+                "GlobalVariable(screenHeight) * Variable(YPADDING_RATIO)/3 - Variable(TITLE_FONT_SIZE)"
               ],
               "subInstructions": []
             }
