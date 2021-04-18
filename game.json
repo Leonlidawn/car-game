@@ -966,6 +966,33 @@
         "name": "Car Game UI\\insurance\\Insuracne Choise_CTP_NotPick.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Car Game UI/Skills/Policy_CAR.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Car Game UI\\Skills\\Policy_CAR.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Car Game UI/Skills/Policy_BUS.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Car Game UI\\Skills\\Policy_BUS.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Car Game UI/Skills/Policy_Heart.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Car Game UI\\Skills\\Policy_Heart.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -1204,7 +1231,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.379999999999999
+        "zoomFactor": 0.359999999999999
       },
       "objectsGroups": [
         {
@@ -1333,7 +1360,7 @@
         {
           "name": "YPADDING_RATIO",
           "type": "string",
-          "value": "0.1"
+          "value": "0.12"
         },
         {
           "name": "reportTextBeginX",
@@ -1364,6 +1391,21 @@
           "name": "kangarooGenerator",
           "type": "string",
           "value": ""
+        },
+        {
+          "name": "XPADDING_RATIO",
+          "type": "string",
+          "value": "0.02"
+        },
+        {
+          "name": "",
+          "type": "string",
+          "value": ""
+        },
+        {
+          "name": "isSkillsDisable",
+          "type": "boolean",
+          "value": true
         }
       ],
       "instances": [
@@ -1556,22 +1598,6 @@
           "x": 41,
           "y": 4,
           "zOrder": 16,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 37,
-          "layer": "",
-          "locked": false,
-          "name": "coin",
-          "persistentUuid": "6ba57dce-b614-45c5-8ae5-b149a386c13c",
-          "width": 36,
-          "x": 232,
-          "y": 3,
-          "zOrder": 17,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2725,20 +2751,26 @@
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
+          "variables": [
+            {
+              "name": "isHide",
+              "type": "boolean",
+              "value": true
+            }
+          ],
           "behaviors": [],
           "animations": [
             {
-              "name": "",
+              "name": "Insurance1",
               "useMultipleDirections": false,
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 0.08,
+                  "timeBetweenFrames": 0.07999999821186066,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "Car Game UI\\Skills\\Insurance1.png",
+                      "image": "Car Game UI\\Skills\\Policy_CAR.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -2764,20 +2796,26 @@
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
+          "variables": [
+            {
+              "name": "isHide",
+              "type": "boolean",
+              "value": true
+            }
+          ],
           "behaviors": [],
           "animations": [
             {
-              "name": "",
+              "name": "Insurance2",
               "useMultipleDirections": false,
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 0.08,
+                  "timeBetweenFrames": 0.07999999821186066,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "Car Game UI\\Skills\\Insurance2.png",
+                      "image": "Car Game UI\\Skills\\Policy_BUS.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -2803,20 +2841,26 @@
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
+          "variables": [
+            {
+              "name": "isHide",
+              "type": "boolean",
+              "value": true
+            }
+          ],
           "behaviors": [],
           "animations": [
             {
-              "name": "",
+              "name": "Insurance3",
               "useMultipleDirections": false,
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 0.08,
+                  "timeBetweenFrames": 0.07999999821186066,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "Car Game UI\\Skills\\Insurance3.png",
+                      "image": "Car Game UI\\Skills\\Policy_Heart.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -3615,12 +3659,45 @@
             {
               "type": {
                 "inverted": false,
+                "value": "MettreY"
+              },
+              "parameters": [
+                "coinNum",
+                "=",
+                "ScreenHeight() * Variable(XPADDING_RATIO)"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreX"
+              },
+              "parameters": [
+                "coinNum",
+                "=",
+                "ScreenWidth()*(1-Variable(XPADDING_RATIO)) - coinNum.Width()"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
                 "value": "BBText::SetBBText"
               },
               "parameters": [
                 "coinNum",
                 "=",
-                "ToString(GlobalVariable(currentCoin))"
+                "\"💰 \" + GlobalVariableString(currentCoin)"
               ],
               "subInstructions": []
             }
@@ -7094,7 +7171,7 @@
         },
         {
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -7174,7 +7251,7 @@
                   "parameters": [
                     "skillButtonGroup",
                     "=",
-                    "skillButtonGroup.Height()"
+                    "skillButtonGroup.Height()*2"
                   ],
                   "subInstructions": []
                 }
@@ -7245,7 +7322,7 @@
                   "parameters": [
                     "skillButtonGroup",
                     "=",
-                    "skillButtonGroup.Height()"
+                    "skillButtonGroup.Height()*2"
                   ],
                   "subInstructions": []
                 }
@@ -7316,7 +7393,27 @@
                   "parameters": [
                     "skillButtonGroup",
                     "=",
-                    "skillButtonGroup.Height()"
+                    "skillButtonGroup.Height()*2"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SetSceneVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "isSkillsDisable",
+                    "True"
                   ],
                   "subInstructions": []
                 }
@@ -7324,6 +7421,38 @@
               "events": []
             }
           ]
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "isSkillsDisable",
+                "True"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeColor"
+              },
+              "parameters": [
+                "skillButtonGroup",
+                "\"74;74;74\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
         },
         {
           "disabled": false,
@@ -7350,7 +7479,7 @@
         },
         {
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -7361,6 +7490,17 @@
               "parameters": [
                 "insuranceButton1",
                 "Left"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SceneVariableAsBoolean"
+              },
+              "parameters": [
+                "isSkillsDisable",
+                "False"
               ],
               "subInstructions": []
             }
@@ -11182,18 +11322,6 @@
             {
               "type": {
                 "inverted": false,
-                "value": "MettreX"
-              },
-              "parameters": [
-                "coinNum",
-                "=",
-                "ScreenWidth()*(1-Variable(YPADDING_RATIO)) - coinNum.Width()"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
                 "value": "MettreY"
               },
               "parameters": [
@@ -11211,7 +11339,20 @@
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
-          "actions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreX"
+              },
+              "parameters": [
+                "coinNum",
+                "=",
+                "ScreenWidth()*(1-Variable(XPADDING_RATIO)) - coinNum.Width()"
+              ],
+              "subInstructions": []
+            }
+          ],
           "events": []
         },
         {
