@@ -1398,11 +1398,6 @@
           "value": "0.02"
         },
         {
-          "name": "",
-          "type": "string",
-          "value": ""
-        },
-        {
           "name": "isSkillsDisable",
           "type": "boolean",
           "value": true
@@ -4638,7 +4633,28 @@
                       "subInstructions": []
                     }
                   ],
-                  "events": []
+                  "events": [
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "SetSceneVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "isSkillsDisable",
+                            "False"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    }
+                  ]
                 },
                 {
                   "disabled": false,
@@ -4992,6 +5008,27 @@
                     }
                   ],
                   "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SetObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "skillButtonGroup",
+                        "isHide",
+                        "False"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
                 }
               ]
             },
@@ -5217,6 +5254,26 @@
                         "coinNum",
                         "=",
                         "ToString(GlobalVariable(currentCoin))"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SetSceneVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "isSkillsDisable",
+                        "False"
                       ],
                       "subInstructions": []
                     }
@@ -7426,14 +7483,37 @@
           "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "skillButtonGroup",
+                "isHide",
+                "=",
+                "Variable(isSkillsDisable)"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
               "type": {
                 "inverted": false,
-                "value": "SceneVariableAsBoolean"
+                "value": "ObjectVariableAsBoolean"
               },
               "parameters": [
-                "isSkillsDisable",
+                "skillButtonGroup",
+                "isHide",
                 "True"
               ],
               "subInstructions": []
@@ -7496,10 +7576,11 @@
             {
               "type": {
                 "inverted": false,
-                "value": "SceneVariableAsBoolean"
+                "value": "ObjectVariableAsBoolean"
               },
               "parameters": [
-                "isSkillsDisable",
+                "skillButtonGroup",
+                "isHide",
                 "False"
               ],
               "subInstructions": []
