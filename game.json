@@ -4777,22 +4777,6 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "height": 30,
-          "layer": "",
-          "locked": false,
-          "name": "timer",
-          "persistentUuid": "baf6f809-688c-487e-ab12-1def561ee4e3",
-          "width": 35,
-          "x": 1,
-          "y": 4,
-          "zOrder": 15,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
           "customSize": false,
           "height": 0,
           "layer": "",
@@ -5898,7 +5882,7 @@
             "fontSize": 20,
             "visible": true,
             "color": "#000000",
-            "fontFamily": "Bimbo_JVE.ttf",
+            "fontFamily": "Car Game UI\\font\\Myriad Pro Bold.ttf",
             "align": "left",
             "wordWrap": true
           }
@@ -6883,6 +6867,88 @@
                 ""
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeHeight"
+              },
+              "parameters": [
+                "topBar",
+                "=",
+                "GlobalVariable(screenHeight)/15\n"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeWidth"
+              },
+              "parameters": [
+                "topBar",
+                "=",
+                "GlobalVariable(screenWidth)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreX"
+              },
+              "parameters": [
+                "timerNum",
+                "=",
+                "GlobalVariable(screenWidth)*Variable(XPADDING_RATIO)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreY"
+              },
+              "parameters": [
+                "timerNum",
+                "=",
+                "GlobalVariable(screenWidth)*Variable(XPADDING_RATIO)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreY"
+              },
+              "parameters": [
+                "coinNum",
+                "=",
+                "GlobalVariable(screenWidth)*Variable(XPADDING_RATIO)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "BBText::SetColor"
+              },
+              "parameters": [
+                "coinNum",
+                "\"255;255;255\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "BBText::SetColor"
+              },
+              "parameters": [
+                "timerNum",
+                "\"255;255;255\""
+              ],
+              "subInstructions": []
             }
           ],
           "events": []
@@ -6893,18 +6959,6 @@
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "MettreY"
-              },
-              "parameters": [
-                "coinNum",
-                "=",
-                "GlobalVariable(screenHeight) * Variable(XPADDING_RATIO)"
-              ],
-              "subInstructions": []
-            },
             {
               "type": {
                 "inverted": false,
@@ -10102,7 +10156,7 @@
                   "parameters": [
                     "timerNum",
                     "=",
-                    "\"0\" + ToString(floor(Variable(time)))"
+                    "\"⏰ 0\" + ToString(floor(Variable(time)))"
                   ],
                   "subInstructions": []
                 }
@@ -10136,7 +10190,7 @@
                   "parameters": [
                     "timerNum",
                     "=",
-                    "ToString(floor(Variable(time)))"
+                    "\"⏰ \" + ToString(floor(Variable(time)))"
                   ],
                   "subInstructions": []
                 }
