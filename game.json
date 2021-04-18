@@ -20,7 +20,7 @@
     "author": "Team Anonymous",
     "windowWidth": 320,
     "windowHeight": 600,
-    "latestCompilationDirectory": "/Users/weidongli/Desktop/carcar7",
+    "latestCompilationDirectory": "/Users/weidongli/Desktop/carcar11",
     "maxFPS": 60,
     "minFPS": 20,
     "verticalSync": false,
@@ -2161,6 +2161,20 @@
                 "",
                 "choose_bgm_com.mp3",
                 "yes",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "CentreCamera"
+              },
+              "parameters": [
+                "",
+                "insuranceSelectPanelBackground",
+                "no",
                 "",
                 ""
               ],
@@ -4690,7 +4704,7 @@
           "angle": 0,
           "customSize": true,
           "height": 66,
-          "layer": "UI layer",
+          "layer": "",
           "locked": false,
           "name": "touchRadius",
           "persistentUuid": "0aa334c5-4605-41f8-bc4c-b29aa2d9d217",
@@ -4706,7 +4720,7 @@
           "angle": 0,
           "customSize": true,
           "height": 26,
-          "layer": "UI layer",
+          "layer": "",
           "locked": false,
           "name": "controllerPosition",
           "persistentUuid": "55c0430a-a41c-4669-a4ea-6eb780c97786",
@@ -4722,7 +4736,7 @@
           "angle": 0,
           "customSize": true,
           "height": 20,
-          "layer": "UI layer",
+          "layer": "",
           "locked": false,
           "name": "controllerCenter",
           "persistentUuid": "ded9ebb3-e1f5-4981-8943-ab69b6a6a5a2",
@@ -6850,39 +6864,6 @@
           "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "GlobalVariableAsBoolean"
-              },
-              "parameters": [
-                "isMute",
-                "True"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "ModGlobalVolume"
-              },
-              "parameters": [
-                "",
-                "=",
-                "0"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
             {
@@ -7412,7 +7393,7 @@
               },
               "parameters": [
                 "",
-                "10",
+                "15",
                 "\"KangarooTimer\""
               ],
               "subInstructions": []
@@ -8228,7 +8209,7 @@
             },
             {
               "disabled": false,
-              "folded": true,
+              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -8356,7 +8337,7 @@
             },
             {
               "disabled": false,
-              "folded": true,
+              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -8863,7 +8844,7 @@
         },
         {
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [],
@@ -9334,7 +9315,7 @@
             },
             {
               "disabled": false,
-              "folded": true,
+              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -9436,7 +9417,7 @@
             },
             {
               "disabled": false,
-              "folded": true,
+              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -9855,6 +9836,20 @@
                     "gameOver",
                     "=",
                     "GlobalVariable(screenHeight)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "CentreCamera"
+                  },
+                  "parameters": [
+                    "",
+                    "road",
+                    "no",
+                    "\"Report Layer\"",
+                    ""
                   ],
                   "subInstructions": []
                 }
@@ -10421,6 +10416,20 @@
                         "reportPage",
                         "=",
                         "GlobalVariable(screenHeight)"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "CentreCamera"
+                      },
+                      "parameters": [
+                        "",
+                        "reportPage",
+                        "no",
+                        "\"Report Layer\"",
+                        ""
                       ],
                       "subInstructions": []
                     }
