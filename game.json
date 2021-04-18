@@ -1401,6 +1401,11 @@
           "name": "isSkillsDisable",
           "type": "boolean",
           "value": true
+        },
+        {
+          "name": "skillActiveDuration",
+          "type": "number",
+          "value": 0
         }
       ],
       "instances": [
@@ -3856,7 +3861,7 @@
               },
               "parameters": [
                 "",
-                "3",
+                "10",
                 "\"TrafficTimer\""
               ],
               "subInstructions": []
@@ -4581,6 +4586,18 @@
                     "0"
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SetObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "skillButtonGroup",
+                    "isHide",
+                    "False"
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": []
@@ -4633,28 +4650,7 @@
                       "subInstructions": []
                     }
                   ],
-                  "events": [
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "SetSceneVariableAsBoolean"
-                          },
-                          "parameters": [
-                            "isSkillsDisable",
-                            "False"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    }
-                  ]
+                  "events": []
                 },
                 {
                   "disabled": false,
@@ -5008,27 +5004,6 @@
                     }
                   ],
                   "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "SetObjectVariableAsBoolean"
-                      },
-                      "parameters": [
-                        "skillButtonGroup",
-                        "isHide",
-                        "False"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
                 }
               ]
             },
@@ -5203,6 +5178,18 @@
                     "Variable(damageDeduct)"
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SetObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "skillButtonGroup",
+                    "isHide",
+                    "False"
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": [
@@ -5254,26 +5241,6 @@
                         "coinNum",
                         "=",
                         "ToString(GlobalVariable(currentCoin))"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": []
-                },
-                {
-                  "disabled": false,
-                  "folded": false,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "SetSceneVariableAsBoolean"
-                      },
-                      "parameters": [
-                        "isSkillsDisable",
-                        "False"
                       ],
                       "subInstructions": []
                     }
@@ -7466,10 +7433,11 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "SetSceneVariableAsBoolean"
+                    "value": "SetObjectVariableAsBoolean"
                   },
                   "parameters": [
-                    "isSkillsDisable",
+                    "skillButtonGroup",
+                    "isHide",
                     "True"
                   ],
                   "subInstructions": []
@@ -7484,21 +7452,15 @@
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "ModVarObjet"
-              },
-              "parameters": [
-                "skillButtonGroup",
-                "isHide",
-                "=",
-                "Variable(isSkillsDisable)"
-              ],
-              "subInstructions": []
-            }
-          ],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
           "events": []
         },
         {
@@ -7528,6 +7490,97 @@
               "parameters": [
                 "skillButtonGroup",
                 "\"74;74;74\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "skillButtonGroup",
+                "isHide",
+                "False"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeColor"
+              },
+              "parameters": [
+                "skillButtonGroup",
+                "\"255;255;255\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "skillActiveDuration",
+                "+",
+                "TimeDelta()"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarScene"
+              },
+              "parameters": [
+                "skillActiveDuration",
+                ">",
+                "5"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "skillActiveDuration",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "skillButtonGroup",
+                "isHide",
+                "True"
               ],
               "subInstructions": []
             }
@@ -7605,9 +7658,34 @@
                     ""
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "skill0",
+                    "isHide",
+                    "False"
+                  ],
+                  "subInstructions": []
                 }
               ],
-              "actions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SetObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "skill0",
+                    "isHide",
+                    "True"
+                  ],
+                  "subInstructions": []
+                }
+              ],
               "events": [
                 {
                   "disabled": false,
@@ -7637,9 +7715,34 @@
                     ""
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "skill1",
+                    "isHide",
+                    "False"
+                  ],
+                  "subInstructions": []
                 }
               ],
-              "actions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SetObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "skill1",
+                    "isHide",
+                    "True"
+                  ],
+                  "subInstructions": []
+                }
+              ],
               "events": [
                 {
                   "disabled": false,
@@ -7669,9 +7772,34 @@
                     ""
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "skill2",
+                    "isHide",
+                    "False"
+                  ],
+                  "subInstructions": []
                 }
               ],
-              "actions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SetObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "skill2",
+                    "isHide",
+                    "True"
+                  ],
+                  "subInstructions": []
+                }
+              ],
               "events": [
                 {
                   "disabled": false,
