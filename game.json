@@ -825,33 +825,6 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "Car Game UI/insurance/Insuracne Choise_CTP.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Car Game UI\\insurance\\Insuracne Choise_CTP.png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "Car Game UI/insurance/Insuracne Choise_3.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Car Game UI\\insurance\\Insuracne Choise_3.png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "Car Game UI/insurance/Insuracne Choise_C.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Car Game UI\\insurance\\Insuracne Choise_C.png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
         "file": "kangaroo2.jpg",
         "kind": "image",
         "metadata": "",
@@ -894,6 +867,105 @@
         "name": "dead-1.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "background-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "background-1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Car Game UI/insurance/Insuracne Choise_Comp_withText.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Car Game UI\\insurance\\Insuracne Choise_Comp_withText.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Car Game UI/insurance/Insuracne Choise_3rd party.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Car Game UI\\insurance\\Insuracne Choise_3rd party.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Car Game UI/insurance/Insuracne Choise_CTP_with text.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Car Game UI\\insurance\\Insuracne Choise_CTP_with text.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Car Game UI/insurance/Insuracne Choise_CTP_with text_NotPick.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Car Game UI\\insurance\\Insuracne Choise_CTP_with text_NotPick.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Car Game UI/insurance/Insuracne Choise_CTP.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Car Game UI\\insurance\\Insuracne Choise_CTP.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Car Game UI/insurance/Insuracne Choise_3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Car Game UI\\insurance\\Insuracne Choise_3.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Car Game UI/insurance/Insuracne Choise_C_NotPick.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Car Game UI\\insurance\\Insuracne Choise_C_NotPick.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Car Game UI/insurance/Insuracne Choise_3_NotPick.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Car Game UI\\insurance\\Insuracne Choise_3_NotPick.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Car Game UI/insurance/Insuracne Choise_C.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Car Game UI\\insurance\\Insuracne Choise_C.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Car Game UI/insurance/Insuracne Choise_CTP_NotPick.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Car Game UI\\insurance\\Insuracne Choise_CTP_NotPick.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -8455,22 +8527,6 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 29,
-          "layer": "",
-          "locked": false,
-          "name": "coin",
-          "persistentUuid": "88ca0457-21f0-4922-ad6b-85dec8fdd516",
-          "width": 31,
-          "x": 226,
-          "y": 1,
-          "zOrder": 19,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
         }
       ],
       "objects": [
@@ -8481,7 +8537,7 @@
           "name": "insuranceSelectPanelBackground",
           "rightMargin": 0,
           "tags": "",
-          "texture": "background.png",
+          "texture": "background-1.png",
           "tiled": true,
           "topMargin": 0,
           "type": "PanelSpriteObject::PanelSprite",
@@ -8504,7 +8560,7 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "ScreenShot2021-04-03at948",
+              "name": "pick",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -8514,6 +8570,35 @@
                     {
                       "hasCustomCollisionMask": false,
                       "image": "Car Game UI\\insurance\\Insuracne Choise_C.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "noPick",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Car Game UI\\insurance\\Insuracne Choise_C_NotPick.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -8549,7 +8634,7 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "ScreenShot2021-04-03at948",
+              "name": "pick",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -8559,6 +8644,35 @@
                     {
                       "hasCustomCollisionMask": false,
                       "image": "Car Game UI\\insurance\\Insuracne Choise_3.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "noPick",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Car Game UI\\insurance\\Insuracne Choise_3_NotPick.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -8594,7 +8708,7 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "ScreenShot2021-04-03at948",
+              "name": "pick",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -8604,6 +8718,35 @@
                     {
                       "hasCustomCollisionMask": false,
                       "image": "Car Game UI\\insurance\\Insuracne Choise_CTP.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "no-pick",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Car Game UI\\insurance\\Insuracne Choise_CTP_NotPick.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -9017,6 +9160,17 @@
                     "PageTitle",
                     "=",
                     "\"[b]CHOOSE INSURANCE[/b]\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BBText::SetColor"
+                  },
+                  "parameters": [
+                    "PageTitle",
+                    "\"255;255;255\""
                   ],
                   "subInstructions": []
                 }
@@ -9529,7 +9683,7 @@
                       "parameters": [
                         "insuranceButton0Des",
                         "=",
-                        "\"📜\" + GlobalVariableString(skillSet.skill0.description) "
+                        "\"💔 \" + GlobalVariableString(skillSet.skill0.description) "
                       ],
                       "subInstructions": []
                     },
@@ -9541,7 +9695,7 @@
                       "parameters": [
                         "insuranceButton1Des",
                         "=",
-                        "\"📜\"+GlobalVariableString(skillSet.skill2.description)"
+                        "\"🚍 \"+GlobalVariableString(skillSet.skill2.description)"
                       ],
                       "subInstructions": []
                     },
@@ -9553,7 +9707,7 @@
                       "parameters": [
                         "insuranceButton2Des",
                         "=",
-                        "\"📜\"+GlobalVariableString(skillSet.skill1.description)+NewLine()+NewLine()+\n\"📜\"+GlobalVariableString(skillSet.skill2.description)"
+                        "\"🚘 \"+GlobalVariableString(skillSet.skill1.description)+NewLine()+NewLine()+\n\"🚍 \"+GlobalVariableString(skillSet.skill2.description)"
                       ],
                       "subInstructions": []
                     }
@@ -9618,7 +9772,7 @@
                 "value": "ObjectVariableAsBoolean"
               },
               "parameters": [
-                "insuranceButton0",
+                "insuranceButtonGroup",
                 "isSelected",
                 "False"
               ],
@@ -9629,11 +9783,44 @@
             {
               "type": {
                 "inverted": false,
-                "value": "ChangeColor"
+                "value": "SetAnimationName"
               },
               "parameters": [
-                "insuranceButton0",
-                "\"233;207;248\""
+                "insuranceButtonGroup",
+                "\"noPick\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ObjectVariableAsBoolean"
+              },
+              "parameters": [
+                "insuranceButtonGroup",
+                "isSelected",
+                "True"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetAnimationName"
+              },
+              "parameters": [
+                "insuranceButtonGroup",
+                "\"pick\""
               ],
               "subInstructions": []
             }
@@ -9885,141 +10072,163 @@
             {
               "type": {
                 "inverted": false,
-                "value": "ObjectVariableAsBoolean"
-              },
-              "parameters": [
-                "insuranceButton1",
-                "isSelected",
-                "False"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "ChangeColor"
-              },
-              "parameters": [
-                "insuranceButton1",
-                "\"255;255;255\""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "ObjectVariableAsBoolean"
-              },
-              "parameters": [
-                "insuranceButton1",
-                "isSelected",
-                "False"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "ChangeColor"
-              },
-              "parameters": [
-                "insuranceButton1",
-                "\"223;177;248\""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "ObjectVariableAsBoolean"
-              },
-              "parameters": [
-                "insuranceButton1",
-                "isSelected",
-                "True"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "ChangeColor"
-              },
-              "parameters": [
-                "insuranceButton1",
-                "\"255;255;255\""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
                 "value": "VarGlobal"
               },
               "parameters": [
                 "currentCoin",
                 "<",
-                "GlobalVariable(insurancePackage.package1.price)"
+                "0"
               ],
               "subInstructions": []
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "insuranceButton1",
+                    "isSelected",
+                    "False"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeColor"
+                  },
+                  "parameters": [
+                    "insuranceButton1",
+                    "\"255;255;255\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
             },
             {
-              "type": {
-                "inverted": false,
-                "value": "ObjectVariableAsBoolean"
-              },
-              "parameters": [
-                "insuranceButton1",
-                "isSelected",
-                "False"
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "insuranceButton1",
+                    "isSelected",
+                    "False"
+                  ],
+                  "subInstructions": []
+                }
               ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeColor"
+                  },
+                  "parameters": [
+                    "insuranceButton1",
+                    "\"223;177;248\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
             {
-              "type": {
-                "inverted": false,
-                "value": "ChangeColor"
-              },
-              "parameters": [
-                "insuranceButton1",
-                "\"74;74;74\""
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "insuranceButton1",
+                    "isSelected",
+                    "True"
+                  ],
+                  "subInstructions": []
+                }
               ],
-              "subInstructions": []
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeColor"
+                  },
+                  "parameters": [
+                    "insuranceButton1",
+                    "\"255;255;255\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarGlobal"
+                  },
+                  "parameters": [
+                    "currentCoin",
+                    "<",
+                    "GlobalVariable(insurancePackage.package1.price)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "insuranceButton1",
+                    "isSelected",
+                    "False"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeColor"
+                  },
+                  "parameters": [
+                    "insuranceButton1",
+                    "\"74;74;74\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
             }
-          ],
-          "events": []
+          ]
         },
         {
           "disabled": false,
@@ -10266,141 +10475,163 @@
             {
               "type": {
                 "inverted": false,
-                "value": "ObjectVariableAsBoolean"
-              },
-              "parameters": [
-                "insuranceButton2",
-                "isSelected",
-                "False"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "ChangeColor"
-              },
-              "parameters": [
-                "insuranceButton2",
-                "\"255;255;255\""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "ObjectVariableAsBoolean"
-              },
-              "parameters": [
-                "insuranceButton2",
-                "isSelected",
-                "False"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "ChangeColor"
-              },
-              "parameters": [
-                "insuranceButton2",
-                "\"223;177;248\""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "ObjectVariableAsBoolean"
-              },
-              "parameters": [
-                "insuranceButton2",
-                "isSelected",
-                "True"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "ChangeColor"
-              },
-              "parameters": [
-                "insuranceButton2",
-                "\"255;255;255\""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
                 "value": "VarGlobal"
               },
               "parameters": [
                 "currentCoin",
                 "<",
-                "GlobalVariable(insurancePackage.package2.price)"
+                "0"
               ],
               "subInstructions": []
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "insuranceButton2",
+                    "isSelected",
+                    "False"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeColor"
+                  },
+                  "parameters": [
+                    "insuranceButton2",
+                    "\"255;255;255\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
             },
             {
-              "type": {
-                "inverted": false,
-                "value": "ObjectVariableAsBoolean"
-              },
-              "parameters": [
-                "insuranceButton2",
-                "isSelected",
-                "False"
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "insuranceButton2",
+                    "isSelected",
+                    "False"
+                  ],
+                  "subInstructions": []
+                }
               ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeColor"
+                  },
+                  "parameters": [
+                    "insuranceButton2",
+                    "\"223;177;248\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
             {
-              "type": {
-                "inverted": false,
-                "value": "ChangeColor"
-              },
-              "parameters": [
-                "insuranceButton2",
-                "\"74;74;74\""
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "insuranceButton2",
+                    "isSelected",
+                    "True"
+                  ],
+                  "subInstructions": []
+                }
               ],
-              "subInstructions": []
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeColor"
+                  },
+                  "parameters": [
+                    "insuranceButton2",
+                    "\"255;255;255\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarGlobal"
+                  },
+                  "parameters": [
+                    "currentCoin",
+                    "<",
+                    "GlobalVariable(insurancePackage.package2.price)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "insuranceButton2",
+                    "isSelected",
+                    "False"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeColor"
+                  },
+                  "parameters": [
+                    "insuranceButton2",
+                    "\"74;74;74\""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
             }
-          ],
-          "events": []
+          ]
         },
         {
           "disabled": false,
@@ -10758,7 +10989,7 @@
               "parameters": [
                 "coinNum",
                 "=",
-                "\"$\" + GlobalVariableString(currentCoin)"
+                "\"💰 \" + GlobalVariableString(currentCoin)"
               ],
               "subInstructions": []
             },
@@ -10947,6 +11178,30 @@
                 "GlobalVariable(INIT_MONEY) - GlobalVariable(insurancePackage.package0.price)"
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreX"
+              },
+              "parameters": [
+                "coinNum",
+                "=",
+                "ScreenWidth()*(1-Variable(YPADDING_RATIO)) - coinNum.Width()"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreY"
+              },
+              "parameters": [
+                "coinNum",
+                "=",
+                "ScreenHeight() * Variable(XPADDING_RATIO)"
+              ],
+              "subInstructions": []
             }
           ],
           "events": []
@@ -10954,21 +11209,6 @@
         {
           "disabled": false,
           "folded": false,
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "insurance package button 状态",
-          "comment2": ""
-        },
-        {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [],
@@ -10985,48 +11225,10 @@
         {
           "disabled": false,
           "folded": false,
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "金钱变化",
-          "comment2": ""
-        },
-        {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [],
           "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
-          "events": []
-        },
-        {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "",
-          "comment2": ""
         }
       ],
       "layers": [
