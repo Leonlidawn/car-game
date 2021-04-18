@@ -20,7 +20,7 @@
     "author": "Team Anonymous",
     "windowWidth": 320,
     "windowHeight": 600,
-    "latestCompilationDirectory": "",
+    "latestCompilationDirectory": "D:\\FinTech Project\\exportGame",
     "maxFPS": 60,
     "minFPS": 20,
     "verticalSync": false,
@@ -888,24 +888,6 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "Car Game UI/insurance/Insuracne Choise_CTP_with text.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Car Game UI\\insurance\\Insuracne Choise_CTP_with text.png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "Car Game UI/insurance/Insuracne Choise_CTP_with text_NotPick.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Car Game UI\\insurance\\Insuracne Choise_CTP_with text_NotPick.png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
         "file": "Car Game UI/insurance/Insuracne Choise_CTP.png",
         "kind": "image",
         "metadata": "",
@@ -986,15 +968,6 @@
         "userAdded": true
       },
       {
-        "alwaysLoaded": false,
-        "file": "Car Game UI/insurance/Insuracne Choise_Comp_withText.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Car Game UI\\insurance\\Insuracne Choise_Comp_withText.png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
         "file": "Car Game UI/font/Myriad Pro Bold.ttf",
         "kind": "font",
         "metadata": "",
@@ -1016,6 +989,105 @@
         "kind": "image",
         "metadata": "",
         "name": "Car Game UI\\insurance\\Insurance Page_background.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Car Game UI/Skill Bar.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Car Game UI\\Skill Bar.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Car Game UI/Top Bar.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Car Game UI\\Top Bar.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Car Game UI/Coins + Balloon/Clock.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Car Game UI\\Coins + Balloon\\Clock.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Car Game UI/Objects on Road/Kangeroo_2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Car Game UI\\Objects on Road\\Kangeroo_2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "background-1-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "background-1-1.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Car Game UI/insurance/Insuracne Choise_CTP_with text.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Car Game UI\\insurance\\Insuracne Choise_CTP_with text.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Car Game UI/insurance/Insuracne Choise_CTP_with text_NotPick.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Car Game UI\\insurance\\Insuracne Choise_CTP_with text_NotPick.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Car Game UI/insurance/Insuracne Choise_3rd party (1).png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Car Game UI\\insurance\\Insuracne Choise_3rd party (1).png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Car Game UI/insurance/Insuracne Choise_3rd party_with text_NotPick.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Car Game UI\\insurance\\Insuracne Choise_3rd party_with text_NotPick.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Car Game UI/insurance/Insuracne Choise_Comp_withText.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Car Game UI\\insurance\\Insuracne Choise_Comp_withText.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Car Game UI/insurance/Insuracne Choise_Comp_withText_NotPick.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Car Game UI\\insurance\\Insuracne Choise_Comp_withText_NotPick.png",
         "smoothed": true,
         "userAdded": false
       }
@@ -2466,7 +2538,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "Car Game UI\\insurance\\Insurance Page_background.png",
+                      "image": "Car Game UI\\Skill Bar.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -2505,7 +2577,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "Car Game UI\\insurance\\Insurance Page_background.png",
+                      "image": "Car Game UI\\Top Bar.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -2705,7 +2777,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "NewObject-1.png",
+                      "image": "Car Game UI\\Coins + Balloon\\Clock.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -3623,11 +3695,11 @@
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 0.08,
+                  "timeBetweenFrames": 0.07999999821186066,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "kangaroo.png",
+                      "image": "Car Game UI\\Objects on Road\\Kangeroo_2.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -3656,7 +3728,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "dead-1.png",
+                      "image": "Car Game UI\\Objects on Road\\Kangeroo_2.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -4785,18 +4857,6 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "ModVarGlobal"
-                      },
-                      "parameters": [
-                        "accident",
-                        "+",
-                        "Variable(damageDeduct)"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
                         "value": "ModVarScene"
                       },
                       "parameters": [
@@ -4854,12 +4914,12 @@
                         {
                           "type": {
                             "inverted": false,
-                            "value": "ModVarGlobal"
+                            "value": "ModVarScene"
                           },
                           "parameters": [
-                            "currentCoin",
-                            "-",
-                            "(Variable(skill0Claim) + Variable(skill1Claim)+Variable(skill2Claim))"
+                            "skill0Claim",
+                            "=",
+                            "0"
                           ],
                           "subInstructions": []
                         }
@@ -4912,12 +4972,12 @@
                         {
                           "type": {
                             "inverted": false,
-                            "value": "ModVarGlobal"
+                            "value": "ModVarScene"
                           },
                           "parameters": [
-                            "currentCoin",
-                            "-",
-                            "(Variable(skill0Claim) + Variable(skill1Claim)+Variable(skill2Claim))"
+                            "skill0Claim",
+                            "=",
+                            "0"
                           ],
                           "subInstructions": []
                         }
@@ -4982,18 +5042,6 @@
                         {
                           "type": {
                             "inverted": false,
-                            "value": "ModVarGlobal"
-                          },
-                          "parameters": [
-                            "currentCoin",
-                            "-",
-                            "(Variable(skill0Claim) + Variable(skill1Claim)+Variable(skill2Claim))"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
                             "value": "Create"
                           },
                           "parameters": [
@@ -5035,6 +5083,42 @@
                             "coinNum",
                             "=",
                             "ToString(GlobalVariable(currentCoin))"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "damageDeduct",
+                            "=",
+                            "(Variable(skill0Claim) + Variable(skill1Claim)+Variable(skill2Claim))"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "accident",
+                            "+",
+                            "Variable(damageDeduct)"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "currentCoin",
+                            "-",
+                            "Variable(damageDeduct)"
                           ],
                           "subInstructions": []
                         }
@@ -5328,7 +5412,7 @@
             },
             {
               "disabled": false,
-              "folded": true,
+              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -5374,30 +5458,6 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "BBText::SetBBText"
-                  },
-                  "parameters": [
-                    "coinNum",
-                    "=",
-                    "ToString(GlobalVariable(currentCoin))"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarGlobal"
-                  },
-                  "parameters": [
-                    "accident",
-                    "+",
-                    "Variable(damageDeduct)"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
                     "value": "SetObjectVariableAsBoolean"
                   },
                   "parameters": [
@@ -5430,9 +5490,57 @@
                         "value": "ModVarScene"
                       },
                       "parameters": [
+                        "skill1Claim",
+                        "=",
+                        "RandomInRange(10,30)/100*player.Variable(value)"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "skill2Claim",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
+                        "skill0Claim",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarScene"
+                      },
+                      "parameters": [
                         "damageDeduct",
                         "=",
-                        "RandomInRange(1,100)*10"
+                        "(Variable(skill0Claim) + Variable(skill1Claim)+Variable(skill2Claim))"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "accident",
+                        "+",
+                        "Variable(damageDeduct)"
                       ],
                       "subInstructions": []
                     },
@@ -5445,18 +5553,6 @@
                         "currentCoin",
                         "-",
                         "Variable(damageDeduct)"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "BBText::SetBBText"
-                      },
-                      "parameters": [
-                        "coinNum",
-                        "=",
-                        "ToString(GlobalVariable(currentCoin))"
                       ],
                       "subInstructions": []
                     }
@@ -8286,7 +8382,20 @@
                       "subInstructions": []
                     }
                   ],
-                  "actions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarGlobal"
+                      },
+                      "parameters": [
+                        "currentCoin",
+                        "+",
+                        "balloon.Variable(claim)"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
                   "events": [
                     {
                       "disabled": false,
@@ -8687,7 +8796,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.6679999999999997
+        "zoomFactor": 0.6279999999999997
       },
       "objectsGroups": [
         {
@@ -8828,17 +8937,17 @@
         {
           "name": "XPADDING_RATIO",
           "type": "string",
-          "value": "0.02"
+          "value": "0.05"
         },
         {
           "name": "YPADDING_RATIO",
           "type": "string",
-          "value": "0.12"
+          "value": "0.15"
         },
         {
           "name": "BUTTON_MARGIN_RATIO",
           "type": "string",
-          "value": "0"
+          "value": "0.01"
         },
         {
           "name": "TEXT_MARGIN",
@@ -8888,7 +8997,7 @@
           "persistentUuid": "a8f5ae45-6c05-483e-bc7d-85e5a7fdac5d",
           "width": 158,
           "x": 71,
-          "y": 57,
+          "y": 78,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -8928,86 +9037,6 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "insuranceTitle0",
-          "persistentUuid": "3c636a8f-4891-4ae4-abbd-d8ba6f90047f",
-          "width": 0,
-          "x": 119,
-          "y": 53,
-          "zOrder": 6,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "insuranceTitle1",
-          "persistentUuid": "6e18682a-4bf4-4907-9816-5f20ddc3bd40",
-          "width": 0,
-          "x": 121,
-          "y": 251,
-          "zOrder": 7,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "insuranceButton0Des",
-          "persistentUuid": "4f1c234f-e77b-46d5-84ee-8fbcce0a0b66",
-          "width": 0,
-          "x": 123,
-          "y": 126,
-          "zOrder": 9,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "insuranceButton1Des",
-          "persistentUuid": "5384debe-03df-46d0-8800-398b80558709",
-          "width": 0,
-          "x": 107,
-          "y": 303,
-          "zOrder": 10,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "PageTitle",
-          "persistentUuid": "58197e99-b34f-4c54-b8c0-d765add20016",
-          "width": 0,
-          "x": 58,
-          "y": 17,
-          "zOrder": 12,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
           "customSize": true,
           "height": 31,
           "layer": "",
@@ -9018,38 +9047,6 @@
           "x": 74,
           "y": 553,
           "zOrder": 13,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "price1",
-          "persistentUuid": "698ebe2b-b358-46da-9f6e-1ad63305e140",
-          "width": 0,
-          "x": 191,
-          "y": 326,
-          "zOrder": 15,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "price0",
-          "persistentUuid": "709a756b-bba8-4bc4-85d7-ada656bddbda",
-          "width": 0,
-          "x": 193,
-          "y": 132,
-          "zOrder": 16,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -9079,7 +9076,7 @@
           "name": "insuranceSelectPanelBackground",
           "rightMargin": 0,
           "tags": "",
-          "texture": "background-1.png",
+          "texture": "background-1-1.png",
           "tiled": true,
           "topMargin": 0,
           "type": "PanelSpriteObject::PanelSprite",
@@ -9136,11 +9133,11 @@
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 0.08,
+                  "timeBetweenFrames": 0.07999999821186066,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "Car Game UI\\insurance\\Insuracne Choise_C_NotPick.png",
+                      "image": "Car Game UI\\insurance\\Insuracne Choise_Comp_withText_NotPick.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -9185,7 +9182,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "Car Game UI\\insurance\\Insuracne Choise_3.png",
+                      "image": "Car Game UI\\insurance\\Insuracne Choise_3rd party (1).png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -9210,11 +9207,11 @@
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 0.08,
+                  "timeBetweenFrames": 0.07999999821186066,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "Car Game UI\\insurance\\Insuracne Choise_3_NotPick.png",
+                      "image": "Car Game UI\\insurance\\Insuracne Choise_3rd party_with text_NotPick.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -9259,7 +9256,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "Car Game UI\\insurance\\Insuracne Choise_CTP.png",
+                      "image": "Car Game UI\\insurance\\Insuracne Choise_CTP_with text.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -9284,11 +9281,11 @@
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 0.08,
+                  "timeBetweenFrames": 0.07999999821186066,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "Car Game UI\\insurance\\Insuracne Choise_CTP_NotPick.png",
+                      "image": "Car Game UI\\insurance\\Insuracne Choise_CTP_with text_NotPick.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
