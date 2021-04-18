@@ -879,15 +879,6 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "Car Game UI/insurance/Insuracne Choise_Comp_withText.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Car Game UI\\insurance\\Insuracne Choise_Comp_withText.png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
         "file": "Car Game UI/insurance/Insuracne Choise_3rd party.png",
         "kind": "image",
         "metadata": "",
@@ -993,6 +984,40 @@
         "name": "Car Game UI\\Skills\\Policy_Heart.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Car Game UI/insurance/Insuracne Choise_Comp_withText.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Car Game UI\\insurance\\Insuracne Choise_Comp_withText.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "file": "Car Game UI/font/Myriad Pro Bold.ttf",
+        "kind": "font",
+        "metadata": "",
+        "name": "Car Game UI\\font\\Myriad Pro Bold.ttf",
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/tiled_Bluebackground-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\tiled_Bluebackground-1.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Car Game UI/insurance/Insurance Page_background.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Car Game UI\\insurance\\Insurance Page_background.png",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -1236,7 +1261,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.359999999999999
+        "zoomFactor": 0.47999999999999915
       },
       "objectsGroups": [
         {
@@ -2432,16 +2457,16 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "",
+              "name": "topbar_placeholder",
               "useMultipleDirections": false,
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 0.08,
+                  "timeBetweenFrames": 0.07999999821186066,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "topbar_placeholder.png",
+                      "image": "Car Game UI\\insurance\\Insurance Page_background.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -2471,21 +2496,21 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "",
+              "name": "topbar_placeholder",
               "useMultipleDirections": false,
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 0.08,
+                  "timeBetweenFrames": 0.07999999821186066,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "topbar_placeholder.png",
+                      "image": "Car Game UI\\insurance\\Insurance Page_background.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 1,
+                        "y": 1.5
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -2778,7 +2803,7 @@
           "height": 128,
           "name": "BlueBackground",
           "tags": "",
-          "texture": "tiled_Blue background.png",
+          "texture": "assets\\tiled_Bluebackground-1.png",
           "type": "TiledSpriteObject::TiledSprite",
           "width": 128,
           "variables": [],
@@ -4810,7 +4835,7 @@
                           "parameters": [
                             "skill1Claim",
                             "=",
-                            "RandomInRange(1,10)/100*Variable(player.value)"
+                            "RandomInRange(1,10)/100*player.Variable(value)"
                           ],
                           "subInstructions": []
                         },
@@ -4822,7 +4847,7 @@
                           "parameters": [
                             "skill2Claim",
                             "=",
-                            "RandomInRange(1,10)/100*Variable(mediuamCarGroup.value)"
+                            "RandomInRange(1,10)/100*mediuamCarGroup.Variable(value)"
                           ],
                           "subInstructions": []
                         },
@@ -4868,7 +4893,7 @@
                           "parameters": [
                             "skill1Claim",
                             "=",
-                            "RandomInRange(10,20)/100*Variable(player.value)"
+                            "RandomInRange(10,20)/100*player.Variable(value)"
                           ],
                           "subInstructions": []
                         },
@@ -4880,7 +4905,7 @@
                           "parameters": [
                             "skill2Claim",
                             "=",
-                            "RandomInRange(10,20)/100*Variable(mediuamCarGroup.value)"
+                            "RandomInRange(10,20)/100*mediuamCarGroup.Variable(value)"
                           ],
                           "subInstructions": []
                         },
@@ -4926,7 +4951,7 @@
                           "parameters": [
                             "skill1Claim",
                             "=",
-                            "RandomInRange(20,40)/100*Variable(player.value)"
+                            "RandomInRange(20,40)/100*player.Variable(value)"
                           ],
                           "subInstructions": []
                         },
@@ -4938,7 +4963,7 @@
                           "parameters": [
                             "skill2Claim",
                             "=",
-                            "RandomInRange(20,40)/100*Variable(mediuamCarGroup.value)"
+                            "RandomInRange(20,40)/100*mediuamCarGroup.Variable(value)"
                           ],
                           "subInstructions": []
                         },
@@ -4993,14 +5018,6 @@
                           "subInstructions": []
                         }
                       ],
-                      "events": []
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [],
                       "events": []
                     },
                     {
@@ -8947,22 +8964,6 @@
           "height": 0,
           "layer": "",
           "locked": false,
-          "name": "insuranceTitle2",
-          "persistentUuid": "eaeb4e99-688c-4452-bc6d-f412fef3ab43",
-          "width": 0,
-          "x": 128,
-          "y": 386,
-          "zOrder": 8,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
           "name": "insuranceButton0Des",
           "persistentUuid": "4f1c234f-e77b-46d5-84ee-8fbcce0a0b66",
           "width": 0,
@@ -8985,22 +8986,6 @@
           "x": 107,
           "y": 303,
           "zOrder": 10,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
-          "name": "insuranceButton2Des",
-          "persistentUuid": "9cda6e75-3acb-4e9c-bea4-e8c484e4a99c",
-          "width": 0,
-          "x": 122,
-          "y": 429,
-          "zOrder": 11,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -9075,22 +9060,6 @@
           "height": 0,
           "layer": "",
           "locked": false,
-          "name": "price2",
-          "persistentUuid": "af9d8cdc-e489-440f-a0bb-31319798f799",
-          "width": 0,
-          "x": 202,
-          "y": 495,
-          "zOrder": 17,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "locked": false,
           "name": "coinNum",
           "persistentUuid": "df992ef6-a86b-472d-b5c7-896e4d79aa96",
           "width": 0,
@@ -9142,7 +9111,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "Car Game UI\\insurance\\Insuracne Choise_C.png",
+                      "image": "Car Game UI\\insurance\\Insuracne Choise_Comp_withText.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -9561,7 +9530,7 @@
             "fontSize": 20,
             "visible": true,
             "color": "#000000",
-            "fontFamily": "Arial",
+            "fontFamily": "Car Game UI\\font\\Myriad Pro Bold.ttf",
             "align": "left",
             "wordWrap": true
           }
@@ -11635,6 +11604,17 @@
                 "price2",
                 "=",
                 "insuranceButton2.Y() + insuranceButton2.Height() - price2.GetFontSize() - 2*Variable(TEXT_MARGIN)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "BBText::SetColor"
+              },
+              "parameters": [
+                "coinNum",
+                "\"255;255;255\""
               ],
               "subInstructions": []
             }
