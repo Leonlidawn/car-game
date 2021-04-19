@@ -1117,6 +1117,78 @@
         "name": "background-1-1-1-0.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Houses 2_Long_Left2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Houses 2_Long_Left2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Houses 2_Long_Right2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Houses 2_Long_Right2.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Policy_CAR.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Policy_CAR.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Policy_BUS.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Policy_BUS.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Policy_Heart.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Policy_Heart.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Ballon_Injured.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Ballon_Injured.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Ballon_Car.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Ballon_Car.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Ballon_Bus.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Ballon_Bus.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -4488,12 +4560,28 @@
             },
             {
               "name": "roadCoin"
+            },
+            {
+              "name": "kangaroo"
+            },
+            {
+              "name": "sideRight"
+            },
+            {
+              "name": "sideLeft"
             }
           ]
         },
         {
-          "name": "Group",
-          "objects": []
+          "name": "roadSideGroup",
+          "objects": [
+            {
+              "name": "sideRight"
+            },
+            {
+              "name": "sideLeft"
+            }
+          ]
         }
       ],
       "variables": [
@@ -4550,7 +4638,7 @@
         {
           "name": "BUTTON_HEIGHT",
           "type": "string",
-          "value": "30"
+          "value": "40"
         },
         {
           "name": "YPADDING_RATIO",
@@ -4655,14 +4743,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 601,
+          "height": 2700,
           "layer": "",
           "locked": false,
           "name": "sideRight",
           "persistentUuid": "b3bab1a1-f18e-4b90-baa8-dc99aba8eaab",
           "width": 44,
-          "x": 274,
-          "y": -1,
+          "x": 278,
+          "y": 2,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -4671,14 +4759,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 599,
+          "height": 2700,
           "layer": "",
           "locked": false,
           "name": "sideLeft",
           "persistentUuid": "9c4db262-b8a9-4f0e-8e84-f2be975d0b4d",
           "width": 41,
-          "x": 1,
-          "y": 2,
+          "x": 0,
+          "y": 1,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -4824,6 +4912,38 @@
           "x": 16,
           "y": 113,
           "zOrder": 19,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 2700,
+          "layer": "",
+          "locked": false,
+          "name": "sideLeft",
+          "persistentUuid": "525d2800-3b5a-4b91-88e3-49fb83ecfa08",
+          "width": 41,
+          "x": 0,
+          "y": -2699,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 2700,
+          "layer": "",
+          "locked": false,
+          "name": "sideRight",
+          "persistentUuid": "dd5a2c04-99af-4cbd-86f7-2d02ea5f7078",
+          "width": 44,
+          "x": 278,
+          "y": -2699,
+          "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -5528,16 +5648,16 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "",
+              "name": "Houses2",
               "useMultipleDirections": false,
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 0.08,
+                  "timeBetweenFrames": 0.07999999821186066,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "Car Game UI/Scenes/Houses 2.png",
+                      "image": "Houses 2_Long_Right2.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -5567,16 +5687,16 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "",
+              "name": "Houses1",
               "useMultipleDirections": false,
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 0.08,
+                  "timeBetweenFrames": 0.07999999821186066,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "Car Game UI/Scenes/Houses 1.png",
+                      "image": "Houses 2_Long_Left2.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -5982,7 +6102,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "Car Game UI\\Skills\\Policy_CAR.png",
+                      "image": "Policy_CAR.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -6027,7 +6147,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "Car Game UI\\Skills\\Policy_BUS.png",
+                      "image": "Policy_BUS.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -6072,7 +6192,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "Car Game UI\\Skills\\Policy_Heart.png",
+                      "image": "Policy_Heart.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -6334,7 +6454,7 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "fade",
+              "name": "fade-skill0",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -6343,7 +6463,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "fade-1.png",
+                      "image": "Ballon_Injured.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -6418,6 +6538,64 @@
                         "name": "centre",
                         "x": 391.44921875,
                         "y": 271.8359375
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "fade-skill1",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Ballon_Car.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 94.15234375,
+                        "y": 129.43359375
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "fade-skill2",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Ballon_Bus.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 93.01171875,
+                        "y": 127.87890625
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
                       },
                       "customCollisionMask": []
                     }
@@ -6639,8 +6817,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 154.984375,
+                        "y": 91.21875
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -6900,6 +7078,18 @@
             {
               "type": {
                 "inverted": false,
+                "value": "ChangeWidth"
+              },
+              "parameters": [
+                "skillBar",
+                "=",
+                "GlobalVariable(screenWidth)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
                 "value": "MettreX"
               },
               "parameters": [
@@ -6952,6 +7142,19 @@
               "parameters": [
                 "timerNum",
                 "\"255;255;255\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "AddForceXY"
+              },
+              "parameters": [
+                "roadSideGroup",
+                "0",
+                "150",
+                "1"
               ],
               "subInstructions": []
             }
@@ -7124,6 +7327,48 @@
         {
           "disabled": false,
           "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "PosY"
+              },
+              "parameters": [
+                "roadSideGroup",
+                ">",
+                "600"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreY"
+              },
+              "parameters": [
+                "roadSideGroup",
+                "=",
+                "-2699"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -7150,6 +7395,18 @@
                 "",
                 "10",
                 "\"TrafficTimer\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Vitesse"
+              },
+              "parameters": [
+                "sideRight",
+                ">",
+                "0"
               ],
               "subInstructions": []
             }
@@ -7381,6 +7638,27 @@
             {
               "type": {
                 "inverted": false,
+                "value": "BuiltinCommonInstructions::And"
+              },
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Vitesse"
+                  },
+                  "parameters": [
+                    "sideRight",
+                    ">",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ]
+            },
+            {
+              "type": {
+                "inverted": false,
                 "value": "Timer"
               },
               "parameters": [
@@ -7481,6 +7759,18 @@
                 "",
                 "15",
                 "\"KangarooTimer\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Vitesse"
+              },
+              "parameters": [
+                "sideRight",
+                ">",
+                "0"
               ],
               "subInstructions": []
             }
@@ -8220,7 +8510,7 @@
                           "parameters": [
                             "accident",
                             "+",
-                            "Variable(damageDeduct)"
+                            "1"
                           ],
                           "subInstructions": []
                         },
@@ -8438,7 +8728,21 @@
                   "subInstructions": []
                 }
               ],
-              "actions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "roadCoin",
+                    "duration",
+                    "+",
+                    "TimeDelta()"
+                  ],
+                  "subInstructions": []
+                }
+              ],
               "events": [
                 {
                   "disabled": false,
@@ -8448,10 +8752,12 @@
                     {
                       "type": {
                         "inverted": false,
-                        "value": "AnimationEnded"
+                        "value": "Egal"
                       },
                       "parameters": [
-                        "roadCoin"
+                        "roadCoin.Variable(duration)",
+                        ">",
+                        "0.300"
                       ],
                       "subInstructions": []
                     }
@@ -8578,6 +8884,18 @@
                     "skillButtonGroup",
                     "isHide",
                     "False"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarGlobal"
+                  },
+                  "parameters": [
+                    "accident",
+                    "+",
+                    "1"
                   ],
                   "subInstructions": []
                 }
@@ -9605,6 +9923,481 @@
           "events": [
             {
               "disabled": false,
+              "folded": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Egal"
+                  },
+                  "parameters": [
+                    "GlobalVariable(currentCoin)",
+                    "<",
+                    "0"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ShowLayer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Report Layer\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "coinCollect",
+                    "Variable(reportTextBeginX)",
+                    "Variable(reportTextBeginY)",
+                    "\"Report Layer\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BBText::SetBBText"
+                  },
+                  "parameters": [
+                    "coinCollect",
+                    "=",
+                    "\"Coins collected: \" + ToString(GlobalVariable(coinCollect))"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "accident",
+                    "Variable(reportTextBeginX)",
+                    "Variable(reportTextBeginY)+Variable(reportTextGap)",
+                    "\"Report Layer\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BBText::SetBBText"
+                  },
+                  "parameters": [
+                    "accident",
+                    "=",
+                    "\"Accidents: \" + ToString(GlobalVariable(accident))"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "claim",
+                    "Variable(reportTextBeginX)",
+                    "Variable(reportTextBeginY) + Variable(reportTextGap)*2",
+                    "\"Report Layer\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BBText::SetBBText"
+                  },
+                  "parameters": [
+                    "claim",
+                    "=",
+                    "\"Insurance Claimed: \" + GlobalVariableString(claimSum)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "pay",
+                    "Variable(reportTextBeginX)",
+                    "Variable(reportTextBeginY) + Variable(reportTextGap)*3",
+                    "\"Report Layer\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BBText::SetBBText"
+                  },
+                  "parameters": [
+                    "pay",
+                    "=",
+                    "\"Insurance Costs: \" +GlobalVariableString(insuranceCost)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "netCoin",
+                    "Variable(reportTextBeginX)",
+                    "Variable(reportTextBeginY) + Variable(reportTextGap)*5",
+                    "\"Report Layer\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BBText::SetBBText"
+                  },
+                  "parameters": [
+                    "netCoin",
+                    "=",
+                    "\"Current coins: \" + ToString(GlobalVariable(currentCoin)) "
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "startAgain",
+                    "50",
+                    "500",
+                    "\"Report Layer\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeHeight"
+                  },
+                  "parameters": [
+                    "startAgain",
+                    "=",
+                    "Variable(BUTTON_HEIGHT)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeWidth"
+                  },
+                  "parameters": [
+                    "startAgain",
+                    "=",
+                    "GlobalVariable(screenWidth)/3"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MettreY"
+                  },
+                  "parameters": [
+                    "startAgain",
+                    "=",
+                    "GlobalVariable(screenHeight) - 150"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MettreX"
+                  },
+                  "parameters": [
+                    "startAgain",
+                    "=",
+                    "GlobalVariable(screenWidth)/6"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "exit",
+                    "200",
+                    "500",
+                    "\"Report Layer\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeHeight"
+                  },
+                  "parameters": [
+                    "exit",
+                    "=",
+                    "Variable(BUTTON_HEIGHT)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeWidth"
+                  },
+                  "parameters": [
+                    "exit",
+                    "=",
+                    "GlobalVariable(screenWidth)/3"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MettreX"
+                  },
+                  "parameters": [
+                    "exit",
+                    "=",
+                    "3*GlobalVariable(screenWidth)/6"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MettreY"
+                  },
+                  "parameters": [
+                    "exit",
+                    "=",
+                    "GlobalVariable(screenHeight)-150"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "gameOver",
+                    "0",
+                    "4",
+                    "\"Report Layer\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeWidth"
+                  },
+                  "parameters": [
+                    "gameOver",
+                    "=",
+                    "GlobalVariable(screenWidth)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeHeight"
+                  },
+                  "parameters": [
+                    "gameOver",
+                    "=",
+                    "GlobalVariable(screenHeight)"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "CentreCamera"
+                  },
+                  "parameters": [
+                    "",
+                    "road",
+                    "no",
+                    "\"Report Layer\"",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Arreter"
+                  },
+                  "parameters": [
+                    "movingGroup"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "MouseButtonReleased"
+                      },
+                      "parameters": [
+                        "insuranceButton1",
+                        "Left"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "SourisSurObjet"
+                          },
+                          "parameters": [
+                            "startAgain",
+                            "",
+                            "",
+                            ""
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Scene"
+                          },
+                          "parameters": [
+                            "",
+                            "\"Choose Insurance - Level 1\"",
+                            ""
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "coinCollect",
+                            "=",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "accident",
+                            "=",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "currentCoin",
+                            "=",
+                            "1000"
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "SourisSurObjet"
+                          },
+                          "parameters": [
+                            "exit",
+                            "",
+                            "",
+                            ""
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "Quit"
+                          },
+                          "parameters": [
+                            ""
+                          ],
+                          "subInstructions": []
+                        }
+                      ],
+                      "events": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "disabled": false,
               "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
@@ -9643,14 +10436,35 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "VarScene"
+                    "value": "BuiltinCommonInstructions::And"
                   },
-                  "parameters": [
-                    "time",
-                    ">=",
-                    "1"
-                  ],
-                  "subInstructions": []
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarScene"
+                      },
+                      "parameters": [
+                        "time",
+                        ">=",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Vitesse"
+                      },
+                      "parameters": [
+                        "sideRight",
+                        ">",
+                        "1"
+                      ],
+                      "subInstructions": []
+                    }
+                  ]
                 }
               ],
               "actions": [
@@ -9782,471 +10596,6 @@
               "events": [
                 {
                   "disabled": false,
-                  "folded": true,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Egal"
-                      },
-                      "parameters": [
-                        "GlobalVariable(currentCoin)",
-                        "<",
-                        "0"
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ShowLayer"
-                      },
-                      "parameters": [
-                        "",
-                        "\"Report Layer\""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Create"
-                      },
-                      "parameters": [
-                        "",
-                        "coinCollect",
-                        "Variable(reportTextBeginX)",
-                        "Variable(reportTextBeginY)",
-                        "\"Report Layer\""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "BBText::SetBBText"
-                      },
-                      "parameters": [
-                        "coinCollect",
-                        "=",
-                        "\"Coin collected: \" + ToString(GlobalVariable(coinCollect))"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Create"
-                      },
-                      "parameters": [
-                        "",
-                        "accident",
-                        "Variable(reportTextBeginX)",
-                        "Variable(reportTextBeginY)+Variable(reportTextGap)",
-                        "\"Report Layer\""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "BBText::SetBBText"
-                      },
-                      "parameters": [
-                        "accident",
-                        "=",
-                        "\"Accident: \" + ToString(GlobalVariable(accident))"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Create"
-                      },
-                      "parameters": [
-                        "",
-                        "claim",
-                        "Variable(reportTextBeginX)",
-                        "Variable(reportTextBeginY) + Variable(reportTextGap)*2",
-                        "\"Report Layer\""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "BBText::SetBBText"
-                      },
-                      "parameters": [
-                        "claim",
-                        "=",
-                        "\"Insurance Claimed: \" + GlobalVariableString(claimSum)"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Create"
-                      },
-                      "parameters": [
-                        "",
-                        "pay",
-                        "Variable(reportTextBeginX)",
-                        "Variable(reportTextBeginY) + Variable(reportTextGap)*3",
-                        "\"Report Layer\""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "BBText::SetBBText"
-                      },
-                      "parameters": [
-                        "pay",
-                        "=",
-                        "\"Insurance Cost: \" +GlobalVariableString(insuranceCost)"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Create"
-                      },
-                      "parameters": [
-                        "",
-                        "netCoin",
-                        "Variable(reportTextBeginX)",
-                        "Variable(reportTextBeginY) + Variable(reportTextGap)*5",
-                        "\"Report Layer\""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "BBText::SetBBText"
-                      },
-                      "parameters": [
-                        "netCoin",
-                        "=",
-                        "\"Current coins: \" + ToString(GlobalVariable(currentCoin)) "
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Create"
-                      },
-                      "parameters": [
-                        "",
-                        "startAgain",
-                        "50",
-                        "500",
-                        "\"Report Layer\""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ChangeHeight"
-                      },
-                      "parameters": [
-                        "startAgain",
-                        "=",
-                        "Variable(BUTTON_HEIGHT)"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ChangeWidth"
-                      },
-                      "parameters": [
-                        "startAgain",
-                        "=",
-                        "GlobalVariable(screenWidth)/3"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "MettreY"
-                      },
-                      "parameters": [
-                        "startAgain",
-                        "=",
-                        "GlobalVariable(screenHeight) - 150"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "MettreX"
-                      },
-                      "parameters": [
-                        "startAgain",
-                        "=",
-                        "GlobalVariable(screenWidth)/6"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Create"
-                      },
-                      "parameters": [
-                        "",
-                        "exit",
-                        "200",
-                        "500",
-                        "\"Report Layer\""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ChangeHeight"
-                      },
-                      "parameters": [
-                        "exit",
-                        "=",
-                        "Variable(BUTTON_HEIGHT)"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ChangeWidth"
-                      },
-                      "parameters": [
-                        "exit",
-                        "=",
-                        "GlobalVariable(screenWidth)/3"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "MettreX"
-                      },
-                      "parameters": [
-                        "exit",
-                        "=",
-                        "3*GlobalVariable(screenWidth)/6"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "MettreY"
-                      },
-                      "parameters": [
-                        "exit",
-                        "=",
-                        "GlobalVariable(screenHeight)-150"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "Create"
-                      },
-                      "parameters": [
-                        "",
-                        "gameOver",
-                        "0",
-                        "0",
-                        "\"Report Layer\""
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ChangeWidth"
-                      },
-                      "parameters": [
-                        "gameOver",
-                        "=",
-                        "GlobalVariable(screenWidth)"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "ChangeHeight"
-                      },
-                      "parameters": [
-                        "gameOver",
-                        "=",
-                        "GlobalVariable(screenHeight)"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "CentreCamera"
-                      },
-                      "parameters": [
-                        "",
-                        "road",
-                        "no",
-                        "\"Report Layer\"",
-                        ""
-                      ],
-                      "subInstructions": []
-                    }
-                  ],
-                  "events": [
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "MouseButtonReleased"
-                          },
-                          "parameters": [
-                            "insuranceButton1",
-                            "Left"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "actions": [],
-                      "events": [
-                        {
-                          "disabled": false,
-                          "folded": false,
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "SourisSurObjet"
-                              },
-                              "parameters": [
-                                "startAgain",
-                                "",
-                                "",
-                                ""
-                              ],
-                              "subInstructions": []
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "Scene"
-                              },
-                              "parameters": [
-                                "",
-                                "\"Choose Insurance - Level 1\"",
-                                ""
-                              ],
-                              "subInstructions": []
-                            },
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "ModVarGlobal"
-                              },
-                              "parameters": [
-                                "coinCollect",
-                                "=",
-                                "0"
-                              ],
-                              "subInstructions": []
-                            },
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "ModVarGlobal"
-                              },
-                              "parameters": [
-                                "accident",
-                                "=",
-                                "0"
-                              ],
-                              "subInstructions": []
-                            },
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "ModVarGlobal"
-                              },
-                              "parameters": [
-                                "currentCoin",
-                                "=",
-                                "1000"
-                              ],
-                              "subInstructions": []
-                            }
-                          ],
-                          "events": []
-                        },
-                        {
-                          "disabled": false,
-                          "folded": false,
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "SourisSurObjet"
-                              },
-                              "parameters": [
-                                "exit",
-                                "",
-                                "",
-                                ""
-                              ],
-                              "subInstructions": []
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "inverted": false,
-                                "value": "Quit"
-                              },
-                              "parameters": [
-                                ""
-                              ],
-                              "subInstructions": []
-                            }
-                          ],
-                          "events": []
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "disabled": false,
                   "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
@@ -10309,7 +10658,7 @@
                       "parameters": [
                         "confirm",
                         "=",
-                        "GlobalVariable(screenWidth)/3"
+                        "GlobalVariable(screenWidth)/2"
                       ],
                       "subInstructions": []
                     },
@@ -10333,7 +10682,7 @@
                       "parameters": [
                         "confirm",
                         "=",
-                        "GlobalVariable(screenWidth)/3"
+                        "GlobalVariable(screenWidth)/2"
                       ],
                       "subInstructions": []
                     },
@@ -10437,7 +10786,7 @@
                       "parameters": [
                         "pay",
                         "=",
-                        "\"Insurance Cost: \" +GlobalVariableString(insuranceCost)"
+                        "\"Insurance Costs: \" +GlobalVariableString(insuranceCost)"
                       ],
                       "subInstructions": []
                     },
@@ -10718,7 +11067,7 @@
                   "parameters": [
                     "skillButtonGroup",
                     "=",
-                    "skillBar.Height()*0.8"
+                    "skillBar.Height()*0.6"
                   ],
                   "subInstructions": []
                 },
@@ -10730,7 +11079,7 @@
                   "parameters": [
                     "skillButtonGroup",
                     "=",
-                    "skillButtonGroup.Height()*2"
+                    "skillButtonGroup.Height()*1.2"
                   ],
                   "subInstructions": []
                 }
@@ -10789,7 +11138,7 @@
                   "parameters": [
                     "skillButtonGroup",
                     "=",
-                    "skillBar.Height()*0.8"
+                    "skillBar.Height()*0.6"
                   ],
                   "subInstructions": []
                 },
@@ -10801,7 +11150,7 @@
                   "parameters": [
                     "skillButtonGroup",
                     "=",
-                    "skillButtonGroup.Height()*2"
+                    "skillButtonGroup.Height()*1.2"
                   ],
                   "subInstructions": []
                 }
@@ -10860,7 +11209,7 @@
                   "parameters": [
                     "skillButtonGroup",
                     "=",
-                    "skillBar.Height()*0.8"
+                    "skillBar.Height()*0.6"
                   ],
                   "subInstructions": []
                 },
@@ -10872,7 +11221,7 @@
                   "parameters": [
                     "skillButtonGroup",
                     "=",
-                    "skillButtonGroup.Height()*2"
+                    "skillButtonGroup.Height()*1.2"
                   ],
                   "subInstructions": []
                 }
@@ -11169,6 +11518,17 @@
                         "Variable(skill1Claim)"
                       ],
                       "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SetAnimationName"
+                      },
+                      "parameters": [
+                        "balloon",
+                        "\"fade-skill0\""
+                      ],
+                      "subInstructions": []
                     }
                   ],
                   "events": []
@@ -11246,6 +11606,17 @@
                         "claim",
                         "=",
                         "Variable(skill1Claim)"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SetAnimationName"
+                      },
+                      "parameters": [
+                        "balloon",
+                        "\"fade-skill1\""
                       ],
                       "subInstructions": []
                     }
@@ -11327,6 +11698,17 @@
                         "Variable(skill2Claim)"
                       ],
                       "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SetAnimationName"
+                      },
+                      "parameters": [
+                        "balloon",
+                        "\"fade-skill2\""
+                      ],
+                      "subInstructions": []
                     }
                   ],
                   "events": []
@@ -11365,13 +11747,44 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "AnimationName"
+                    "value": "BuiltinCommonInstructions::Or"
                   },
-                  "parameters": [
-                    "balloon",
-                    "\"fade\""
-                  ],
-                  "subInstructions": []
+                  "parameters": [],
+                  "subInstructions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "AnimationName"
+                      },
+                      "parameters": [
+                        "balloon",
+                        "\"fade-skill0\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "AnimationName"
+                      },
+                      "parameters": [
+                        "balloon",
+                        "\"fade-skill1\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "AnimationName"
+                      },
+                      "parameters": [
+                        "balloon",
+                        "\"fade-skill2\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ]
                 }
               ],
               "actions": [
