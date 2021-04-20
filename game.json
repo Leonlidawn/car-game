@@ -1189,6 +1189,51 @@
         "name": "Ballon_Bus.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "background-1-1-1-0-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "background-1-1-1-0-1.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Car Game UI/Skills/Policy_Package_Car.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Car Game UI\\Skills\\Policy_Package_Car.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Car Game UI/Skills/Policy_Package_Bus.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Car Game UI\\Skills\\Policy_Package_Bus.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Car Game UI/Skills/Policy_Package_Bus_Third.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Car Game UI\\Skills\\Policy_Package_Bus_Third.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Car Game UI/Skills/Policy_Package_Injured.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Car Game UI\\Skills\\Policy_Package_Injured.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -1717,6 +1762,22 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 26,
+          "layer": "",
+          "locked": false,
+          "name": "coin",
+          "persistentUuid": "cee9617f-9e56-41cb-8e55-32407e21ba2a",
+          "width": 41,
+          "x": 213,
+          "y": 4,
+          "zOrder": 19,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -1727,7 +1788,7 @@
           "name": "insuranceSelectPanelBackground",
           "rightMargin": 0,
           "tags": "",
-          "texture": "background-1-1-1-0.png",
+          "texture": "background-1-1-1-0-1.png",
           "tiled": true,
           "topMargin": 0,
           "type": "PanelSpriteObject::PanelSprite",
@@ -2205,8 +2266,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 84.5,
+                        "y": 78.5
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -4193,7 +4254,7 @@
               "parameters": [
                 "coinNum",
                 "=",
-                "\"💰 \" + GlobalVariableString(currentCoin)"
+                "GlobalVariableString(currentCoin)"
               ],
               "subInstructions": []
             },
@@ -4405,6 +4466,18 @@
                 "GlobalVariable(screenHeight) * Variable(YPADDING_RATIO)/3 - Variable(TITLE_FONT_SIZE)"
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreY"
+              },
+              "parameters": [
+                "coin",
+                "=",
+                "coinNum.Y() + coinNum.Height()/2"
+              ],
+              "subInstructions": []
             }
           ],
           "events": []
@@ -4418,12 +4491,36 @@
             {
               "type": {
                 "inverted": false,
+                "value": "ChangeWidth"
+              },
+              "parameters": [
+                "coin",
+                "=",
+                "coinNum.GetFontSize()"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeHeight"
+              },
+              "parameters": [
+                "coin",
+                "=",
+                "coinNum.GetFontSize()"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
                 "value": "MettreX"
               },
               "parameters": [
-                "coinNum",
+                "coin",
                 "=",
-                "GlobalVariable(screenWidth)*(1-Variable(XPADDING_RATIO)) - coinNum.Width()"
+                "coinNum.X() - coin.Width()/2"
               ],
               "subInstructions": []
             }
@@ -4970,6 +5067,22 @@
           "x": 278,
           "y": -2699,
           "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "height": 31,
+          "layer": "",
+          "locked": false,
+          "name": "coin",
+          "persistentUuid": "0b620edf-53f7-49bf-a5b3-d6c948f4bd81",
+          "width": 36,
+          "x": 243,
+          "y": 25,
+          "zOrder": 20,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -6077,14 +6190,14 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 84.5,
+                        "y": 79.5
                       },
                       "centerPoint": {
                         "automatic": true,
                         "name": "centre",
                         "x": 0,
-                        "y": 0
+                        "y": 78.5
                       },
                       "customCollisionMask": []
                     }
@@ -6128,7 +6241,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "Policy_CAR.png",
+                      "image": "Car Game UI\\Skills\\Policy_Package_Car.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -6164,7 +6277,7 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "Insurance2",
+              "name": "skill2_c",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -6173,12 +6286,41 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "Policy_BUS.png",
+                      "image": "Car Game UI\\Skills\\Policy_Package_Bus.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
                         "x": 157.5,
                         "y": 205.5
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "skill2_3",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Car Game UI\\Skills\\Policy_Package_Bus_Third.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -6218,7 +6360,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "Policy_Heart.png",
+                      "image": "Car Game UI\\Skills\\Policy_Package_Injured.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -7152,6 +7294,18 @@
             {
               "type": {
                 "inverted": false,
+                "value": "MettreY"
+              },
+              "parameters": [
+                "coin",
+                "=",
+                "GlobalVariable(screenWidth)*Variable(XPADDING_RATIO) + coinNum.Height()/2"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
                 "value": "BBText::SetColor"
               },
               "parameters": [
@@ -7213,7 +7367,43 @@
               "parameters": [
                 "coinNum",
                 "=",
-                "\"💰 \" + GlobalVariableString(currentCoin)"
+                "GlobalVariableString(currentCoin)"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeHeight"
+              },
+              "parameters": [
+                "coin",
+                "=",
+                "coinNum.GetFontSize()"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ChangeWidth"
+              },
+              "parameters": [
+                "coin",
+                "=",
+                "coinNum.GetFontSize()"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreX"
+              },
+              "parameters": [
+                "coin",
+                "=",
+                "coinNum.X() - coin.Width()/2"
               ],
               "subInstructions": []
             }
@@ -8926,7 +9116,7 @@
                       "parameters": [
                         "skill1Claim",
                         "=",
-                        "RandomInRange(10,30)/100*player.Variable(value)"
+                        "RandomInRange(10,20)/100*player.Variable(value)"
                       ],
                       "subInstructions": []
                     },
@@ -10268,6 +10458,29 @@
                     "movingGroup"
                   ],
                   "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ChangeColor"
+                  },
+                  "parameters": [
+                    "skillButtonGroup",
+                    "\"74;74;74\""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SetObjectVariableAsBoolean"
+                  },
+                  "parameters": [
+                    "skillButtonGroup",
+                    "isHide",
+                    "True"
+                  ],
+                  "subInstructions": []
                 }
               ],
               "events": [
@@ -10934,13 +11147,36 @@
                         ""
                       ],
                       "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangeColor"
+                      },
+                      "parameters": [
+                        "skillButtonGroup",
+                        "\"74;74;74\""
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SetObjectVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "skillButtonGroup",
+                        "isHide",
+                        "True"
+                      ],
+                      "subInstructions": []
                     }
                   ],
                   "events": []
                 },
                 {
                   "disabled": false,
-                  "folded": true,
+                  "folded": false,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -11146,7 +11382,7 @@
                   "parameters": [
                     "skillButtonGroup",
                     "=",
-                    "skillButtonGroup.Height()*1.2"
+                    "skillButtonGroup.Height()*1.5"
                   ],
                   "subInstructions": []
                 }
@@ -11217,7 +11453,7 @@
                   "parameters": [
                     "skillButtonGroup",
                     "=",
-                    "skillButtonGroup.Height()*1.2"
+                    "skillButtonGroup.Height()*1.5"
                   ],
                   "subInstructions": []
                 }
@@ -11288,12 +11524,77 @@
                   "parameters": [
                     "skillButtonGroup",
                     "=",
-                    "skillButtonGroup.Height()*1.2"
+                    "skillButtonGroup.Height()*1.5"
                   ],
                   "subInstructions": []
                 }
               ],
-              "events": []
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "GlobalVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "insurancePackage.package1.isSelected",
+                        "True"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SetAnimationName"
+                      },
+                      "parameters": [
+                        "skill2",
+                        "\"skill2_3\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "GlobalVariableAsBoolean"
+                      },
+                      "parameters": [
+                        "insurancePackage.package1.isSelected",
+                        "False"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "SetAnimationName"
+                      },
+                      "parameters": [
+                        "skill2",
+                        "\"skill2_c\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
             },
             {
               "disabled": false,
@@ -12253,20 +12554,7 @@
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "BBText::SetBBText"
-              },
-              "parameters": [
-                "coinNum",
-                "=",
-                "ToString(GlobalVariable(currentCoin))"
-              ],
-              "subInstructions": []
-            }
-          ],
+          "actions": [],
           "events": []
         },
         {
