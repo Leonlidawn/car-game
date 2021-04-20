@@ -7436,7 +7436,7 @@
               "parameters": [
                 "logo",
                 "=",
-                "topBar.Height()/2+5"
+                "topBar.Height()/2"
               ],
               "subInstructions": []
             },
@@ -7448,7 +7448,7 @@
               "parameters": [
                 "logo",
                 "=",
-                "topBar.Height()*0.7"
+                "topBar.Height()*0.8"
               ],
               "subInstructions": []
             },
@@ -11818,6 +11818,17 @@
                             "True"
                           ],
                           "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "GlobalVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "insurancePackage.package2.isSelected",
+                            "False"
+                          ],
+                          "subInstructions": []
                         }
                       ],
                       "actions": [
@@ -11846,8 +11857,8 @@
                             "value": "GlobalVariableAsBoolean"
                           },
                           "parameters": [
-                            "insurancePackage.package1.isSelected",
-                            "False"
+                            "insurancePackage.package2.isSelected",
+                            "True"
                           ],
                           "subInstructions": []
                         }
