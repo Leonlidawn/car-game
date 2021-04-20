@@ -1447,7 +1447,7 @@
         "gridWidth": 32,
         "snap": true,
         "windowMask": false,
-        "zoomFactor": 0.6279999999999997
+        "zoomFactor": 0.6479999999999997
       },
       "objectsGroups": [
         {
@@ -4582,6 +4582,32 @@
               "name": "sideLeft"
             }
           ]
+        },
+        {
+          "name": "textBoxGroup",
+          "objects": [
+            {
+              "name": "coinCollect"
+            },
+            {
+              "name": "coinNum"
+            },
+            {
+              "name": "timerNum"
+            },
+            {
+              "name": "claim"
+            },
+            {
+              "name": "accident"
+            },
+            {
+              "name": "pay"
+            },
+            {
+              "name": "netCoin"
+            }
+          ]
         }
       ],
       "variables": [
@@ -6024,7 +6050,7 @@
             "fontSize": 20,
             "visible": true,
             "color": "#000000",
-            "fontFamily": "Bimbo_JVE.ttf",
+            "fontFamily": "Car Game UI\\font\\Myriad Pro Bold.ttf",
             "align": "left",
             "wordWrap": true
           }
@@ -6695,7 +6721,7 @@
             "fontSize": 20,
             "visible": true,
             "color": "#000000",
-            "fontFamily": "Arial",
+            "fontFamily": "Car Game UI\\font\\Myriad Pro Bold.ttf",
             "align": "left",
             "wordWrap": true
           }
@@ -6712,7 +6738,7 @@
             "fontSize": 20,
             "visible": true,
             "color": "#000000",
-            "fontFamily": "Arial",
+            "fontFamily": "Car Game UI\\font\\Myriad Pro Bold.ttf",
             "align": "left",
             "wordWrap": true
           }
@@ -6846,7 +6872,7 @@
             "fontSize": 20,
             "visible": true,
             "color": "#000000",
-            "fontFamily": "Arial",
+            "fontFamily": "Car Game UI\\font\\Myriad Pro Bold.ttf",
             "align": "left",
             "wordWrap": true
           }
@@ -6863,7 +6889,7 @@
             "fontSize": 20,
             "visible": true,
             "color": "#000000",
-            "fontFamily": "Arial",
+            "fontFamily": "Car Game UI\\font\\Myriad Pro Bold.ttf",
             "align": "left",
             "wordWrap": true
           }
@@ -6880,7 +6906,7 @@
             "fontSize": 20,
             "visible": true,
             "color": "#000000",
-            "fontFamily": "Arial",
+            "fontFamily": "Car Game UI\\font\\Myriad Pro Bold.ttf",
             "align": "left",
             "wordWrap": true
           }
@@ -8481,18 +8507,6 @@
                         {
                           "type": {
                             "inverted": false,
-                            "value": "BBText::SetBBText"
-                          },
-                          "parameters": [
-                            "coinNum",
-                            "=",
-                            "ToString(GlobalVariable(currentCoin))"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
                             "value": "ModVarScene"
                           },
                           "parameters": [
@@ -8665,18 +8679,6 @@
                         "currentCoin",
                         "+",
                         "5"
-                      ],
-                      "subInstructions": []
-                    },
-                    {
-                      "type": {
-                        "inverted": false,
-                        "value": "BBText::SetBBText"
-                      },
-                      "parameters": [
-                        "coinNum",
-                        "=",
-                        "ToString(GlobalVariable(currentCoin))"
                       ],
                       "subInstructions": []
                     },
@@ -8972,7 +8974,7 @@
                       "parameters": [
                         "accident",
                         "+",
-                        "Variable(damageDeduct)"
+                        "1"
                       ],
                       "subInstructions": []
                     },
@@ -9923,7 +9925,7 @@
           "events": [
             {
               "disabled": false,
-              "folded": true,
+              "folded": false,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -10355,8 +10357,73 @@
                             "1000"
                           ],
                           "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "SetGlobalVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "skillSet.skill0.isSelected",
+                            "True"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "SetGlobalVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "skillSet.skill1.isSelected",
+                            "False"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "SetGlobalVariableAsBoolean"
+                          },
+                          "parameters": [
+                            "skillSet.skill2.isSelected",
+                            "False"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "currentLevel",
+                            "=",
+                            "0"
+                          ],
+                          "subInstructions": []
+                        },
+                        {
+                          "type": {
+                            "inverted": false,
+                            "value": "ModVarGlobal"
+                          },
+                          "parameters": [
+                            "skillSet.selectedCount",
+                            "=",
+                            "0"
+                          ],
+                          "subInstructions": []
                         }
                       ],
+                      "events": []
+                    },
+                    {
+                      "disabled": false,
+                      "folded": false,
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [],
                       "events": []
                     },
                     {
@@ -11515,7 +11582,7 @@
                         "balloon",
                         "claim",
                         "=",
-                        "Variable(skill1Claim)"
+                        "Variable(skill0Claim)"
                       ],
                       "subInstructions": []
                     },
@@ -11527,6 +11594,40 @@
                       "parameters": [
                         "balloon",
                         "\"fade-skill0\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarObjet"
+                      },
+                      "parameters": [
+                        "balloon",
+                        "claim",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangeColor"
+                      },
+                      "parameters": [
+                        "balloon",
+                        "\"139;184;236\""
                       ],
                       "subInstructions": []
                     }
@@ -11622,6 +11723,40 @@
                     }
                   ],
                   "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarObjet"
+                      },
+                      "parameters": [
+                        "balloon",
+                        "claim",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangeColor"
+                      },
+                      "parameters": [
+                        "balloon",
+                        "\"139;184;236\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
                 }
               ]
             },
@@ -11707,6 +11842,40 @@
                       "parameters": [
                         "balloon",
                         "\"fade-skill2\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarObjet"
+                      },
+                      "parameters": [
+                        "balloon",
+                        "claim",
+                        "=",
+                        "0"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ChangeColor"
+                      },
+                      "parameters": [
+                        "balloon",
+                        "\"139;184;236\""
                       ],
                       "subInstructions": []
                     }
@@ -12058,6 +12227,47 @@
               ]
             }
           ]
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "BBText::SetColor"
+              },
+              "parameters": [
+                "textBoxGroup",
+                "\"255;255;255\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "BBText::SetBBText"
+              },
+              "parameters": [
+                "coinNum",
+                "=",
+                "ToString(GlobalVariable(currentCoin))"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
         },
         {
           "disabled": false,
