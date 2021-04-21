@@ -7468,7 +7468,7 @@
               "parameters": [
                 "logo",
                 "=",
-                "topBar.Height()/2"
+                "topBar.Height()/2+4"
               ],
               "subInstructions": []
             },
@@ -7492,7 +7492,7 @@
               "parameters": [
                 "logo",
                 "=",
-                "topBar.Width()/2.5"
+                "topBar.Width()/3"
               ],
               "subInstructions": []
             }
@@ -7879,7 +7879,7 @@
                   },
                   "parameters": [
                     "",
-                    "8",
+                    "7",
                     "\"TrafficTimer\""
                   ],
                   "subInstructions": []
