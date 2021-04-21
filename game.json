@@ -7492,7 +7492,7 @@
               "parameters": [
                 "logo",
                 "=",
-                "topBar.Width()/3"
+                "topBar.Width()/4"
               ],
               "subInstructions": []
             }
@@ -8785,7 +8785,7 @@
                               "parameters": [
                                 "skill1Claim",
                                 "=",
-                                "RandomInRange(1,10)/100*player.Variable(value)"
+                                "RandomInRange(player.Variable(value)*0.01,player.Variable(value)*0.1)"
                               ],
                               "subInstructions": []
                             },
@@ -8797,7 +8797,7 @@
                               "parameters": [
                                 "skill2Claim",
                                 "=",
-                                "RandomInRange(1,10)/100*mediuamCarGroup.Variable(value)"
+                                "RandomInRange(mediuamCarGroup.Variable(value)*0.1,mediuamCarGroup.Variable(value)*0.2)"
                               ],
                               "subInstructions": []
                             },
@@ -8843,7 +8843,7 @@
                               "parameters": [
                                 "skill1Claim",
                                 "=",
-                                "RandomInRange(10,20)/100*player.Variable(value)"
+                                "RandomInRange(player.Variable(value)*0.1,player.Variable(value)*0.2)"
                               ],
                               "subInstructions": []
                             },
@@ -8855,7 +8855,7 @@
                               "parameters": [
                                 "skill2Claim",
                                 "=",
-                                "RandomInRange(10,20)/100*mediuamCarGroup.Variable(value)"
+                                "RandomInRange(mediuamCarGroup.Variable(value)*0.2,mediuamCarGroup.Variable(value)*0.3)"
                               ],
                               "subInstructions": []
                             },
@@ -8901,7 +8901,7 @@
                               "parameters": [
                                 "skill1Claim",
                                 "=",
-                                "RandomInRange(20,40)/100*player.Variable(value)"
+                                "RandomInRange(player.Variable(value)*0.2,player.Variable(value)*0.4)"
                               ],
                               "subInstructions": []
                             },
@@ -8913,7 +8913,7 @@
                               "parameters": [
                                 "skill2Claim",
                                 "=",
-                                "RandomInRange(20,40)/100*mediuamCarGroup.Variable(value)"
+                                "RandomInRange(mediuamCarGroup.Variable(value)*0.2,mediuamCarGroup.Variable(value)*0.4)"
                               ],
                               "subInstructions": []
                             },
@@ -9386,7 +9386,7 @@
                           "parameters": [
                             "skill1Claim",
                             "=",
-                            "RandomInRange(10,20)/100*player.Variable(value)"
+                            "RandomInRange(player.Variable(value)*0.1,player.Variable(value)*0.2)"
                           ],
                           "subInstructions": []
                         },
