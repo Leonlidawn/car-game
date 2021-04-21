@@ -5137,7 +5137,7 @@
             {
               "name": "value",
               "type": "number",
-              "value": 2000
+              "value": 500
             }
           ],
           "behaviors": [
@@ -5237,7 +5237,7 @@
             {
               "name": "value",
               "type": "string",
-              "value": "1000"
+              "value": "700"
             }
           ],
           "behaviors": [],
@@ -5379,7 +5379,7 @@
             {
               "name": "value",
               "type": "string",
-              "value": "1500"
+              "value": "500"
             }
           ],
           "behaviors": [],
@@ -5521,7 +5521,7 @@
             {
               "name": "value",
               "type": "string",
-              "value": "1600"
+              "value": "600"
             }
           ],
           "behaviors": [],
@@ -7418,6 +7418,30 @@
                 "0",
                 "150",
                 "1"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreX"
+              },
+              "parameters": [
+                "sideLeft",
+                "=",
+                "road.X()-sideLeft.Width()"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreX"
+              },
+              "parameters": [
+                "sideRight",
+                "=",
+                "road.X()+road.Width()"
               ],
               "subInstructions": []
             },
