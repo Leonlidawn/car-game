@@ -1120,15 +1120,6 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "Houses 2_Long_Left2.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Houses 2_Long_Left2.png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
         "file": "Houses 2_Long_Right2.png",
         "kind": "image",
         "metadata": "",
@@ -1250,6 +1241,42 @@
         "kind": "image",
         "metadata": "",
         "name": "Logo_Header.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Houses2-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Houses2-1.png",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Houses 2_Long_Left2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Houses 2_Long_Left2.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Houses1-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Houses1-1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Houses2-1-0.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Houses2-1-0.png",
         "smoothed": true,
         "userAdded": true
       }
@@ -2344,7 +2371,7 @@
                 "",
                 "choose_bgm_com.mp3",
                 "yes",
-                "",
+                "20",
                 ""
               ],
               "subInstructions": []
@@ -4898,7 +4925,12 @@
           "x": 278,
           "y": 2,
           "zOrder": 2,
-          "numberProperties": [],
+          "numberProperties": [
+            {
+              "name": "animation",
+              "value": 0
+            }
+          ],
           "stringProperties": [],
           "initialVariables": []
         },
@@ -5835,7 +5867,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "Houses 2_Long_Right2.png",
+                      "image": "Houses2-1-0.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -5874,7 +5906,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": false,
-                      "image": "Houses 2_Long_Left2.png",
+                      "image": "Houses1-1.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -6331,35 +6363,6 @@
                         "name": "origine",
                         "x": 157.5,
                         "y": 205.5
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "skill2_3",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "Car Game UI\\Skills\\Policy_Package_Bus_Third.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -7297,7 +7300,7 @@
                 "",
                 "bgm.mp3",
                 "yes",
-                "0",
+                "20",
                 ""
               ],
               "subInstructions": []
@@ -7876,7 +7879,7 @@
                   },
                   "parameters": [
                     "",
-                    "10",
+                    "8",
                     "\"TrafficTimer\""
                   ],
                   "subInstructions": []
@@ -11831,83 +11834,7 @@
                       "subInstructions": []
                     }
                   ],
-                  "events": [
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "GlobalVariableAsBoolean"
-                          },
-                          "parameters": [
-                            "insurancePackage.package1.isSelected",
-                            "True"
-                          ],
-                          "subInstructions": []
-                        },
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "GlobalVariableAsBoolean"
-                          },
-                          "parameters": [
-                            "insurancePackage.package2.isSelected",
-                            "False"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "SetAnimationName"
-                          },
-                          "parameters": [
-                            "skill2",
-                            "\"skill2_3\""
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    },
-                    {
-                      "disabled": false,
-                      "folded": false,
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "GlobalVariableAsBoolean"
-                          },
-                          "parameters": [
-                            "insurancePackage.package2.isSelected",
-                            "True"
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "inverted": false,
-                            "value": "SetAnimationName"
-                          },
-                          "parameters": [
-                            "skill2",
-                            "\"skill2_c\""
-                          ],
-                          "subInstructions": []
-                        }
-                      ],
-                      "events": []
-                    }
-                  ]
+                  "events": []
                 },
                 {
                   "disabled": false,
